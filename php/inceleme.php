@@ -1,35 +1,45 @@
 <?php include "Header.php" ?>
+
 <body>
     <div class="siteici">
         <div class="container">
             <div class="row">
                 <div class="bildiri">
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
-                    <div class="mkvorta">
-                        <ul>
-                            <?php for ($i=0; $i < 22; $i++) { ?>
-                            <li>
-                                <div class="MKTV ortalık">
-                                    <div class="mktvicerik ortalık">
-                                        <a href="">
-                                            <div class="mktvresim">
-                                                <img src="../img/heybro.jpg" alt="">
-                                            </div>
-                                            <div class="mktvyazi">
-                                                <div class="mktvbaslik">
-                                                    Gaming İstanbul 2019'da kameramıza takılanlar
-                                                </div>
-                                                <div class="mktvaltbaslik">
-                                                    Fuarda neler var?
-                                                </div>
-                                                <div class="mktvtarih">
-                                                    31.01.2019 17:32
-                                                </div>
-                                            </div>
-                                        </a>
+                    <div class="ozelinceleme">
+                    <ul>
+                        <li onclick="javascript:window.location='http://tunaweb.net';">
+                            <div class="resim">
+                                <img src="../img/heybro.jpg" alt="">
+                                <div class="soluustu haberlerin">
+                                    <div class="yorumsayisi">
+                                        <i>
+                                            <span class="ion-android-chat" style="color:#fff"></span>
+                                            <span style="color:#fff; font-size:13px">23</span>
+                                        </i>
                                     </div>
-                            </li>
-                            <?php }?>
+                                </div>
+                            </div>
+
+                            <div class="yazi">
+                                <div class="icyazi">
+                                    <div class="icyazikonu">
+                                        Haber
+                                    </div>
+                                    <div class="icyazibaslik">
+                                        Hamburgerin wasdasdasdas
+                                        dasd asdas
+                                    </div>
+                                    <div class="icyazialtbaslik">
+                                        Görenler şaşkına döndü
+                                    </div>
+                                    <div class="icyazitarih">
+                                        29.01.2019 17:53
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
                         </ul>
                     </div>
                     <div class="sayfa-numarasi">
@@ -60,118 +70,9 @@
                 </div>
                 <div class="sidebar">
                     <div class="sidebarlist">
-                        <div class="sidebarkonu">Teknoloji Haberleri</div>
+                        <div class="sidebarkonu">Populer Oyunlar</div>
                         <div class="sidebarustu">
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        1
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        2
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        3
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        4
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        5
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        6
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        7
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        8
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        9
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="siderow">
-                                <div class="kapsul">
-                                    <div class="kapsulsayi">
-                                        10
-                                    </div>
-                                    <div class="kapsulyazisi">
-                                        <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                            olacak</a>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
 
                         <div class="devam">
