@@ -80,12 +80,11 @@
                                 <li>
                                     <div class="resim">
                                         <img src="../img/heybro.jpg" alt="">
-                                        <div class="soluustu haberlerin">
-                                            <div class="yorumsayisi">
-                                                <i>
-                                                    <span class="ion-android-chat" style="color:#fff"></span>
-                                                    <span style="color:#fff; font-size:13px">23</span>
-                                                </i>
+                                        <div class="soluustu haberin">
+                                            <div class="yorumsayisi solalti">
+                                                    <div class="puan">
+                                                        60
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>
@@ -140,19 +139,41 @@
                     </div>
                 </div>
                 <div class="sidebar">
-                    <div class="sidebarlist">
+                    <div class="sidebarlist pop">
                         <div class="sidebarkonu">Populer Oyunlar</div>
                         <div class="sidebarustu">
-
+                            <ul>
+                            <?php for ($i=0; $i < 6; $i++) { ?>
+                                <li>
+                                    <a href="">
+                                        <div class="sidebarresim">
+                                            <img src="../img/heybro.jpg" alt="">
+                                            <div class="sayi">1</div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">
+                                                Red Dead Redemption 2
+                                            </div>
+                                            <div class="text">
+                                                Yapımcı
+                                                <div class="mark">Rockstar Games</div>
+                                            </div>
+                                            <div class="text">
+                                                Yapımcı
+                                                <div class="mark">Rockstar Games</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                            </ul>
                         </div>
-
                         <div class="devam">
                             <form action="">
-                            <input type="button" value="Daha Fazlası">
+                                <input type="button" value="Daha Fazlası">
                             </form>
                         </div>
                     </div>
-
                     <div class="anketcontent">
                         <div class="anket">
                             <div class="anketyazisi">

@@ -297,20 +297,20 @@ body {
     font-size: 19px;
     font-weight: 900;
     word-wrap: normal;
-    color:black;
+    color: black;
 }
 
 .icyazialtbaslik {
     padding-bottom: 5px;
     font-size: 13px;
     font-weight: 400;
-    color:#74767B;
+    color: #74767B;
 }
 
 .icyazitarih {
     font-size: 10px;
     font-weight: 300;
-    color:#74767B;
+    color: #74767B;
 }
 
 .sidebarkonu {
@@ -690,26 +690,108 @@ body {
 .ozelinceleme {
     width: 740px;
 }
-a{
-    color:none;
-}   
-.siralama{
-    height:60px;
+
+a {
+    color: none;
+}
+
+.siralama {
+    height: 60px;
     background: #F0F4F5;
 }
-.siralama ul{
+
+.siralama ul {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-.siralama li{
+
+.siralama li {
     display: inline-block;
     border-right: 1px solid #161A2322;
-    padding: 10px;  
+    padding: 10px;
 }
-.siralama li a{
-    color:#161A23;
+
+.siralama li a {
+    color: #161A23;
     font-size: 14px;
     font-weight: 500;
-    
+}
+
+.sidebarustu ul {
+    padding-left: 0;
+}
+
+.sidebarustu:hover .title {
+    transition: 500ms;
+    color: #FFD500;
+}
+
+.sidebarustu:hover .sayi {
+    transition: 500ms;
+    color: #FFD500;
+}
+.sidebarustu li {
+    padding-top: 10px;
+}
+.sidebarresim {
+    position: relative;
+    display: inline-block;
+}
+
+.sidebarresim .sayi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40%;
+    font-size: 48px;
+    color: black;
+}
+
+.sidebarresim img {
+    width: 100px;
+    height: 120px;
+}
+
+.caption {
+    padding-left: 10px;
+    width: calc(100% - 120px);
+    display: inline-block;
+}
+
+.caption .title {
+    font-weight: 600;
+    color: #FEFEFE;
+}
+
+.caption .text {
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.caption .mark {
+    padding-top: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    color:#FFD500;
+}
+
+.yorumsayisi.solalti {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #FFD500;
+}
+.puan{
+    color: #161A23;
+}
+.haberin {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+.sidebarlist.pop{
+    height: 1000px;
 }
