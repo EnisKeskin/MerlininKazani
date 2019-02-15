@@ -298,17 +298,20 @@ body {
     font-size: 19px;
     font-weight: 900;
     word-wrap: normal;
+    color:black;
 }
 
 .icyazialtbaslik {
     padding-bottom: 5px;
     font-size: 13px;
     font-weight: 400;
+    color:#74767B;
 }
 
 .icyazitarih {
     font-size: 10px;
     font-weight: 300;
+    color:#74767B;
 }
 
 .sidebarkonu {
@@ -687,4 +690,7 @@ body {
 
 .ozelinceleme {
     width: 740px;
+}
+a{
+    color:none;
 }

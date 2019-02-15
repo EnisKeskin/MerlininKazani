@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../js/ionicons-2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
@@ -14,8 +15,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="../js/arama.js" type="text/javascript"></script>
 </head>
+
 <body>
-<div class="ustbaslik">
+    <div class="ustbaslik">
         <div class="ustbaslikbilgisi">
             <div class="logo">
                 <a href="https://www.merlininkazani.com">
@@ -165,4 +167,5 @@
     </div>
     <div class="clearfix"></div>
 </body>
+
 </html>

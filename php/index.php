@@ -1,7 +1,7 @@
 <?php include "Header.php"; ?>
 
 <body>
-<div class="siteici">
+    <div class="siteici">
         <div class="container">
             <div class="bodyustkismi">
                 <div class="bodyustkismisolu" onclick="javascript:window.location='http://tunaweb.net';">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="arabolum">
@@ -201,7 +201,7 @@
                             </div>
                             <div class="clearfix"></div>
                         </li>
-                        
+
                         <li>
                             <div class="resim">
                                 <img src="../img/heybro.jpg" alt="">
@@ -577,7 +577,8 @@
                         </div>
 
                         <div class="devam">
-                            <input type="button" value="Daha Fazlası" onclick="javascript:window.location='http://tunaweb.net';">
+                            <input type="button" value="Daha Fazlası"
+                                onclick="javascript:window.location='http://tunaweb.net';">
                         </div>
 
                     </div>
@@ -1196,8 +1197,10 @@
                                 Sizce hangisi daha başarılı?
                             </div>
                             <div class="anketcevap">
-                                <div class="ank"><input type="radio" name="anket1" id="anke" value="anke"><label for="anke">PUBG</label></div>
-                                <div class="ank"><input type="radio" name="anket1" id="anke2" value="anke2"><label for="anke2">Fortnite</label></div>
+                                <div class="ank"><input type="radio" name="anket1" id="anke" value="anke"><label
+                                        for="anke">PUBG</label></div>
+                                <div class="ank"><input type="radio" name="anket1" id="anke2" value="anke2"><label
+                                        for="anke2">Fortnite</label></div>
                             </div>
                             <div class="anketbuttonlar">
                                 <div class="oyla">

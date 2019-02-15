@@ -7,39 +7,43 @@
                 <div class="bildiri">
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
                     <div class="ozelinceleme">
-                    <ul>
-                        <li onclick="javascript:window.location='http://tunaweb.net';">
-                            <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
+                        <ul>
+                            <?php for ($i=0; $i < 15; $i++) { ?>
+                            <a href="">
+                                <li>
+                                    <div class="resim">
+                                        <img src="../img/heybro.jpg" alt="">
+                                        <div class="soluustu haberlerin">
+                                            <div class="yorumsayisi">
+                                                <i>
+                                                    <span class="ion-android-chat" style="color:#fff"></span>
+                                                    <span style="color:#fff; font-size:13px">23</span>
+                                                </i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
+                                    <div class="yazi">
+                                        <div class="icyazi">
+                                            <div class="icyazikonu">
+                                                Haber
+                                            </div>
+                                            <div class="icyazibaslik">
+                                                Hamburgerin wasdasdasdas
+                                                dasd asdas
+                                            </div>
+                                            <div class="icyazialtbaslik">
+                                                Görenler şaşkına döndü
+                                            </div>
+                                            <div class="icyazitarih">
+                                                29.01.2019 17:53
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </a>
+                            <?php } ?>
                         </ul>
                     </div>
                     <div class="sayfa-numarasi">
@@ -81,98 +85,7 @@
                         </div>
 
                     </div>
-                    <div class="sidebarlist alttaki">
-                        <div class="sidebarkonu">Teknoloji Haberleri</div>
-                        <div class="sidebarustu populer">
-                            <ul>
-                                <li>Haberler</li>
-                                <li>İnceleme</li>
-                                <li>Teknoloji</li>
-                            </ul>
-                        </div>
-                        <div class="populerkonular">
-                            <div class="pop">
-                                <a href="">
-                                    <div class="resim">
-                                        <img src="../img/heybro.jpg" alt="">
-                                    </div>
-                                    <div class="sagustu">
-                                        <div class="popsayisi">
-                                            <i>
-                                                <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                            </i>
-                                        </div>
-                                    </div>
-                                    <div class="popyazi">
-                                        <span>asdasdasd</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="pop">
-                                <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
-                                </div>
-                                <div class="sagustu">
-                                    <div class="popsayisi">
-                                        <i>
-                                            <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                        </i>
-                                    </div>
-                                </div>
-                                <div class="popyazi">
-                                    <span>asdasdasdas</span>
-                                </div>
-                            </div>
-                            <div class="pop">
-                                <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
-                                </div>
-                                <div class="sagustu">
-                                    <div class="popsayisi">
-                                        <i>
-                                            <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                        </i>
-                                    </div>
-                                </div>
-                                <div class="popyazi">
 
-                                </div>
-                            </div>
-                            <div class="pop">
-                                <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
-                                </div>
-                                <div class="sagustu">
-                                    <div class="popsayisi">
-                                        <i>
-                                            <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                        </i>
-                                    </div>
-                                </div>
-                                <div class="popyazi">
-
-                                </div>
-                            </div>
-                            <div class="pop">
-                                <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
-                                </div>
-                                <div class="sagustu">
-                                    <div class="popsayisi">
-                                        <i>
-                                            <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                        </i>
-                                    </div>
-                                </div>
-                                <div class="popyazi">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="devam">
-                            <a href=""><input type="button" value="Daha Fazlası"></a>
-                        </div>
-                    </div>
                     <div class="anketcontent">
                         <div class="anket">
                             <div class="anketyazisi">
