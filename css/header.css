@@ -1,0 +1,295 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+.ustbaslik{
+    color: white;
+    position: sticky;
+    top:0;
+    height: 70.4px;
+    background: #292C34;
+    z-index: 100;
+}
+.ustbaslikbilgisi{
+    display: flex;
+    height: 100%;
+    width: 1080px;
+    margin: auto;
+    background: #292C34;
+}
+.filler{
+    flex-grow:1;
+    text-align:center
+}
+.logo{
+    display: inline-block;
+    height: 100%;
+}
+.logo img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    margin-left:20px;
+}
+ul.menu {
+    background: #292C34;
+    height: 100%;
+}
+ul.menu > li{
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul.menu >li> a{
+    display: block;
+    line-height: 70.4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    
+}
+ul.menu >li:hover{
+    border-bottom:solid #ffd5ff;
+    height: 65.4px;
+    border-bottom-width: 5px;
+}
+ul.menu >li.kirmizi:hover{
+    border-bottom:solid red;
+    height: 65.4px;
+    border-bottom-width: 5px;
+}
+ul.menu >li.mavi:hover{
+    border-bottom:solid blue;
+    height: 65.4px;
+    border-bottom-width: 5px;
+}
+ul.menu ul{
+    background: #23262E;
+    width: 200px;
+    position: absolute;
+    top: 70px;
+    left: 0; 
+    opacity: 0;
+    transition: 250ms all;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+}
+ul.menu ul li{
+    padding:0px 10px 0px 10px;
+}
+.menualtı{
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+ul.menu ul li a{
+    display: block;
+    padding-left: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    height: 40px;
+    border-radius: 3px;
+    line-height: 40px;
+}
+ul.menu ul li a:hover{
+    display: block;
+    padding-left: 5px;
+    color:#E0BC05;
+    background: #1A1D23;
+    text-decoration: none;
+}
+ul.menu >li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+.sagustbaslik{
+    width: 200px;
+}
+.sagustbasliksolu{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sagustbasliksagi{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    top:-13.5px;
+    left:140px;
+    transform: translateY(-50%); 
+}
+.sagustbasliksagi span{
+    color:#8D8F93;
+    font-size: 20px;
+}
+.giris{
+    margin:0;
+    padding:0;
+}
+ul.giris{
+    background:#31353E;
+    width: 113px;
+    border-radius: 3px;
+    height: 50px;
+}
+ul.giris> li{
+    line-height: 50px;
+    text-align: center;
+}
+ul.giris > li> a{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A0A4AA;
+}
+ul.giris .uyelik{
+    background: #F7F7F7;
+    width: 260px;
+    height: 170px;
+    position: absolute;
+    top: 50px;
+    right:85px; 
+    opacity: 0;
+    transition: 250ms all;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    border-radius: 3px;
+}
+ul.giris >li:hover .uyelik{
+    opacity: 1;
+    visibility: visible;
+}
+.pencere{
+    padding:10px;
+}
+.kullanicigiris{
+    border:1px solid #ffd500;
+    border-radius: 3px;
+}
+.pencere a{
+    color: #767A83;
+    font-size: 15px;
+    font-weight: 500;
+}
+.pencere span{
+    
+    color: #767A83;
+    font-size: 13px;
+    font-weight: 400;
+}
+.kullanicikayit{
+    background-color: #FFD400;
+    border-radius: 3px;
+}
+.pencere a{
+    color: #1E1900;
+    font-size: 15px;
+    font-weight: 500;
+}
+.aramamenu{
+    width: 100%;
+    height: 100%;
+    background: #292C34;
+    margin: 0;
+    padding: 0;
+}
+.aramamenu .form{
+    line-height: 50px;
+}
+.aramamenu > div{
+    widows: 100%;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A0A4AA;
+}
+.aramamenu .form{
+    position: absolute;
+    top: -2px;
+    right:10px; 
+    z-index: -99;
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+.aramamenu input{
+    width: 300px;
+    height: 45px;
+    border-radius: 3px;
+    padding-left:12px;
+    border: #F7F7F7;
+}
+.altbaslik{
+    background: #292C34;
+    width: 100%;
+    height: 50px;
+}
+.altbaslikbilgisi{
+    background: #292C34;
+    width: 1080px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.solaltbaslikbilgisi {
+    height: 100%;
+}
+.solaltbaslikbilgisi ul li{
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.solaltbaslikbilgisi ul li a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #767a83;
+}
+.solaltbaslikbilgisi ul li a:hover{
+    color:#fff;
+}
+.solaltbaslikbilgisi ul{
+    margin: 0;
+    padding-left: 0;
+    line-height: 50px;
+}
+
+.sagaltbaslikbilgisi{
+    display: block;
+    float: right;
+   
+}
+.sagaltbaslikbilgisi ul li{
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+}
+.sagaltbaslikbilgisi ul{
+    padding: 0;
+
+}
+.sagaltbaslikbilgisi ul li i{
+    color:#fff;
+}
+
+.sagaltbaslikbilgisi ul li:hover i{
+    color: green;
+}
+.clearfix{
+    clear: both;
+}
