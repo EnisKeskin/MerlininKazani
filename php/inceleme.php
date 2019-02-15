@@ -6,6 +6,73 @@
             <div class="row">
                 <div class="bildiri">
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
+                    <div class="siralama">
+                        <ul>
+                            <li>
+                                <a href="">0-9</a>
+                            </li>
+                            <li>
+                                <a href="">A</a>
+                            </li>
+                            <li>
+                                <a href="">B</a>
+                            </li>
+                            <li>
+                                <a href="">C</a>
+                            </li>
+                            <li>
+                                <a href="">D</a>
+                            </li>
+                            <li>
+                                <a href="">E</a>
+                            </li>
+                            <li>
+                                <a href="">F</a>
+                            </li>
+                            <li>
+                                <a href="">G</a>
+                            </li>
+                            <li>
+                                <a href="">A</a>
+                            </li>
+                            <li>
+                                <a href="">B</a>
+                            </li>
+                            <li>
+                                <a href="">C</a>
+                            </li>
+                            <li>
+                                <a href="">D</a>
+                            </li>
+                            <li>
+                                <a href="">E</a>
+                            </li>
+                            <li>
+                                <a href="">F</a>
+                            </li>
+                            <li>
+                                <a href="">G</a>
+                            </li>
+                            <li>
+                                <a href="">A</a>
+                            </li>
+                            <li>
+                                <a href="">B</a>
+                            </li>
+                            <li>
+                                <a href="">C</a>
+                            </li>
+                            <li>
+                                <a href="">D</a>
+                            </li>
+                            <li>
+                                <a href="">E</a>
+                            </li>
+                            <li>
+                                <a href="">F</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="ozelinceleme">
                         <ul>
                             <?php for ($i=0; $i < 15; $i++) { ?>

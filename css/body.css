@@ -261,7 +261,6 @@ body {
 }
 
 .bildiri li {
-    cursor: pointer;
     display: flex;
     padding: 10px 0px 10px 0px;
 }
@@ -693,4 +692,24 @@ body {
 }
 a{
     color:none;
+}   
+.siralama{
+    height:60px;
+    background: #F0F4F5;
+}
+.siralama ul{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.siralama li{
+    display: inline-block;
+    border-right: 1px solid #161A2322;
+    padding: 10px;  
+}
+.siralama li a{
+    color:#161A23;
+    font-size: 14px;
+    font-weight: 500;
+    
 }
