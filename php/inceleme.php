@@ -1,7 +1,4 @@
-<!--    -->
-
 <?php include "Header.php" ?>
-
 <body>
     <div class="siteici">
         <div class="container">
