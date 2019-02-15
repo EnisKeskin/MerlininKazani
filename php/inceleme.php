@@ -142,13 +142,15 @@
                 <div class="sidebar">
                     <div class="sidebarlist">
                         <div class="sidebarkonu">Populer Oyunlar</div>
+
                         <div class="sidebarustu">
 
                         </div>
 
                         <div class="devam">
+                            <form action="">
                             <input type="button" value="Daha Fazlası"
-                                onclick="javascript:window.location='http://tunaweb.net';">
+                            </form>
                         </div>
 
                     </div>
