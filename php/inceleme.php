@@ -142,74 +142,75 @@
                 <div class="sidebar">
                     <div class="sidebarlist">
                         <div class="sidebarkonu">Populer Oyunlar</div>
-
                         <div class="sidebarustu">
 
                         </div>
 
                         <div class="devam">
                             <form action="">
-                                <input type="button" value="Daha Fazlası"> </form>
-                            <div class="anketcontent">
-                                <div class="anket">
-                                    <div class="anketyazisi">
-                                        <span>Anket</span>
-                                    </div>
-                                    <div class="anketsorusu">
-                                        Sizce hangisi daha başarılı?
-                                    </div>
-                                    <div class="anketcevap">
-                                        <div class="ank"><input type="radio" name="anket1" id="anke" value="anke"><label
-                                                for="anke">PUBG</label></div>
-                                        <div class="ank"><input type="radio" name="anket1" id="anke2"
-                                                value="anke2"><label for="anke2">Fortnite</label></div>
-                                    </div>
-                                    <div class="anketbuttonlar">
-                                        <div class="oyla">
-                                            <input type="button" value="Oyla">
-                                        </div>
-                                        <div class="soncular">
-                                            <input type="button" value="Sonuclar">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="yorumcont">
-                                <div style="padding-bottom: 20px; font-weight: 500;">Yorumlar</div>
-                                <div class="yorumyazisi">
-                                    <div class="yorum">
-                                        <div class="yorumyazan">
-                                            <span>Bilgekhan</span>
-                                        </div>
-                                        <div class="yorumunkendisi">
-                                            <span>Yeni Batman Arkham oyunu ile ilgili söylenti kafaları
-                                                karıştırdı</span>
-                                        </div>
-                                        <div class="yorumtarihi">
-                                            <span>01.02.2019 16:03</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yorumyazisi">
-                                    <div class="yorum">
-                                        <div class="yorumyazan">
-                                            <span>Bilgekhan</span>
-                                        </div>
-                                        <div class="yorumunkendisi">
-                                            <span>Yeni Batman Arkham oyunu ile ilgili söylenti kafaları
-                                                karıştırdı</span>
-                                        </div>
-                                        <div class="yorumtarihi">
-                                            <span>01.02.2019 16:03</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <input type="button" value="Daha Fazlası">
+                            </form>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+
+                    <div class="anketcontent">
+                        <div class="anket">
+                            <div class="anketyazisi">
+                                <span>Anket</span>
+                            </div>
+                            <div class="anketsorusu">
+                                Sizce hangisi daha başarılı?
+                            </div>
+                            <div class="anketcevap">
+                                <div class="ank"><input type="radio" name="anket1" id="anke" value="anke"><label
+                                        for="anke">PUBG</label></div>
+                                <div class="ank"><input type="radio" name="anket1" id="anke2" value="anke2"><label
+                                        for="anke2">Fortnite</label></div>
+                            </div>
+                            <div class="anketbuttonlar">
+                                <div class="oyla">
+                                    <input type="button" value="Oyla">
+                                </div>
+                                <div class="soncular">
+                                    <input type="button" value="Sonuclar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yorumcont">
+                        <div style="padding-bottom: 20px; font-weight: 500;">Yorumlar</div>
+                        <div class="yorumyazisi">
+                            <div class="yorum">
+                                <div class="yorumyazan">
+                                    <span>Bilgekhan</span>
+                                </div>
+                                <div class="yorumunkendisi">
+                                    <span>Yeni Batman Arkham oyunu ile ilgili söylenti kafaları karıştırdı</span>
+                                </div>
+                                <div class="yorumtarihi">
+                                    <span>01.02.2019 16:03</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yorumyazisi">
+                            <div class="yorum">
+                                <div class="yorumyazan">
+                                    <span>Bilgekhan</span>
+                                </div>
+                                <div class="yorumunkendisi">
+                                    <span>Yeni Batman Arkham oyunu ile ilgili söylenti kafaları karıştırdı</span>
+                                </div>
+                                <div class="yorumtarihi">
+                                    <span>01.02.2019 16:03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </body>
 <?php include "Footer.php" ?>
