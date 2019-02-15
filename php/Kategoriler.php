@@ -34,9 +34,7 @@
                                         </a>
                             </div>
                         </li>
-                   <?php }?>
-                    
-                        
+                   <?php }?>         
                     </ul>
                     </div>
                     <div class="sayfa-numarasi">

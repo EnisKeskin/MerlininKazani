@@ -574,7 +574,8 @@ body {
     border-radius: 3px;
 }
 .sayfa-numarasi li a{
-    padding: 10px;
-    color:black;
-
+    padding: 15px;
+    color:#23262e;
+    font-size: 12px;
+    font-weight: 500;
 }
