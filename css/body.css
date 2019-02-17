@@ -722,12 +722,12 @@ a {
     padding-left: 0;
 }
 
-.sidebarustu:hover .title {
+.sidebarustu ul li:hover .title {
     transition: 500ms;
     color: #FFD500;
 }
 
-.sidebarustu:hover .sayi {
+.sidebarustu ul li:hover .sayi {
     transition: 500ms;
     color: #FFD500;
 }
@@ -745,7 +745,8 @@ a {
     transform: translateY(-50%);
     left: 40%;
     font-size: 48px;
-    color: black;
+    color: #ffffff;
+    font-weight: 900;
 }
 
 .sidebarresim img {
