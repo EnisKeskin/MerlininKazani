@@ -11,7 +11,24 @@
                         <div class="baslikkonusu">
                             <a href="">Resident Evil 2 Remake için yetişkinlere özel 18+ mod yapıldı</a>
                         </div>
-
+                        <div class="icerikresim">
+                            <img src="../img/heybro.jpg" alt="">
+                        </div>
+                        <div class="icerikyazari">
+                            <div class="iceriksol">
+                                <div class="yazarresim">
+                                    <img src="../img/heybro.jpg" alt="">
+                                </div>
+                                <div class="yazar">
+                                    <div class="yazarismi">
+                                        <p>Furkan güler</p>
+                                    </div>
+                                    <div class="yazilantarih">
+                                        <p>14.02.2019 - 14:09</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="sidebar">
