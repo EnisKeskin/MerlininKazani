@@ -73,9 +73,28 @@
                         </div>
                         <div class="yorumlar">
                             <div class="yorumyeri">
-                                <div class="yorumuyazan">
-                                    <div class="icon">
-                                        <img src="../img/heybro.jpg" alt="">
+                                <div class="icerikyazari">
+                                    <div class="anabaslik">Yorumlar</div>
+                                    <div class="iceriksol">
+                                        <div class="yazarresim">
+                                            <img src="../img/heybro.jpg" alt="">
+                                        </div>
+                                        <div class="yazar">
+                                            <div class="yazarismi">
+                                                <p>Furkan güler</p>
+                                            </div>
+                                            <div class="yazilantarih">
+                                                <p>14.02.2019 - 14:09</p>
+                                            </div>
+                                        </div>
+                                        <form action="" class="formyeri">
+                                            <textarea name="" id="" class="textyorum" placeholder="Yorum"></textarea>
+                                            <div class="kalankarakter">
+                                                <p>Kalan Sayi:<b>300</b> </p>
+                                            </div>
+                                            <div class="filler"></div>
+                                            <input type="button" value="Gönder" class="gonder">
+                                        </form>
                                     </div>
                                 </div>
                             </div>
