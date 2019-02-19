@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="bildiri">
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
-                    <div class="mkvorta">
+                    <div class="mkvorta denge">
                         <ul>
                             <?php for ($i=0; $i < 22; $i++) { ?>
                             <li>

@@ -29,6 +29,57 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="icerikyazisi">
+                            <p>
+                                Claire lütfen...
+                                Bu senenin en dikkat çekici korku oyunlarından bir tanesi olacağı tahmin edilen Resident
+                                Evil 2 Remake, eski ve yeni Resident Evil hayranlarını sonuna kadar memnun etti. Konsol
+                                platformlarının yanında PC platformuna da çıkan oyun için modlarsa oyunu daha güzel bir
+                                hale getirebiliyor. Ancak son yapılan modun tüm oyunculara hitap etmediği kesin. Oyunun
+                                ana karakterlerinden Claire için yapılan modun sadece yetişkin bireylere hitap eden 18+
+                                bir mod olduğunun altı çizildi. İlgili modu Nexus Mods sitesinden "Topless Claire"
+                                olarak aratıp bulabilirsiniz.
+
+                                Resident Evil 2 Remake'ye özel yetişkin modu yapıldı
+                                Modu kullanmak için aşağıda yer alan sistem gereksinimlerini karşılamak zorundasınız
+
+                                MİNİMUM:
+
+                                - 64-bit işlemci ve işletim sistemi gerektirir
+                                - İşletim Sistemi: WINDOWS® 7, 8.1, 10 (64-BIT gerekli)
+                                - İşlemci: Intel® Core™ i5-4460 veya AMD FX™-6300 veya daha iyisi
+                                - Bellek: 8 GB RAM
+                                - Ekran Kartı: NVIDIA® GeForce® GTX 760 veya AMD Radeon™ R7 260x 2GB Video RAM
+                                - DirectX: Sürüm 11
+                                - Depolama: 26 GB kullanılabilir alan
+
+                                ÖNERİLEN:
+
+                                - 64-bit işlemci ve işletim sistemi gerektirir
+                                - İşletim Sistemi: WINDOWS® 7, 8.1, 10 (64-BIT gerekli)
+                                - İşlemci: Intel® Core™ i7-3770 or AMD FX™-9590 veya daha iyisi
+                                - Bellek: 8 GB RAM
+                                - Ekran Kartı: NVIDIA® GeForce® GTX 1060 veya AMD Radeon™ RX 480 3GB VRAM
+                                - DirectX: Sürüm 11
+                                - Depolama: 26 GB kullanılabilir alan</p>
+                        </div>
+                        <div class="tags">
+                            <ul>
+                                <li><a href="">#Resident Evil 2 Remake</a></li>
+                                <li><a href="">#Resident Evil 2 Remake</a></li>
+                                <li><a href="">#Resident Evil 2 Remake</a></li>
+                                <li><a href="">#Resident Evil 2 Remake</a></li>
+                            </ul>
+                        </div>
+                        <div class="yorumlar">
+                            <div class="yorumyeri">
+                                <div class="yorumuyazan">
+                                    <div class="icon">
+                                        <img src="../img/heybro.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="sidebar">

@@ -541,7 +541,7 @@ body {
     width: 740px;
 }
 
-.mkvorta li {
+.mkvorta.denge li {
     display: inline-block;
     width: 45%;
     padding: 10px;
@@ -802,8 +802,8 @@ a {
     height: 1000px;
 }
 
-.icerikresim img  {
-   width: 100%;
+.icerikresim img {
+    width: 100%;
     height: 100%;
 }
 
@@ -812,35 +812,57 @@ a {
     font-size: 37px;
     font-weight: 700;
 }
-.yazarresim{
+
+.yazarresim {
     padding-top: 20px;
     display: inline-block;
 }
-.yazarresim img{
+
+.yazarresim img {
     width: 60px;
     height: 60px;
 }
-.icerikyazari{
+
+.icerikyazari {
     position: relative;
 }
-.yazar{
+
+.yazar {
     display: inline-block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding-left: 10px;
 }
-.yazar p{
-    margin: 2px 0px 0px 0px; 
+
+.yazar p {
+    margin: 2px 0px 0px 0px;
 }
-.yazarismi{
+
+.yazarismi {
     display: inline-block;
-    color:#5d616a;
+    color: #5d616a;
     font-size: 14px;
     font-weight: 500;
 }
-.yazilantarih{
-    color:#5d616a;
+
+.yazilantarih {
+    color: #5d616a;
     font-size: 11px;
     font-weight: 300;
+}
+
+.tags ul li a {
+    color: #1a94d4;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.tags ul li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.icon {
+    
 }
