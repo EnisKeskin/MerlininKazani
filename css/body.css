@@ -895,41 +895,67 @@ a {
     height: 45px;
     background: #FFD800;
     border: none;
-} 
+}
 
 .yorumetkinligi {
-   margin-left: 20px;
+    margin-left: 20px;
 }
+
 .yorumgostermeyeri {
     background: #FBFCFC;
-    border:1px solid #161A2355;
-    border-radius: 20px;
+    border: 1px solid #161A2355;
+    border-radius: 3px;
     margin-left: 65px;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
 }
+
 .yorumetkinligi span {
-    font-size: 25px;
-    padding-right: 20px;
-}
-.yorumetkinligi span i {
-    font-size: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font: italic;
+    margin-right: 20px;
 }
 
-.yorumyazisi.yorumyeri{
+.yorumyazisi.yorumyeri {
     padding: 20px;
     border: none;
 }
-.yorumayorum{
+
+.yorumayorum {
     margin-top: 20px;
     border-top: 1px solid #161A2344;
     margin-left: 50px;
     margin-right: 20px;
 }
-.yorumyazisi.yorumyeri.yorumyorumu{
+
+.yorumyazisi.yorumyeri.yorumyorumu {
     padding-top: 0px;
+}
+
+.ion-thumbsup.es {
+    color: white;
+    background: #3673EE;
+    border-radius: 100%;
+    padding: 10px; 
+}
+
+.ion-chatbubbles.es {
+    color: white;
+    background: #3673EE;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.yorumetkinligi i {
+    font-size: 15px;
+    font-weight: 400;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.ara {
+    margin: 20px;
 }

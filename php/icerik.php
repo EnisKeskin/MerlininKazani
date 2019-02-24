@@ -143,8 +143,8 @@
                                         için bence oyuna gerilim katmıştır.
                                     </div>
                                     <div class="yorumetkinligi">
-                                        <span class="ion-thumbsup"></span>
-                                        <span class="ion-chatbubbles"><i>Yanıtla</i></span>
+                                        <span class="ion-thumbsup es"></span>
+                                        <span class="ion-chatbubbles es"></span><i>Yanıtla</i>
                                     </div>
                                     <div class="yorumayorum">
                                         <div class="yazarresim">
@@ -204,6 +204,7 @@
                                         <div class="yorumetkinligi">
                                             <span class="ion-thumbsup"></span>
                                         </div>
+                                        <div class="ara"></div>
                                     </div>
                                 </div>
                             </div>
