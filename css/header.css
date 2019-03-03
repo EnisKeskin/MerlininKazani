@@ -332,7 +332,7 @@ ul.giris>li:hover .uyelik {
     color: #fff;
 }
 
-.sagaltbaslikbilgisi ul li:hover i {
+.sagaltbaslikbilgisi ul li i:hover {
     color: green;
 }
 
