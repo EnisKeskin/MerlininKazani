@@ -170,36 +170,36 @@
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
                     <ul>
                         <?php for ($i = 0; $i < 10; $i++) {?>
-                            <a href="" style="display:flex;">
-                        <li onclick="javascript:window.location='http://tunaweb.net';">
-                            <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
+                        <a href="" style="display:flex;">
+                            <li onclick="javascript:window.location='http://tunaweb.net';">
+                                <div class="resim">
+                                    <img src="../img/heybro.jpg" alt="">
+                                    <div class="soluustu haberlerin">
+                                        <div class="yorumsayisi">
+                                            <i>
+                                                <span class="ion-android-chat" style="color:#fff"></span>
+                                                <span style="color:#fff; font-size:13px">23</span>
+                                            </i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
+                                <div class="yazi">
+                                    <div class="icyazi">
+                                        <div class="icyazikonu">
+                                            Haber
+                                        </div>
+                                        <div class="icyazibaslik">
+                                            Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
+                                        </div>
+                                        <div class="icyazialtbaslik">
+                                            Görenler şaşkına döndü
+                                        </div>
+                                        <div class="icyazitarih">
+                                            29.01.2019 17:53
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            </a>
+                        </a>
                         </li>
                         <?php }?>
                     </ul>
@@ -608,36 +608,36 @@
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
                     <ul>
                         <?php for ($i = 0; $i < 10; $i++) {?>
-                            <a href="" style="display:flex;">
-                        <li onclick="javascript:window.location='http://tunaweb.net';">
-                            <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
+                        <a href="" style="display:flex;">
+                            <li onclick="javascript:window.location='http://tunaweb.net';">
+                                <div class="resim">
+                                    <img src="../img/heybro.jpg" alt="">
+                                    <div class="soluustu haberlerin">
+                                        <div class="yorumsayisi">
+                                            <i>
+                                                <span class="ion-android-chat" style="color:#fff"></span>
+                                                <span style="color:#fff; font-size:13px">23</span>
+                                            </i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
+                                <div class="yazi">
+                                    <div class="icyazi">
+                                        <div class="icyazikonu">
+                                            Haber
+                                        </div>
+                                        <div class="icyazibaslik">
+                                            Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
+                                        </div>
+                                        <div class="icyazialtbaslik">
+                                            Görenler şaşkına döndü
+                                        </div>
+                                        <div class="icyazitarih">
+                                            29.01.2019 17:53
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            </a>
+                        </a>
                         </li>
                         <?php }?>
                         <div class="haberbutton">
