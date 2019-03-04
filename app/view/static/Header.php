@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-    <link rel="stylesheet" href="../js/ionicons-2.0.1/css/ionicons.min.css">
-    <!--
-        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    -->
+    <link rel="stylesheet" href="assets/js/ionicons-2.0.1/css/ionicons.min.css">
+       <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <link rel="stylesheet" type="text/css" href="../css/body.css">
-    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <title>Merlini Kazanı</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/body.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 
-    <script src="../js/arama.js" type="text/javascript"></script>
+    <script src="assets/js/arama.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -24,7 +21,7 @@
         <div class="ustbaslikbilgisi">
             <div class="logo">
                 <a href="https://www.merlininkazani.com">
-                    <img src="../img/logo.svg" alt="">
+                    <img src="assets/img/logo.svg" alt="">
                 </a>
             </div>
 
@@ -85,7 +82,7 @@
                             <a href="">Üyelik &nbsp; <i class="ion-ios-arrow-down"></i></a>
                             <div class="uyelik">
                                 <div class="pencere">
-                                    <a href="#">
+                                    <a href="<?=site_url('login')?>">
                                         <div class="kullanicigiris">
                                             Giris Yap
                                         </div>
@@ -104,7 +101,7 @@
                 <div class="sagustbasliksagi">
 
                     <div class="aramamenu">
-                        <span class="ion-ios-search-strong" id="aramamenuac" style="cursor:pointer;"></span>
+                        <span class="ion-ios-search-strong" id="aramamenuac" style="cursor:pointer; padding:20px;"></span>
                         <div>
                             <form action="" class="form" id="aramamenu">
                                 <input type="text" placeholder=" Arama Yap">
@@ -169,6 +166,3 @@
         </div>
     </div>
     <div class="clearfix"></div>
-</body>
-
-</html>

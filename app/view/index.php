@@ -1,11 +1,10 @@
-<?php include "Header.php";?>
+<?php include "static/Header.php";?>
 
-<body>
     <div class="siteici">
         <div class="container">
             <div class="bodyustkismi">
                 <div class="bodyustkismisolu" onclick="javascript:window.location='http://tunaweb.net';">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -62,7 +61,7 @@
 
             <div class="arabolum">
                 <div class="bodyustkismisolu buyuk" onclick="javascript:window.location='http://tunaweb.net';">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -87,7 +86,7 @@
                     </div>
                 </div>
                 <div class="bodyustkismisolu kucuk">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -106,7 +105,7 @@
                     </div>
                 </div>
                 <div class="bodyustkismisolu kucuk" onclick="javascript:window.location='http://tunaweb.net';">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -125,7 +124,7 @@
                     </div>
                 </div>
                 <div class="bodyustkismisolu kucuk">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -144,7 +143,7 @@
                     </div>
                 </div>
                 <div class="bodyustkismisolu kucuk">
-                    <img src="../img/heybro.jpg" alt="">
+                    <img src="assets/img/heybro.jpg" alt="">
                     <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -173,7 +172,7 @@
                         <a href="" style="display:flex;">
                             <li onclick="javascript:window.location='http://tunaweb.net';">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                     <div class="soluustu haberlerin">
                                         <div class="yorumsayisi">
                                             <i>
@@ -339,7 +338,7 @@
                             <div class="pop">
                                 <a href="">
                                     <div class="resim">
-                                        <img src="../img/heybro.jpg" alt="">
+                                        <img src="assets/img/heybro.jpg" alt="">
                                     </div>
                                     <div class="sagustu">
                                         <div class="popsayisi">
@@ -355,7 +354,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -370,7 +369,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -385,7 +384,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -400,7 +399,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -423,7 +422,7 @@
             </div>
 
             <div class="bodyustkismisolu kucuk">
-                <img src="../img/heybro.jpg" alt="">
+                <img src="assets/img/heybro.jpg" alt="">
                 <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                     <div class="soluustu">
                         <div class="yorumsayisi">
@@ -442,7 +441,7 @@
                 </div>
             </div>
             <div class="bodyustkismisolu kucuk">
-                <img src="../img/heybro.jpg" alt="">
+                <img src="assets/img/heybro.jpg" alt="">
                 <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                     <div class="soluustu">
                         <div class="yorumsayisi">
@@ -461,7 +460,7 @@
                 </div>
             </div>
             <div class="bodyustkismisolu kucuk">
-                <img src="../img/heybro.jpg" alt="">
+                <img src="assets/img/heybro.jpg" alt="">
                 <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                     <div class="soluustu">
                         <div class="yorumsayisi">
@@ -480,7 +479,7 @@
                 </div>
             </div>
             <div class="bodyustkismisolu kucuk">
-                <img src="../img/heybro.jpg" alt="">
+                <img src="assets/img/heybro.jpg" alt="">
                 <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                     <div class="soluustu">
                         <div class="yorumsayisi">
@@ -507,7 +506,7 @@
                     <div class="mktviceriksol">
                         <a href="">
                             <div class="mktvresim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                             </div>
                             <div class="mktvyazi">
                                 <div class="mktvbaslik">
@@ -530,7 +529,7 @@
                                 <li>
                                     <a href="">
                                         <div class="mktvvideofoto">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
 
                                         <div class="mktvvideoyazilar">
@@ -547,7 +546,7 @@
                                 <li>
                                     <a href="">
                                         <div class="mktvvideofoto">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
 
                                         <div class="mktvvideoyazilar">
@@ -564,7 +563,7 @@
                                 <li>
                                     <a href="">
                                         <div class="mktvvideofoto">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
 
                                         <div class="mktvvideoyazilar">
@@ -581,7 +580,7 @@
                                 <li>
                                     <a href="">
                                         <div class="mktvvideofoto">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
 
                                         <div class="mktvvideoyazilar">
@@ -611,7 +610,7 @@
                         <a href="" style="display:flex;">
                             <li onclick="javascript:window.location='http://tunaweb.net';">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                     <div class="soluustu haberlerin">
                                         <div class="yorumsayisi">
                                             <i>
@@ -704,5 +703,4 @@
             </div>
         </div>
     </div>
-</body>
-<?php include "Footer.php"?>
+<?php include "static/Footer.php"?>

@@ -9,9 +9,6 @@ spl_autoload_register(function($class){
 
 Helper::Load();
 require 'system/config.php';
-$host     = "localhost";
-$user     = "root";
-$password = "";
-$database = "merlinikazani";
-$db = mysqli_connect( $host, $user, $password, $database );
+
+$db = mysqli_connect($config['db']['host'], $config['db']['user'], $config['db']['pass'], $config['db']['dbname'] );
 if( mysqli_connect_error() ) die("Veritabanına bağlanılamadı...");

@@ -35,3 +35,8 @@ function url($index)
     }
     return false;
 }
+
+function site_url($url = null)
+{
+    return url . '/' . $url;
+}

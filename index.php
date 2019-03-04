@@ -6,8 +6,8 @@ $_url = array_filter(explode('/', $_url));
 if (!isset($_url[0])) {
     $_url[0] = 'index';
 }
-if (!file_exists('app/controller/' . $_url[0] . '.php')) {
+if (!file_exists(controller($_url[0]))) {
      $_url[0] = 'index';
 }
 
-require 'app/controller/' . $_url[0] . '.php';
+require controller($_url[0]);
