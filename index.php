@@ -1,13 +1,13 @@
 <?php
 
 require "app/init.php";
-$url = get('url');
-$url = array_filter(explode('/', $url));
-if (!isset($url[0])) {
-    $url[0] = 'index';
+$_url = get('url');
+$_url = array_filter(explode('/', $_url));
+if (!isset($_url[0])) {
+    $_url[0] = 'index';
 }
-if (!file_exists('app/controller/' . $url[0] . '.php')) {
-     $url[0] = 'index';
+if (!file_exists('app/controller/' . $_url[0] . '.php')) {
+     $_url[0] = 'index';
 }
 
-require 'app/controller/' . $url[0] . '.php';
+require 'app/controller/' . $_url[0] . '.php';
