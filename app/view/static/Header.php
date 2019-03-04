@@ -79,7 +79,7 @@
                 <div class="sagustbasliksolu">
                     <ul class="giris">
                         <li>
-                            <a href="">Üyelik &nbsp; <i class="ion-ios-arrow-down"></i></a>
+                            <a href="">Üyelık &nbsp; <i class="ion-ios-arrow-down"></i></a>
                             <div class="uyelik">
                                 <div class="pencere">
                                     <a href="<?=site_url('login')?>">
