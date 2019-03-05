@@ -2,18 +2,18 @@
 <html lang="tr">
 
 <head>
-    <link rel="stylesheet" href="assets/js/ionicons-2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?= asset_url('js/ionicons-2.0.1/css/ionicons.min.css') ?>">
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Merlini Kazanı</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/header.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/body.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="<?= asset_url('css/style.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= asset_url('css/header.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= asset_url('css/body.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= asset_url('css/footer.css') ?>">
 
-    <script src="assets/js/arama.js" type="text/javascript"></script>
+    <script src="<?= asset_url('js/arama.js') ?>" type="text/javascript"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="ustbaslikbilgisi">
             <div class="logo">
                 <a href="<?=site_url('index')?>">
-                    <img src="assets/img/logo.svg" alt="">
+                    <img src="<?= asset_url('img/logo.svg') ?>" alt="">
                 </a>
             </div>
 

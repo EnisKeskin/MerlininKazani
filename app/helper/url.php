@@ -40,6 +40,10 @@ function site_url($url = null)
 {
     return url . '/' . $url;
 }
+function asset_url($url = null)
+{
+    return url . '/assets/' . $url;
+}
 function permalink($str, $options = array())
 {
     $str = mb_convert_encoding((string) $str, 'UTF-8', mb_list_encodings());
