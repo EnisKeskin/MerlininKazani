@@ -26,3 +26,5 @@ if (url(1) == 'kayit') {
     }
     
 }
+
+require view('profil');

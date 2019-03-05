@@ -2,11 +2,13 @@
 
 if (post('submit')) {
     $user_name = post('kullaniciadi');
+    $user_pass = post('kullanicisifre');
     $user_url = permalink(post('kullaniciadi'));
 
     if (!$user_url) {
-        $giriskontrol = 'Kullanıcı Adı boş bırakma!';
-    } else {
+        $giriskontrol = 'Kullanıcı Adı boş bırakılamaz!';
+    } else if (!$user_pass) {
+        $giriskontrol = 'Şifre boş bırakılamaz!';
     }
     $SQL = "SELECT * FROM kullanici WHERE kullanici_adi = '$user_name'";
     $rows = mysqli_query($db, $SQL);

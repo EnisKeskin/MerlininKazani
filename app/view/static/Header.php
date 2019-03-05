@@ -3,15 +3,15 @@
 
 <head>
     <link rel="stylesheet" href="assets/js/ionicons-2.0.1/css/ionicons.min.css">
-       <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Merlini Kazanı</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/header.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/body.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/body.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
 
     <script src="assets/js/arama.js" type="text/javascript"></script>
 </head>
@@ -20,7 +20,7 @@
     <div class="ustbaslik">
         <div class="ustbaslikbilgisi">
             <div class="logo">
-                <a href="https://www.merlininkazani.com">
+                <a href="<?=site_url('index')?>">
                     <img src="assets/img/logo.svg" alt="">
                 </a>
             </div>
@@ -79,16 +79,16 @@
                 <div class="sagustbasliksolu">
                     <ul class="giris">
                         <li>
-                            <a href="">Üyelık &nbsp; <i class="ion-ios-arrow-down"></i></a>
+                            <a href="">Üyelik &nbsp; <i class="ion-ios-arrow-down"></i></a>
                             <div class="uyelik">
                                 <div class="pencere">
                                     <a href="<?=site_url('login')?>">
                                         <div class="kullanicigiris">
-                                            Giris Yap
+                                            Giriş Yap
                                         </div>
                                     </a>
                                     <span>veya</span>
-                                    <a href="#">
+                                    <a href="<?=site_url('signup')?>">
                                         <div class="kullanicikayit">
                                             Üye Ol
                                         </div>
@@ -101,7 +101,8 @@
                 <div class="sagustbasliksagi">
 
                     <div class="aramamenu">
-                        <span class="ion-ios-search-strong" id="aramamenuac" style="cursor:pointer; padding:20px;"></span>
+                        <span class="ion-ios-search-strong" id="aramamenuac"
+                            style="cursor:pointer; padding:20px;"></span>
                         <div>
                             <form action="" class="form" id="aramamenu">
                                 <input type="text" placeholder=" Arama Yap">

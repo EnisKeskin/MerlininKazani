@@ -1,4 +1,4 @@
-<?php include "Header.php";?>
+<?php include "static/Header.php";?>
 <div class="siteici">
     <div class="container">
         <div class="girisformu">
@@ -43,4 +43,4 @@
         </div>
     </div>
 </div>
-<?php include "Footer.php";?>
+<?php include "static/Footer.php";?>

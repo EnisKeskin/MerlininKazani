@@ -58,6 +58,10 @@ body {
     border-radius: 3px;
     background: hsl(204, 3%, 70%, 0.7);
 }
+.yorumsay {
+    color:#fff; 
+    font-size:13px;
+}
 
 .soluustu {
     display: inline-block;
