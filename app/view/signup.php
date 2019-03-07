@@ -3,12 +3,12 @@
     <div class="container">
         <div class="girisformu">
             <div class="girisbaslik">Üye Girişi</div>
-            <form action="" class="girisform">
+            <form action="" class="girisform" method="post">
                 <input type="text" name="Adi" id="" class="inputcss" placeholder="Adınız"> <br>
                 <input type="text" name="Soyadi" id="" class="inputcss" placeholder="Soydınız"> <br>
                 <input type="text" name="nickname" id="" class="inputcss" placeholder="Kullanici Adi"> <br>
                 <input type="text" name="mail" id="" class="inputcss" placeholder="E-Posta"> <br>
-                <input type="text" name="tel" id="" class="inputcss" placeholder="Cep telefonu (90 541 000 1122)"> <br>
+                <input type="text" name="tel" id="" class="inputcss" placeholder="Cep telefonu (90 541 000 1122)" maxlength="12"> <br>
                 <input type="password" name="sifre" id="" class="inputcss" placeholder="Sifre">
                 <input type="password" name="sifretekrar" id="" class="inputcss" placeholder="Sifre Tekrar">
                 <textarea style="color: #707580; resize:none" name="" id="" cols="49" rows="10" readonly>
@@ -36,8 +36,13 @@
                     <input type="checkbox" name="kullanicisoz" class="benihatirlacl">
                     <div class="benihat">Üyelik sözleşmesni kabul ediyorum</div>
                 </label> <br>
+                <div class="kontrol">
+                    <?php if(isset($giriskontrol)):?>
+                    <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?=$giriskontrol?></p>
+                    <?php endif ?>
+                    </div>
                 <div class="girisbutton">
-                    <button type="submit">Üye Ol</button>
+                    <button type="submit" name="submit" value="1">Üye Ol</button>
                 </div>
             </form>
         </div>
