@@ -28,28 +28,32 @@ if (post('submit')) {
     $kuladi = post('nickname');
     $kulep = post('mail');
     $kulcep = post('tel');
-    $kulsifre = post('sifre');
-    $kulsifretk = post('sifretekrar');
+    $kulsifre = md5(post('sifre'));
+    $kulsifretk = md5(post('sifretekrar'));
     if (degerkontrol($adi, $soyadi, $kuladi, $kulep, $kulcep, $kulsifre, $kulsifretk)) {
-        if (uyecontrol($kuladi)) {
-            $SQL = "INSERT INTO kullanici SET
-            kullanici_ismi = '$adi',
-            kullanici_soyadi = '$soyadi',
-            kullanici_adi = '$kuladi',
-            kullanici_eposta = '$kulep',
-            kullanici_cep = '$kulep',
-            kullanici_sifre = '$kulsifre'";
-            $rows = mysqli_query($db, $SQL);
-            if ($rows) {
-                header('location:' . site_url('profil/' . permalink($kuladi)));
+        if ($kulsifre == $kulsifretk) {
+            if (uyecontrol($kuladi)) {
+                $SQL = "INSERT INTO kullanici SET
+                        kullanici_ismi = '$adi',
+                        kullanici_soyadi = '$soyadi',
+                        kullanici_adi = '$kuladi',
+                        kullanici_eposta = '$kulep',
+                        kullanici_cep = '$kulep',
+                        kullanici_sifre = '$kulsifre'";
+                $rows = mysqli_query($db, $SQL);
+                if ($rows) {
+                    header('location:' . site_url('profil/' . permalink($kuladi)));
+                } else {
+                    echo 'Uye eklenemedi!!!';
+                }
             } else {
-                echo 'Uye eklenemedi!!!';
+                $giriskontrol = 'Kullanıcı adı kullanılıyor';
             }
-        } else {
-            $giriskontrol = 'Kullanıcı Adı Kullanılıyor';
+        }else {
+            $giriskontrol = 'Şifreler aynı değil';
         }
-    }else {
-        $giriskontrol = 'Alan boş bırakılamaz';
+    } else {
+        $giriskontrol = 'Alanlar boş bırakılamaz';
     }
 }
 

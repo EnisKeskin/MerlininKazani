@@ -33,7 +33,7 @@
 10. Merlin’in Kazanı’na üye olan herkes, yukarıda yazılı olan kuralları okumuş ve bu sözleşmeyi kabul etmiş sayılır. Kurallara uymayan üyeler hakkındaki gereken işlemler, görevlilerce yapılacaktır.
                 </textarea>
                 <label id="benihat">
-                    <input type="checkbox" name="kullanicisoz" class="benihatirlacl">
+                    <input type="checkbox" name="kullanicisoz" class="benihatirlacl" required>
                     <div class="benihat">Üyelik sözleşmesni kabul ediyorum</div>
                 </label> <br>
                 <div class="kontrol">
