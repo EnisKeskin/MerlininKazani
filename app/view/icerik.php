@@ -1,5 +1,4 @@
-<?php include "Header.php" ?>
-
+<?php require controller("header");?>
 <body>
     <div class="siteici">
         <div class="container">
@@ -12,12 +11,12 @@
                             <a href="">Resident Evil 2 Remake için yetişkinlere özel 18+ mod yapıldı</a>
                         </div>
                         <div class="icerikresim">
-                            <img src="../img/heybro.jpg" alt="">
+                            <img src="assets/img/heybro.jpg" alt="">
                         </div>
                         <div class="icerikyazari">
                             <div class="iceriksol">
                                 <div class="yazarresim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="yazar">
                                     <div class="yazarismi">
@@ -77,7 +76,7 @@
                                     <div class="anabaslik">Yorumlar</div>
                                     <div class="iceriksol">
                                         <div class="yazarresim">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
                                         <div class="yazar">
                                             <div class="yazarismi">
@@ -101,7 +100,7 @@
                             <div class="yorumlar">
                                 <div class="iceriksol">
                                     <div class="yazarresim">
-                                        <img src="../img/heybro.jpg" alt="">
+                                        <img src="assets/img/heybro.jpg" alt="">
                                     </div>
                                     <div class="yazar">
                                         <div class="yazarismi">
@@ -148,7 +147,7 @@
                                     </div>
                                     <div class="yorumayorum">
                                         <div class="yazarresim">
-                                            <img src="../img/heybro.jpg" alt="">
+                                            <img src="assets/img/heybro.jpg" alt="">
                                         </div>
                                         <div class="yazar">
                                             <div class="yazarismi">
@@ -214,7 +213,7 @@
                     <ul>
                         <li onclick="javascript:window.location='http://tunaweb.net';">
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -247,7 +246,7 @@
 
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -279,7 +278,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -311,7 +310,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -343,7 +342,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -375,7 +374,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -407,7 +406,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -439,7 +438,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -471,7 +470,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="../img/heybro.jpg" alt="">
+                                <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -638,7 +637,7 @@
                             <div class="pop">
                                 <a href="">
                                     <div class="resim">
-                                        <img src="../img/heybro.jpg" alt="">
+                                        <img src="assets/img/heybro.jpg" alt="">
                                     </div>
                                     <div class="sagustu">
                                         <div class="popsayisi">
@@ -654,7 +653,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -669,7 +668,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -684,7 +683,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -699,7 +698,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="../img/heybro.jpg" alt="">
+                                    <img src="assets/img/heybro.jpg" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -724,4 +723,4 @@
     </div>
 </body>
 
-<?php include "Footer.php" ?>
+<?php include "static/Footer.php"?>

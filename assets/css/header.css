@@ -157,6 +157,10 @@ ul.menu>li:hover ul {
     font-size: 20px;
 }
 
+.giris a {
+    text-align: none;
+}
+
 .giris {
     margin: 0;
     padding: 0;
@@ -171,6 +175,9 @@ ul.giris {
 
 ul.giris>li {
     line-height: 50px;
+}
+
+.girisli {
     text-align: center;
 }
 
@@ -184,7 +191,6 @@ ul.giris>li>a {
 ul.giris .uyelik {
     background: #F7F7F7;
     width: 260px;
-    height: 170px;
     position: absolute;
     top: 50px;
     right: 85px;
@@ -338,4 +344,48 @@ ul.giris>li:hover .uyelik {
 
 .clearfix {
     clear: both;
+}
+
+.uyeicon {
+    display: inline-block;
+}
+
+.uyeicon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.uyebilgi {
+    position: absolute;
+    top: 10px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.uyebilgi span {
+    font-size: 15px;
+    color: #161616;
+    font-weight: 600;
+}
+
+.seviye {
+    font-size: 11px;
+    line-height: 0px;
+    color: #333;
+    font-weight: 400;
+}
+
+.pencere ul {
+    padding: 0;
+}
+.pencere ul li {
+    line-height: 40px;
+    border-bottom: 1px solid #16161644;
+}
+.pencere ul li i {
+    padding-right: 10px;
+}
+.pencere ul li a {
+    font-weight: 400;
 }

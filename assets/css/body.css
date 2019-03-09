@@ -999,13 +999,13 @@ a {
     height: 25px;
 }
 
-.girisbutton {
+.girisbutton,.cikisbutton {
     width: 100%;
     height: 50px;
     margin-top: 20px;
 }
 
-.girisbutton button {
+.girisbutton button,.cikisbutton button {
     width: 100%;
     height: 100%;
     font-size: 15px;

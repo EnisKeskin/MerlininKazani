@@ -32,9 +32,10 @@ function user_check($username, $userpass)
         if (isset($row['kullanici_id'])) {
             $_SESSION["username"] = $username;
             $_SESSION["userpass"] = $userpass;
-            header('location:' . site_url('profil/' . permalink($user_url)));
+            $_SESSION["userlogin"] = 1;
+            header('location:' . site_url('index'));
         } else {
-            //kullanici yok ise
+            $giriskontrol = "Bilgileriniz Hatalı";
         }
     }
 }

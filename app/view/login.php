@@ -1,4 +1,4 @@
-<?php require "static/Header.php";?>
+<?php require controller("header");?>
 <div class="siteici">
     <div class="container">
         <div class="girisformu">

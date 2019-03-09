@@ -1,5 +1,4 @@
-<?php include "Header.php" ?>
-
+<?php require controller("header");?>
 <body>
     <div class="siteici">
         <div class="container">

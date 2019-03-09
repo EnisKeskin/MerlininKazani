@@ -1,5 +1,4 @@
-<?php include "static/Header.php";?>
-
+<?php require controller("header");?>
 <div class="siteici">
     <div class="container">
         <div class="bodyustkismi">
@@ -559,7 +558,7 @@
                 <ul>
                     <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
-                        <li onclick="javascript:window.location='http://tunaweb.net';">
+                        <li onclick="javascript:window.location='http:tunaweb.net';">
                             <div class="resim">
                                 <img src="assets/img/heybro.jpg" alt="">
                                 <div class="soluustu haberlerin">
