@@ -7,7 +7,7 @@
                 <input type="text" name="kullaniciadi" id="" class="inputcss" placeholder="Kullanici Adi"> <br>
                 <input type="password" name="kullanicisifre" id="" class="inputcss" placeholder="Sifre">
                 <label id="benihat">
-                    <input type="checkbox" name="benihatirla" class="benihatirlacl">
+                    <input type="checkbox" name="benihatirla" value = "1" class="benihatirlacl">
                     <div class="benihat">Beni hatırla</div>
                 </label> <br>
                 <div class="kontrol">

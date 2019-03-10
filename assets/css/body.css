@@ -304,7 +304,13 @@ body {
     word-wrap: normal;
     color: black;
 }
-
+.icyazibaslik.yorumur {
+    
+    font-weight: 400;
+}
+.yorumur {
+    word-wrap: normal;
+}
 .icyazialtbaslik {
     padding-bottom: 5px;
     font-size: 13px;
@@ -999,13 +1005,13 @@ a {
     height: 25px;
 }
 
-.girisbutton,.cikisbutton {
+.girisbutton, .cikisbutton {
     width: 100%;
     height: 50px;
     margin-top: 20px;
 }
 
-.girisbutton button,.cikisbutton button {
+.girisbutton button, .cikisbutton button {
     width: 100%;
     height: 100%;
     font-size: 15px;
@@ -1024,12 +1030,12 @@ a {
     display: inherit;
     padding: 7px;
     margin: 20px;
-    float:right;
+    float: right;
     background: #161A2370;
     border-radius: 10px;
-    color:white;
+    color: white;
     font-size: 10px;
-    font-weight: 500;   
+    font-weight: 500;
 }
 
 .chance-over i {
@@ -1039,13 +1045,42 @@ a {
 .avatar {
     width: 100px;
     height: 100px;
+    display: inline-block;
 }
+
 .avatar img {
     width: 100%;
     height: 100%;
+    border-radius: 100%;
 }
 
 .profil-bilgi {
     margin-left: 60px;
-    
+}
+
+.profilbilgiler {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.profilad {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.profilbilgiler ul {
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+}
+
+.profilbilgiler ul li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.profilbilgiler ul li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
 }

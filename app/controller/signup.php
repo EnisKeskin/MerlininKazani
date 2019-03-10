@@ -56,5 +56,4 @@ if (post('submit')) {
         $giriskontrol = 'Alanlar boş bırakılamaz';
     }
 }
-
-require view('signup');
+linkup('signup');

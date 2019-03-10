@@ -2,8 +2,9 @@
 <html lang="tr">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="<?=asset_url('js/ionicons-2.0.1/css/ionicons.min.css')?>">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -91,7 +92,7 @@
                                             <img src="<?= asset_url("img/heybro.jpg") ?>" alt="">
                                         </div>
                                         <div class="uyebilgi">
-                                            <span>Enis Keskin</span> <br>
+                                            <span><?= $_SESSION["adsoyad"] ?></span> <br>
                                             <div class="seviye">Seviye 0</div>
                                         </div>
                                 </a>

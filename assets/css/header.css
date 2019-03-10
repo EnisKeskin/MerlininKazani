@@ -181,8 +181,8 @@ ul.giris>li {
 ul.giris>li>a {
     display: block;
     font-size: 15px;
-    font-weight: 400;
-    color: #A0A4AA;
+    font-weight: 500;
+    color: #d1d5da;
 }
 
 .solaolanlar {
@@ -247,10 +247,7 @@ ul.giris>li:hover .uyelik {
     background: #292C34;
     margin: 0;
     padding: 0;
-}
-
-.aramamenu .form {
-    line-height: 50px;
+    position: relative;
 }
 
 .aramamenu>div {
@@ -264,11 +261,12 @@ ul.giris>li:hover .uyelik {
 .aramamenu .form {
     position: absolute;
     top: -2px;
-    right: 10px;
-    z-index: -99;
+    right: 40px;
+    z-index: 1;
     display: none;
     list-style: none;
     padding: 0;
+    line-height: 50px;
 }
 
 .aramamenu input {
