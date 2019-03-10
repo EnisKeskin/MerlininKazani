@@ -19,6 +19,7 @@ function user_check($username, $userpass)
 {
     global $db;
     global $giriskontrol;
+    global $adsoyad;
     $user_url = permalink($username);
     if (!$username) {
         $giriskontrol = 'Kullanıcı Adı boş bırakılamaz!';
@@ -32,6 +33,7 @@ function user_check($username, $userpass)
         if (isset($row['kullanici_id'])) {
             $_SESSION["username"] = $username;
             $_SESSION["userpass"] = $userpass;
+            $_SESSION["adsoyad"] = $row['kullanici_ismi']." ".$row['kullanici_soyadi'];
             $_SESSION["userlogin"] = 1;
             header('location:' . site_url('index'));
         } else {
@@ -40,3 +42,4 @@ function user_check($username, $userpass)
     }
 }
 //    
+?>

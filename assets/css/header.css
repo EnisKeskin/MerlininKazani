@@ -12,11 +12,16 @@
     z-index: 100;
 }
 
+.ustbaslikmenu {
+    flex: 1;
+}
+
 .ustbaslikbilgisi {
     display: flex;
     height: 100%;
     width: 1080px;
     margin: auto;
+    justify-content: space-between;
     background: #292C34;
 }
 
@@ -26,8 +31,8 @@
 }
 
 .logo {
-    display: inline-block;
     height: 100%;
+    width: 195px;
 }
 
 .logo img {
@@ -131,25 +136,16 @@ ul.menu>li:hover ul {
 }
 
 .sagustbaslik {
-    width: 200px;
-}
-
-.sagustbasliksolu {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    margin-top: 10px;
 }
 
 .sagustbasliksagi {
-    position: relative;
     display: inline-block;
     width: 50px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    top: -13.5px;
-    left: 140px;
-    transform: translateY(-50%);
 }
 
 .sagustbasliksagi span {
@@ -168,9 +164,10 @@ ul.menu>li:hover ul {
 
 ul.giris {
     background: #31353E;
-    width: 113px;
+    padding: 0px 10px 0px 10px;
     border-radius: 3px;
     height: 50px;
+    position: relative;
 }
 
 ul.giris>li {
@@ -188,12 +185,17 @@ ul.giris>li>a {
     color: #A0A4AA;
 }
 
+.solaolanlar {
+    display: flex;
+    justify-content: flex-start;
+}
+
 ul.giris .uyelik {
     background: #F7F7F7;
     width: 260px;
     position: absolute;
     top: 50px;
-    right: 85px;
+    right: 0px;
     opacity: 0;
     transition: 250ms all;
     visibility: hidden;
@@ -379,13 +381,16 @@ ul.giris>li:hover .uyelik {
 .pencere ul {
     padding: 0;
 }
+
 .pencere ul li {
     line-height: 40px;
     border-bottom: 1px solid #16161644;
 }
+
 .pencere ul li i {
     padding-right: 10px;
 }
+
 .pencere ul li a {
     font-weight: 400;
 }

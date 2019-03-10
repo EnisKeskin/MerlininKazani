@@ -19,12 +19,12 @@
 <body>
     <div class="ustbaslik">
         <div class="ustbaslikbilgisi">
+        <div class="solaolanlar">
             <div class="logo">
                 <a href="<?=site_url('index')?>">
                     <img src="<?=asset_url('img/logo.svg')?>" alt="">
                 </a>
             </div>
-
             <div class="ustbaslikmenu">
                 <ul class="menu">
                     <li class="kirmizi"><a href="">Oyun</a>
@@ -74,7 +74,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="filler"></div>
+            </div>
             <div class="sagustbaslik">
                 <div class="sagustbasliksolu">
                     <?php if(isset($_SESSION["userlogin"])) { ?>
@@ -82,7 +82,7 @@
                         <?php if($_SESSION["userlogin"] = 1){ ?>
                         <li>
                             <a href="<?= site_url("profil/". permalink($_SESSION["username"])) ?>"
-                                style="text-align:center;"><?php if(!isset($_SESSION["username"])){echo "Üyelik";}elseif($_SESSION["userlogin"] = 0) {echo "Üyelik";}else {echo $_SESSION["username"];}?>&nbsp;
+                                style="text-align:center;"><?php if(!isset($_SESSION["username"])){echo "Üyelik";}elseif($_SESSION["userlogin"] = 0) {echo "Üyelik";}else {echo $_SESSION["adsoyad"];}?>&nbsp;
                                 <i class="ion-ios-arrow-down"></i></a>
                             <div class="uyelik">
                                 <a href="<?= site_url("profil/". permalink($_SESSION["username"])) ?>">
