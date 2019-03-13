@@ -69,6 +69,7 @@ function user_bring()
 function user_pass_replace()
 {
     global $db;
+    global $giriskontrol;
     $useridcheck = (int) session('userid');
     $usroldpass = post('eskisifre');
     $usrpass = post('yenisifre');
@@ -77,22 +78,44 @@ function user_pass_replace()
         $usrpassmd5 = md5($usrpass);
         $usroldpass = md5($usroldpass);
         //int ve string olmasına çok dikkat et...
-        if ($useridcheck) {
-            $SQL = "UPDATE kullanici
+        if (user_pass_control($usroldpass)) {
+            if ($useridcheck) {
+                $SQL = "UPDATE kullanici
                     SET    kullanici_sifre = '$usrpassmd5'
-                    WHERE  kullanici_id = $useridcheck AND kullanici_sifre = '$usroldpass' ";
-            $rows = mysqli_query($db, $SQL);
-            if ($rows) {
-                $_SESSION["userpass"] = $usrpass;
-                $giriskontrol = "Şifre Değiştirildi";
+                    WHERE  kullanici_id    =  $useridcheck
+                    ";
+                $rows = mysqli_query($db, $SQL);
+                if ($rows) {
+                    $_SESSION["userpass"] = $usrpass;
+                    $giriskontrol = "Şifre Değiştirildi";
+                } else {
+                    $giriskontrol = "Şifre Değiştirilemedi <br> Bir Hata Oluştu";
+                }
             } else {
-                $giriskontrol = "Şifre Değiştirilemedi <br> Bir Hata Oluştu";
+                $giriskontrol = "Böyle bir kullanici yok";
             }
         } else {
-            $giriskontrol = "Böyle bir kullanici yok";
+            $giriskontrol = "Eski Şifren Yanlış";
         }
     } else {
         $giriskontrol = "Tekrar Şifre Aynı değil";
     }
-    require header("location:" . site_url("profil/kisibilgileri/" . permalink(session('username'))));
+}
+
+function user_pass_control($pass)
+{
+    global $db;
+    $SQL = "SELECT * FROM kullanici WHERE kullanici_sifre = '$pass' ";
+    $rows = mysqli_query($db, $SQL);
+    $row = mysqli_num_rows($rows);
+    if ($row != 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function user_info_replace()
+{
+
 }
