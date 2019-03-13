@@ -1084,3 +1084,25 @@ a {
     font-size: 14px;
     font-weight: 400;
 }
+.kisisel {
+    display: flex;
+    width: 800px;
+    justify-content:flex-start;
+}
+
+.kisiselbilgi {
+    flex: 2;
+    margin-right: 40px;
+}
+
+.sifredegistir {
+    flex: 2; 
+}
+
+.kisiselbilgi input {
+    color:#161A2355;
+}
+
+.dogumtar {
+    margin-bottom:20px;
+}

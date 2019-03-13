@@ -98,11 +98,11 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a title="Mesajlarım" href="">
+                                        <a title="Mesajlarım" href="<?=site_url("profil/mesajlar/" . permalink($_SESSION["username"]));?>">
                                             <i class="ion-email"></i>Mesajlar</a>
                                     </li>
                                     <li>
-                                        <a title="Kişisel Bilgilerim" href="">
+                                        <a title="Kişisel Bilgilerim" href="<?=site_url("profil/kisibilgileri/" . permalink($_SESSION["username"]));?>">
                                             <i class="ion-person"></i>Kişisel Bilgiler</a>
                                     </li>
                                 </ul>

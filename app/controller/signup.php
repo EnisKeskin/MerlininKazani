@@ -29,6 +29,7 @@ if (post('submit')) {
     $kulep = post('mail');
     $kulcep = post('tel');
     $kulsifre = md5(post('sifre'));
+    $kulsifre1 = post('sifre');
     $kulsifretk = md5(post('sifretekrar'));
     if (degerkontrol($adi, $soyadi, $kuladi, $kulep, $kulcep, $kulsifre, $kulsifretk)) {
         if ($kulsifre == $kulsifretk) {
@@ -42,7 +43,7 @@ if (post('submit')) {
                         kullanici_sifre = '$kulsifre'";
                 $rows = mysqli_query($db, $SQL);
                 if ($rows) {
-                    header('location:' . site_url('profil/' . permalink($kuladi)));
+                    user_check($kuladi,$kulsifre1);
                 } else {
                     echo 'Uye eklenemedi!!!';
                 }
