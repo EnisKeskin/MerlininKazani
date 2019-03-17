@@ -44,6 +44,10 @@ function asset_url($url = null)
 {
     return url . '/assets/' . $url;
 }
+function asset_url_img($url = null)
+{
+    return url . '/assets/img/' . $url;
+}
 function permalink($str, $options = array())
 {
     $str = mb_convert_encoding((string) $str, 'UTF-8', mb_list_encodings());

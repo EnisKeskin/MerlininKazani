@@ -31,15 +31,15 @@
                 <div class="ustbaslikmenu">
                     <ul class="menu">
                         <?php for ($i = 0; $i < $row_main_num; $i++) {?>
-                        <li class="<?= $main_category[$i][2] ?>">
-                         <a href=""><?= $main_category[$i][1] ?></a>
+                        <li class="<?=$main_category[$i][2]?>">
+                         <a href=""><?=$main_category[$i][1]?></a>
                             <ul>
                                 <div class="menualti">
-                                     <?php category_datapull(($i+1));?>
-                                     <?php for ($j=0; $j < $row_cat_num; $j++) { ?>
-                                        <li><a href=""><?= $category[$j] ?></a></li>
-                                     <?php } ?>
-                                    
+                                     <?php category_datapull(($i + 1));?>
+                                     <?php for ($j = 0; $j < $row_cat_num; $j++) {?>
+                                        <li><a href=""><?=$category[$j]?></a></li>
+                                     <?php }?>
+
                                 </div>
                             </ul>
                         </li>
@@ -136,48 +136,27 @@
         <div class="altbaslikbilgisi">
             <div class="solaltbaslikbilgisi">
                 <ul>
-                    <li>
-                        <a href="#">PC</a>
-                    </li>
-                    <li>
-                        <a href="#">Monster Notebook</a>
-                    </li>
-                    <li>
-                        <a href="#">PlayStation</a>
-                    </li>
-                    <li>
-                        <a href="#">Xbox</a>
-                    </li>
-                    <li>
-                        <a href="#">Mobil</a>
-                    </li>
-                    <li>
-                        <a href="#">Nintendo</a>
-                    </li>
-                    <li>
-                        <a href="#">Popüler Oyunlar</a>
-                    </li>
-                    <li>
-                        <a href="#">Kod Dağıtımı</a>
-                    </li>
+                   <?php for ($i = 0; $i < $row_special_num; $i++) {?>
+                    <li><a href="#"><?=$specialCat[$i];?></a></li>
+                  <?php }?>
                 </ul>
             </div>
             <div class="sagaltbaslikbilgisi">
                 <ul>
                     <li>
-                        <i class="ion-social-facebook"></i>
+                        <a href=""><i class="ion-social-facebook"></i></a>
                     </li>
                     <li>
-                        <i class="ion-social-youtube"></i>
+                        <a href=""><i class="ion-social-youtube"></i></a>
                     </li>
                     <li>
-                        <i class="ion-social-twitch"></i>
+                        <a href=""><i class="ion-social-twitch"></i></a>
                     </li>
                     <li>
-                        <i class="ion-social-twitter"></i>
+                        <a href=""><i class="ion-social-twitter"></i></a>
                     </li>
                     <li>
-                        <i class="ion-social-rss"></i>
+                        <a href=""></a>
                     </li>
                 </ul>
             </div>

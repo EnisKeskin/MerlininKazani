@@ -3,7 +3,7 @@
     <div class="container">
         <div class="bodyustkismi">
             <div class="bodyustkismisolu" onclick="javascript:window.location='http://tunaweb.net';">
-                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                <img src="<?=asset_url_img("heybro.jpg"); ?>" alt="">
                 <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                     <div class="soluustu">
                         <div class="yorumsayisi">
@@ -118,16 +118,17 @@
             <div class="bildiri">
                 <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
                 <ul>
+                    <?php content_datapull(0,10,'desc'); ?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?= asset_url_img($contentInfo[$i]['konu_resim_url']); ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
                                             <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
+                                            <span style="color:#fff; font-size:12px">23</span>
                                         </i>
                                     </div>
                                 </div>
@@ -135,16 +136,17 @@
                             <div class="yazi">
                                 <div class="icyazi">
                                     <div class="icyazikonu">
-                                        Haber
+                                        <?php category_name_datapull($contentInfo[$i]['kategori_id']); ?>
+                                        <?= $categor_name ?>
                                     </div>
                                     <div class="icyazibaslik">
-                                        Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
+                                            <?= $contentInfo[$i]['konu_baslik']; ?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
+                                        <?= $contentInfo[$i]['konu_altbaslik']; ?>
                                     </div>
                                     <div class="icyazitarih">
-                                        29.01.2019 17:53
+                                        <?= $contentInfo[$i]['konu_tarih']; ?>
                                     </div>
                                 </div>
                             </div>
@@ -553,19 +555,20 @@
         <div class="clearfix"></div>
 
         <div class="row enalt">
-            <div class="bildiri">
+        <div class="bildiri">
                 <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
                 <ul>
+                    <?php content_datapull(10,10,'desc'); ?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?= asset_url_img($contentInfo[$i]['konu_resim_url']); ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
                                             <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
+                                            <span style="color:#fff; font-size:12px">23</span>
                                         </i>
                                     </div>
                                 </div>
@@ -573,27 +576,24 @@
                             <div class="yazi">
                                 <div class="icyazi">
                                     <div class="icyazikonu">
-                                        Haber
+                                        <?php category_name_datapull($contentInfo[$i]['kategori_id']); ?>
+                                        <?= $categor_name ?>
                                     </div>
                                     <div class="icyazibaslik">
-                                        Hitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
+                                            <?= $contentInfo[$i]['konu_baslik']; ?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
+                                        <?= $contentInfo[$i]['konu_altbaslik']; ?>
                                     </div>
                                     <div class="icyazitarih">
-                                        29.01.2019 17:53
+                                        <?= $contentInfo[$i]['konu_tarih']; ?>
                                     </div>
                                 </div>
                             </div>
                     </a>
                     </li>
                     <?php }?>
-                    <div class="haberbutton">
-                        <input type="button" value="Devamı">
-                    </div>
                 </ul>
-
             </div>
             <div class="sidebar">
                 <div class="anketcontent">

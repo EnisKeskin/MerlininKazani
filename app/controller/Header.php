@@ -8,5 +8,5 @@ if (post('cikis')) {
     header('location:' . site_url('index'));
 }
     main_category_datapull();
-    
+    special_category_datapull();
 require view("static/header");
