@@ -13,7 +13,7 @@
                         <img src="<?=asset_url('/img/heybro.jpg')?>" alt="">
                     </div>
                     <div class="profilbilgiler">
-                        <div class="profilad">Enis Keskin</div>
+                        <div class="profilad"><?=strtoupper(session('adsoyad'));?></div>
                         <ul>
                             <li><a href="<?=site_url("profil/" . permalink(session("username")));?>">Profilim</a></li>
                             <li><a
@@ -124,15 +124,15 @@
                                     value="<?=$kisbil[5]?>">
                             </label><br>
                             <div class="kontrol">
-                                <?php if (isset($giriskontrol)): ?>
-                                <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?=$giriskontrol?></p>
+                                <?php if (isset($infocheck)): ?>
+                                <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?=$infocheck?></p>
                                 <?php endif?>
                             </div>
                             <div class="girisbutton">
-                                <button type="submit" name="degistir" value="1">Kaydet</button>
+                                <button type="submit" name="kulbildeg" value="1">Kaydet</button>
                             </div>
                         </form>
-
+                        <!-- ŞİFRE DEĞİŞİM -->
                         <form action="" class="sifredegistir" method="post">
                             <label>
                                 <div class="icyazialtbaslik">

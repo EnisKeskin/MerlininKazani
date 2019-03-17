@@ -2,10 +2,10 @@
 
 function linkup($name)
 {
-    if (!isset($_SESSION['userlogin'])) {
-        require view("$name");
-    } else {
+    if (session('userlogin')) {
         require view('index');
+    } else {
+        require view("$name");
     }
 
 }

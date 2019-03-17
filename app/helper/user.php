@@ -30,17 +30,14 @@ function user_check($username, $userpass)
         $SQL = "SELECT * FROM kullanici WHERE kullanici_adi = '$username' AND kullanici_sifre = '$userpassmd5' ";
         $rows = mysqli_query($db, $SQL);
         $row = mysqli_fetch_assoc($rows);
-        if (isset($row['kullanici_id'])) {
-            $_SESSION["userid"] = $row['kullanici_id'];
-            $_SESSION["username"] = $username;
-            $_SESSION["userpass"] = $userpass;
-            $_SESSION["adsoyad"] = $row['kullanici_ismi'] . " " . $row['kullanici_soyadi'];
-            $_SESSION["userlogin"] = 1;
-            $kiskulad = $row["kullanici_adi"];
-            $kisad = $row["kullanici_ismi"];
-            $kissoy = $row["kullanici_soyadi"];
-            $kisemail = $row["kullanici_eposta"];
-            $kiscep = $row["kullanici_cep"];
+        if (isset($row['kullanici_id'])){
+            //SESSION oluşturulduğu yer
+            $_SESSION["userid"]    =  $row['kullanici_id'];
+            $_SESSION["username"]  =  $username;
+            $_SESSION["userpass"]  =  $userpass;
+            $_SESSION["adsoyad"]   =  $row['kullanici_ismi'] . " " . $row['kullanici_soyadi'];
+            $_SESSION["userlogin"] =  1;
+            //Yönlendirme
             header('location:' . site_url('index'));
         } else {
             $giriskontrol = "Bilgileriniz Hatalı";
@@ -105,7 +102,8 @@ function user_pass_replace()
 function user_pass_control($pass)
 {
     global $db;
-    $SQL = "SELECT * FROM kullanici WHERE kullanici_sifre = '$pass' ";
+    $useridcheck = (int) session('userid');
+    $SQL = "SELECT * FROM kullanici WHERE kullanici_sifre = '$pass' AND kullanici_id = $useridcheck ";
     $rows = mysqli_query($db, $SQL);
     $row = mysqli_num_rows($rows);
     if ($row != 0) {
@@ -117,5 +115,29 @@ function user_pass_control($pass)
 
 function user_info_replace()
 {
+    global $db;
+    global $infocheck;
+    global $kisbil;
+    $isim = post('Adi');
+    $soyadi = post('Soyadi');
+    $ceptel = post('tel');
+    $dogumtar = post('dogumtar');
+    $useridcheck = (int) session('userid');
+    $SQL = "UPDATE kullanici
+            SET kullanici_ismi     = '$isim',
+                kullanici_soyadi   = '$soyadi',
+                kullanici_cep      = '$ceptel',
+                kullanici_dogumtar = '$dogumtar'
+            WHERE kullanici_id = $useridcheck ";
+    $rows = mysqli_query($db, $SQL);
+    if ($rows) {
+        $infocheck = "Başarıyla Değiştirildi";
+        $kisbil[1] = $isim;
+        $kisbil[2] = $soyadi;
+        $kisbil[4] = $dogumtar;
+        $kisbil[5] = $ceptel;
+    } else {
+        $infocheck = "Bilinmeyen Bir Hata Oluştu";
+    }
 
 }

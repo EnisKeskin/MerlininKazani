@@ -2,9 +2,9 @@
 <html lang="tr">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
+ <!--   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <link rel="stylesheet" href="<?=asset_url('js/ionicons-2.0.1/css/ionicons.min.css')?>">
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,89 +20,63 @@
 <body>
     <div class="ustbaslik">
         <div class="ustbaslikbilgisi">
-        <div class="solaolanlar">
-            <div class="logo">
-                <a href="<?=site_url('index')?>">
-                    <img src="<?=asset_url('img/logo.svg')?>" alt="">
-                </a>
-            </div>
-            <div class="ustbaslikmenu">
-                <ul class="menu">
-                    <li class="kirmizi"><a href="">Oyun</a>
-                        <ul>
-                            <div class="menualtı">
-                                <li><a href="">ee</a></li>
-                                <li><a href="">ASD</a></li>
-                                <li><a href="">ASDADS</a></li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="mavi"><a href="">Oyun</a>
-                        <ul>
-                            <div class="menualtı">
-                                <li><a href="">ee</a></li>
-                                <li><a href="">ASD</a></li>
-                                <li><a href="">ASDADS</a></li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="">Oyun</a>
-                        <ul>
-                            <div class="menualtı">
-                                <li><a href="">ee</a></li>
-                                <li><a href="">ASD</a></li>
-                                <li><a href="">ASDADS</a></li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="">Oyun</a>
-                        <ul>
-                            <div class="menualtı">
-                                <li><a href="">ee</a></li>
-                                <li><a href="">ASD</a></li>
-                                <li><a href="">ASDADS</a></li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="">Oyun</a>
-                        <ul>
-                            <div class="menualtı">
-                                <li><a href="">ee</a></li>
-                                <li><a href="">ASD</a></li>
-                                <li><a href="">ASDADS</a></li>
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <div class="solaolanlar">
+                <div class="logo">
+                    <a href="<?=site_url('index')?>">
+                        <img src="<?=asset_url('img/logo.svg')?>" alt="">
+                    </a>
+                </div>
+                <!--
+            -->
+                <div class="ustbaslikmenu">
+                    <ul class="menu">
+                        <?php for ($i = 0; $i < $row_main_num; $i++) {?>
+                        <li class="<?= $main_category[$i][2] ?>">
+                         <a href=""><?= $main_category[$i][1] ?></a>
+                            <ul>
+                                <div class="menualti">
+                                     <?php category_datapull(($i+1));?>
+                                     <?php for ($j=0; $j < $row_cat_num; $j++) { ?>
+                                        <li><a href=""><?= $category[$j] ?></a></li>
+                                     <?php } ?>
+                                    
+                                </div>
+                            </ul>
+                        </li>
+                        <?php }?>
+                    </ul>
+                </div>
             </div>
             <div class="sagustbaslik">
                 <div class="sagustbasliksolu">
-                    <?php if(isset($_SESSION["userlogin"])) { ?>
+                    <?php if (session('userlogin')) {?>
                     <ul class="giris">
-                        <?php if($_SESSION["userlogin"] = 1){ ?>
+                        <?php if (session('userlogin')) {?>
                         <li>
-                            <a href="<?= site_url("profil/". permalink($_SESSION["username"])) ?>"
-                                style="text-align:center;"><?php if(!isset($_SESSION["username"])){echo "Üyelik";}elseif($_SESSION["userlogin"] = 0) {echo "Üyelik";}else {echo $_SESSION["adsoyad"];}?>&nbsp;
+
+                            <a href="<?=site_url("profil/" . permalink(session('username')))?>"
+                                style="text-align:center;"><?php if (session('userlogin')) {echo strtoupper(session('adsoyad'));} else {echo "Üyelik";}?>&nbsp;
                                 <i class="ion-ios-arrow-down"></i></a>
                             <div class="uyelik">
-                                <a href="<?= site_url("profil/". permalink($_SESSION["username"])) ?>">
+                                <a href="<?=site_url("profil/" . permalink(session('username')))?>">
                                     <div class="pencere">
                                         <div class="uyeicon">
-                                            <img src="<?= asset_url("img/heybro.jpg") ?>" alt="">
+                                            <img src="<?=asset_url("img/heybro.jpg")?>" alt="">
                                         </div>
                                         <div class="uyebilgi">
-                                            <span><?= $_SESSION["adsoyad"] ?></span> <br>
+                                            <span><?=session('adsoyad')?></span> <br>
                                             <div class="seviye">Seviye 0</div>
                                         </div>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a title="Mesajlarım" href="<?=site_url("profil/mesajlar/" . permalink($_SESSION["username"]));?>">
+                                        <a title="Mesajlarım"
+                                            href="<?=site_url("profil/mesajlar/" . permalink(session('username')));?>">
                                             <i class="ion-email"></i>Mesajlar</a>
                                     </li>
                                     <li>
-                                        <a title="Kişisel Bilgilerim" href="<?=site_url("profil/kisibilgileri/" . permalink($_SESSION["username"]));?>">
+                                        <a title="Kişisel Bilgilerim"
+                                            href="<?=site_url("profil/kisibilgileri/" . permalink(session('username')));?>">
                                             <i class="ion-person"></i>Kişisel Bilgiler</a>
                                     </li>
                                 </ul>
@@ -117,7 +91,7 @@
                         <?php }?>
                     </ul>
                     <!-- /giriş yapılmışsa -->
-                    <?php } else { ?>
+                    <?php } else {?>
                     <ul class="giris">
                         <li class="girisli">
                             <a style="cursor:pointer">Üyelik &nbsp; <i class="ion-ios-arrow-down"></i></a>
@@ -138,7 +112,7 @@
                             </div>
                         </li>
                     </ul>
-                    <?php } ?>
+                    <?php }?>
 
                 </div>
                 <div class="sagustbasliksagi">

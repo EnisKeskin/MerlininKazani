@@ -77,13 +77,43 @@ ul.menu>li:hover {
 }
 
 ul.menu>li.kirmizi:hover {
-    border-bottom: solid red;
+    border-bottom: solid #c82c54;
     height: 65.4px;
-    border-bottom-width: 5px;
+    border-bottom-width: 3px;
 }
 
 ul.menu>li.mavi:hover {
-    border-bottom: solid blue;
+    border-bottom: solid #48a2db;
+    height: 65.4px;
+    border-bottom-width: 3px;
+}
+
+ul.menu>li.sari:hover {
+    border-bottom: solid #ffd500;
+    height: 65.4px;
+    border-bottom-width: 3px;
+}
+
+ul.menu>li.yesil:hover {
+    border-bottom: solid #a4cb3c;
+    height: 65.4px;
+    border-bottom-width: 3px;
+}
+
+ul.menu>li.sari:hover {
+    border-bottom: solid yellow;
+    height: 65.4px;
+    border-bottom-width: 3px;
+}
+
+ul.menu>li.beyaz:hover {
+    border-bottom: solid #e5e9e9;
+    height: 65.4px;
+    border-bottom-width: 3px;
+}
+
+ul.menu>li.renksiz:hover {
+    border-bottom: solid #292c34;;
     height: 65.4px;
     border-bottom-width: 5px;
 }
@@ -105,7 +135,7 @@ ul.menu ul li {
     padding: 0px 10px 0px 10px;
 }
 
-.menualtı {
+.menualti {
     padding-top: 10px;
     padding-bottom: 10px;
 }
