@@ -5,5 +5,6 @@ if (post('submit')) {
     $userpass = post('kullanicisifre');
     user_check($username, $userpass);
 }
+
 linkup('login');
 

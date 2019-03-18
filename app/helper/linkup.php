@@ -5,7 +5,8 @@ function linkup($name)
     if (session('userlogin')) {
         require view('index');
     } else {
-        require view("$name");
+        echo  $name;
+        require view($name);
     }
 
 }

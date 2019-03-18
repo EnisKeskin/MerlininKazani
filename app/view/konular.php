@@ -1,33 +1,43 @@
 <?php require controller("header");?>
+
 <body>
     <div class="siteici">
         <div class="container">
             <div class="row">
                 <div class="bildiri">
-                    <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
-                    <div class="mkvorta denge">
+                    <div class = "girisbaslik">
+                        <?=$categor_name?>
+                    </div>
+                    <div class="tumicerikkonu">
                         <ul>
-                            <?php for ($i=0; $i < 22; $i++) { ?>
+                            <?php content_speacial_datapull(0, 20, 1);?>
+                            <?php for ($i = 0; $i < 20; $i++) {?>
                             <li>
-                                <div class="MKTV ortalık">
-                                    <div class="mktvicerik ortalık">
-                                        <a href="">
-                                            <div class="mktvresim">
-                                                <img src="../img/heybro.jpg" alt="">
+                                <div class="icerikkonu">
+                                    <a href="">
+                                        <div class="icerikkonuici">
+                                            <div class="icerikkonuimg">
+                                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>"
+                                                    alt="">
                                             </div>
-                                            <div class="mktvyazi">
-                                                <div class="mktvbaslik">
-                                                    Gaming İstanbul 2019'da kameramıza takılanlar
+                                            <div class="ustbosluk">
+                                                <div class="icerikkonukat">
+                                                    <?php category_name_datapull(1);?>
+                                                    <?=$categor_name?>
                                                 </div>
-                                                <div class="mktvaltbaslik">
-                                                    Fuarda neler var?
+                                                <div class="icerikkonubaslik">
+                                                    <span><?= $contentInfospe[$i]['konu_baslik']; ?></span>
                                                 </div>
-                                                <div class="mktvtarih">
-                                                    31.01.2019 17:32
+                                                <div class="icerikkonualtbaslik">
+                                                    <?= $contentInfospe[$i]['konu_altbaslik']; ?>
+                                                </div>
+                                                <div class="icerikkonutarih">
+                                                    <?= $contentInfospe[$i]['konu_tarih']; ?>
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </li>
                             <?php }?>
                         </ul>
@@ -332,4 +342,4 @@
         </div>
     </div>
 </body>
-<?php include "Footer.php" ?>
+<?php include "static/Footer.php";?>

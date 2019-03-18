@@ -1,4 +1,12 @@
 <?php
+ global $main_category;
+ global $row_main_num;
+ global $category;
+ global $row_cat_num;
+ global $categor_name;
+ global $row_catnm_num;
+ global $specialCat;
+ global $row_special_num;
 if (post('cikis')) {
     unset($_SESSION['username']);
     unset($_SESSION['userpass']);

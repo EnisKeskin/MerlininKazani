@@ -3,7 +3,7 @@
 
 <head>
  <!--   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
     <link rel="stylesheet" href="<?=asset_url('js/ionicons-2.0.1/css/ionicons.min.css')?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
                             <ul>
                                 <div class="menualti">
                                      <?php category_datapull(($i + 1));?>
-                                     <?php for ($j = 0; $j < $row_cat_num; $j++) {?>
+                                     <?php global $row_cat_num; for ($j = 0; $j < $row_cat_num; $j++) {?>
                                         <li><a href=""><?=$category[$j]?></a></li>
                                      <?php }?>
 
@@ -91,6 +91,7 @@
                         <?php }?>
                     </ul>
                     <!-- /giriş yapılmışsa -->
+                    <!-- giris yapılmamışsa -->
                     <?php } else {?>
                     <ul class="giris">
                         <li class="girisli">

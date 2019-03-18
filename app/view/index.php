@@ -116,7 +116,7 @@
 
         <div class="row">
             <div class="bildiri">
-                <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
+                <div class = "girisbaslik">HABER AKIŞI</div>
                 <ul>
                     <?php content_datapull(0,10,'desc'); ?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
