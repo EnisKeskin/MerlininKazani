@@ -1,24 +1,26 @@
 <?php
 
-function content_datapull($collocation = 'desc')
+function content_datapull($analysis = 0)
 {
     global $db;
     global $contentInfo;
     global $contentRowNum;
-    if ($collocation == 'desc') {
+    if($analysis == 0){
         $SQL = "SELECT *
                 FROM icerik
                 WHERE kategori_id != 33
                 ORDER BY konu_id desc";
-    } elseif ($collocation == 'asc') {
+    }else {
         $SQL = "SELECT *
-        FROM icerik
-        ORDER BY konu_id asc";
+                FROM icerik
+                WHERE kategori_id in(2,3,4)
+                ORDER BY konu_id desc";
     }
     $rows = mysqli_query($db, $SQL);
     $contentRowNum = mysqli_num_rows($rows);
     if (isset($contentRowNum)) {
         $c = 0;
+        clear();
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
             $contentInfo[$c]['konu_id'] = $konu_id;
@@ -65,4 +67,7 @@ function content_speacial_datapull($lower = 0, $upper = 10, $select = 0)
             $c++;
         }
     }
+}
+function clear() {
+    unset($contentInfo );
 }

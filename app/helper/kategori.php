@@ -82,3 +82,10 @@ function special_category_datapull()
         }
     }
 }
+
+function permalink_add($perma) {
+    global $db;
+    $SQL = "UPDATE kategoriler
+            SET kategori_perma = $perma";
+    $row = mysqli_query($db,$SQL);
+}

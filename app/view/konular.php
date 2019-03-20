@@ -4,7 +4,7 @@
     <div class="siteici">
         <div class="container">
             <div class="row">
-                <div class="bildiri">
+                <div class="bildi">
                     <div class = "girisbaslik">
                         <?=$categor_name?>
                     </div>

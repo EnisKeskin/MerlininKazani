@@ -371,83 +371,37 @@
             </div>
 
         </div>
+        <?php content_datapull(1) ?>
+        <?php for ($i=0; $i < 4; $i++) { ?> 
+            <div class="bodyustkismisolu kucuk">
+            <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
+            <div class="bodyustkismisoluyazikismi">
+                <div class="soluustu">
+                    <div class="yorumsayisi">
+                        <i>
+                            <span class="ion-android-chat" style="color:#fff"></span>
+                            <span style="color:#fff; font-size:13px">23</span>
+                        </i>
+                    </div>
+                    <div class="konu">
+                            <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
+                        </div>
+                </div>
+                <div class="alt">
+                    <span class="baslik"><?php
+                    $boyut = strlen($contentInfo[$i]['konu_baslik']); 
+                    
+                    if($boyut <= 60) {
+                      echo  $contentInfo[$i]['konu_baslik'];
+                    }else {
+                      echo substr($contentInfo[$i]['konu_baslik'],0,57)."...";
+                    }
 
-        <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
-            <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
-                <div class="soluustu">
-                    <div class="yorumsayisi">
-                        <i>
-                            <span class="ion-android-chat" style="color:#fff"></span>
-                            <span style="color:#fff; font-size:13px">23</span>
-                        </i>
-                    </div>
-                    <div class="konu">
-                        <span>Yiyecek</span>
-                    </div>
-                </div>
-                <div class="alt">
-                    <span class="baslik">KÜÇÜK HAMBURGER</span><br>
+                    ?></span><br>
                 </div>
             </div>
         </div>
-        <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
-            <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
-                <div class="soluustu">
-                    <div class="yorumsayisi">
-                        <i>
-                            <span class="ion-android-chat" style="color:#fff"></span>
-                            <span style="color:#fff; font-size:13px">23</span>
-                        </i>
-                    </div>
-                    <div class="konu">
-                        <span>Yiyecek</span>
-                    </div>
-                </div>
-                <div class="alt">
-                    <span class="baslik">KÜÇÜK HAMBURGER</span><br>
-                </div>
-            </div>
-        </div>
-        <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
-            <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
-                <div class="soluustu">
-                    <div class="yorumsayisi">
-                        <i>
-                            <span class="ion-android-chat" style="color:#fff"></span>
-                            <span style="color:#fff; font-size:13px">23</span>
-                        </i>
-                    </div>
-                    <div class="konu">
-                        <span>Yiyecek</span>
-                    </div>
-                </div>
-                <div class="alt">
-                    <span class="baslik">KÜÇÜK HAMBURGER</span><br>
-                </div>
-            </div>
-        </div>
-        <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
-            <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
-                <div class="soluustu">
-                    <div class="yorumsayisi">
-                        <i>
-                            <span class="ion-android-chat" style="color:#fff"></span>
-                            <span style="color:#fff; font-size:13px">23</span>
-                        </i>
-                    </div>
-                    <div class="konu">
-                        <span>Yiyecek</span>
-                    </div>
-                </div>
-                <div class="alt">
-                    <span class="baslik">KÜÇÜK HAMBURGER</span><br>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
         <div class="clearfix"></div>
         <?php content_speacial_datapull(0, 5, 33)?>
         <div class="MKTV">

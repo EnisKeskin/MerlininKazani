@@ -73,7 +73,7 @@ body {
 .konu {
     display: inline-block;
     background-color: hsl(53, 76%, 70%, 0.7);
-    padding: 5px 20px 5px 20px;
+    padding: 5px 15px 5px 15px;
     border-radius: 3px;
 }
 
@@ -86,7 +86,7 @@ body {
 .alt {
     position: relative;
     z-index: 2;
-    padding: 1rem;
+    padding: 20px 5px 10px 5px;
     color: #fff;
 }
 
@@ -143,7 +143,6 @@ body {
 
 .icerikkonuimg img {
     width: 100% !important;
-    height: 100% !important;
 }
 
 .icerikkonukat {
@@ -280,12 +279,14 @@ body {
 }
 
 .kucuk .bodyustkismisoluyazikismi {
-    width: 250px;
+    width: 255px;
     height: 146px;
 }
 
 .kucuk .baslik {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
 }
 
 .resim img {
@@ -296,11 +297,16 @@ body {
 .row {
     display: flex;
 }
-
+.bildi {
+    flex: 5;
+}
 .bildiri {
     flex: 5;
 }
-
+.tumicerikkonu ul {
+    padding: 0;
+    margin: 0;
+}
 .sidebar {
     flex: 2;
 }
@@ -313,7 +319,7 @@ body {
     padding-left: 10px;
 }
 
-.bildiri img {
+.bildiri ul img {
     width: 250px;
     height: 140px;
 }
