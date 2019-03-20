@@ -1,23 +1,19 @@
 <?php
 
-function content_datapull($lower = 0, $upper = 0, $collocation = 'asc')
+function content_datapull($collocation = 'desc')
 {
     global $db;
     global $contentInfo;
     global $contentRowNum;
-    if (($lower != 0 || $upper != 0) and $collocation == 'desc') {
+    if ($collocation == 'desc') {
         $SQL = "SELECT *
-            FROM icerik
-            ORDER BY konu_id desc
-            LIMIT $lower, $upper";
-    } elseif (($lower != 0 || $upper != 0) and $collocation == 'asc') {
+                FROM icerik
+                WHERE kategori_id != 33
+                ORDER BY konu_id desc";
+    } elseif ($collocation == 'asc') {
         $SQL = "SELECT *
         FROM icerik
-        ORDER BY konu_id asc
-        LIMIT $lower, $upper";
-    } else {
-        $SQL = "SELECT *
-        FROM icerik";
+        ORDER BY konu_id asc";
     }
     $rows = mysqli_query($db, $SQL);
     $contentRowNum = mysqli_num_rows($rows);

@@ -45,7 +45,7 @@ function category_datapull($ana_kategori_id)
     }
 }
 
-function category_name_datapull($kategori_id)
+function category_name_datapull($kategori_id,$chk = 1)
 {
     global $db;
     global $categor_name;
@@ -60,6 +60,8 @@ function category_name_datapull($kategori_id)
         extract($row);
         $categor_name = $kategori_adi;
     }
+    if($chk == 1 )
+    echo $categor_name;
 }
 
 function special_category_datapull()

@@ -187,12 +187,12 @@ body {
 }
 
 .baslik {
-    font-size: 3em;
+    font-size: 2.7em;
     font-weight: 500;
     color: #ffffff;
 }
 
-.altı {
+.alti {
     font-size: 0.9em;
     color: #ffffff;
     font-weight: 300
@@ -363,6 +363,7 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 19px;
+    line-height: 21px;
     font-weight: 900;
     word-wrap: normal;
     color: black;
@@ -934,6 +935,7 @@ a {
 }
 
 .girisbaslik {
+    margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -1068,4 +1070,112 @@ a {
 
 .dogumtar {
     margin-bottom: 20px;
+}
+
+.MKTV {
+    padding-top: 20px;
+    padding-left: 6px;
+}
+
+.mktviceriksol {
+    flex: 1;
+}
+
+.mktvyazi {
+    display: flex;
+    flex-direction: column;
+}
+
+.mktvicerik {
+    display: flex;
+    flex-direction: column;
+}
+
+.arabosluk {
+    display: flex;
+    flex-direction: row;
+}
+
+.mkviceriksag {
+    flex: 1;
+}
+
+.mktvresim img {
+    width: 525px;
+    height: 300px;
+}
+
+.mktvtarih {
+    font-size: 10px;
+    font-weight: 300px;
+    line-height: 20px;
+    color: #9da1a9;
+}
+
+.mktvbaslik {
+    font-size: 26px;
+    font-weight: 900;
+    color: #23262E;
+    line-height: 30px;
+    padding-top: 5px;
+}
+
+.mktvaltbaslik {
+    color: #23262e;
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.mkviceriksag {
+    padding-left: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.mkvicerikvideolar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+.mktvvideofoto img {
+    width: 251px;
+    height: 140px;
+}
+
+.mktvvideoyazilar {
+    display: flex;
+    flex-direction: column;
+}
+
+.mktvbaslik.kucuk {
+    margin-top: 0px;
+    margin-left: 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+
+.mktvicerikik {
+    flex: 1px;
+}
+
+.ustyazi {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.baslik.kuc {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 900;
+}
+
+.alti.kuc {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
 }

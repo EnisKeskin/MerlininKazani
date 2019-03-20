@@ -2,9 +2,10 @@
 <div class="siteici">
     <div class="container">
         <div class="bodyustkismi">
-            <div class="bodyustkismisolu" onclick="javascript:window.location='http://tunaweb.net';">
-                <img src="<?=asset_url_img("heybro.jpg"); ?>" alt="">
-                <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
+            <?php content_datapull();?>
+            <div class="bodyustkismisolu">
+                <img src="<?=asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
+                <div class="bodyustkismisoluyazikismi">
                     <div class="soluustu">
                         <div class="yorumsayisi">
                             <i>
@@ -13,21 +14,21 @@
                             </i>
                         </div>
                         <div class="konu">
-                            <span>Yiyecek</span>
+                            <span><?php category_name_datapull($contentInfo[0]['kategori_id'])?></span>
                         </div>
                     </div>
                     <div class="alt">
+                        <?php if (category_name_datapull($contentInfo[0]['kategori_id'], 0) == "İnceleme/Özel İnceleme") {?>
                         <div class="inceleme">
                             <span>Editör<br>Puanı</span>
                             <div class="puan">86</div>
                         </div><br>
-                        <span class="platfromkategorisi">Yemek</span> <br>
-                        <span class="baslik">HAMBURGER</span><br>
-                        <span class="altı">Lezzetli</span>
+                        <?php }?>
+                        <span class="baslik"><?=$contentInfo[0]['konu_baslik']?></span><br>
+                        <span class="alti"><?=$contentInfo[0]['konu_altbaslik']?></span>
                     </div>
                 </div>
             </div>
-
             <div class="boyustkismisagi">
                 <div class="witter">
                     <div class="wittercontent">
@@ -55,13 +56,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="arabolum">
             <div class="bodyustkismisolu buyuk">
                 <a href="">
-                    <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                    <img src="<?=asset_url_img($contentInfo[1]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -71,26 +71,26 @@
                                 </i>
                             </div>
                             <div class="konu">
-                                <span>Yiyecek</span>
-                            </div>
+                            <span><?php category_name_datapull($contentInfo[1]['kategori_id'])?></span>
+                        </div>
                         </div>
                         <div class="alt">
+                            <?php if (category_name_datapull($contentInfo[1]['kategori_id'], 0) == "İnceleme/Özel İnceleme") {?>
                             <div class="inceleme">
                                 <span>Editör<br>Puanı</span>
                                 <div class="puan">86</div>
                             </div><br>
-                            <span class="platfromkategorisi">Yemek</span> <br>
-                            <span class="baslik">HAMBURGER</span><br>
-                            <span class="altı">Lezzetli</span>
+                            <?php }?>
+                            <span class="baslik kuc"><?=$contentInfo[1]['konu_baslik']?></span><br>
+                        <span class="alti kuc"><?=$contentInfo[1]['konu_altbaslik']?></span>
                         </div>
                     </div>
                 </a>
             </div>
-
-            <?php for ($i = 0; $i < 4; $i++): ?>
+            <?php for ($i = 2; $i <= 5; $i++): ?>
             <div class="bodyustkismisolu kucuk">
                 <a href="">
-                    <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                    <img src = "<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -100,8 +100,8 @@
                                 </i>
                             </div>
                             <div class="konu">
-                                <span>Yiyecek</span>
-                            </div>
+                            <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
+                        </div>
                         </div>
                         <div class="alt">
                             <span class="baslik">KÜÇÜK HAMBURGER</span><br>
@@ -116,14 +116,14 @@
 
         <div class="row">
             <div class="bildiri">
-                <div class = "girisbaslik">HABER AKIŞI</div>
+                <div class="girisbaslik">HABER AKIŞI</div>
                 <ul>
-                    <?php content_datapull(0,10,'desc'); ?>
+                    <?php content_speacial_datapull(0, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="resim">
-                                <img src="<?= asset_url_img($contentInfo[$i]['konu_resim_url']); ?>" alt="">
+                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -136,22 +136,21 @@
                             <div class="yazi">
                                 <div class="icyazi">
                                     <div class="icyazikonu">
-                                        <?php category_name_datapull($contentInfo[$i]['kategori_id']); ?>
-                                        <?= $categor_name ?>
+                                        <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
                                     </div>
                                     <div class="icyazibaslik">
-                                            <?= $contentInfo[$i]['konu_baslik']; ?>
+                                        <?=$contentInfospe[$i]['konu_baslik'];?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        <?= $contentInfo[$i]['konu_altbaslik']; ?>
+                                        <?=$contentInfospe[$i]['konu_altbaslik'];?>
                                     </div>
                                     <div class="icyazitarih">
-                                        <?= $contentInfo[$i]['konu_tarih']; ?>
+                                        <?=$contentInfospe[$i]['konu_tarih'];?>
                                     </div>
                                 </div>
                             </div>
+                        </li>
                     </a>
-                    </li>
                     <?php }?>
                 </ul>
             </div>
@@ -290,7 +289,7 @@
                         <div class="pop">
                             <a href="">
                                 <div class="resim">
-                                    <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                    <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -306,7 +305,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -321,7 +320,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -336,7 +335,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -351,7 +350,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -374,7 +373,7 @@
         </div>
 
         <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
             <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                 <div class="soluustu">
                     <div class="yorumsayisi">
@@ -393,7 +392,7 @@
             </div>
         </div>
         <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
             <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                 <div class="soluustu">
                     <div class="yorumsayisi">
@@ -412,7 +411,7 @@
             </div>
         </div>
         <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
             <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                 <div class="soluustu">
                     <div class="yorumsayisi">
@@ -431,7 +430,7 @@
             </div>
         </div>
         <div class="bodyustkismisolu kucuk">
-            <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+            <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
             <div class="bodyustkismisoluyazikismi" onclick="javascript:window.location='http://tunaweb.net';">
                 <div class="soluustu">
                     <div class="yorumsayisi">
@@ -450,120 +449,66 @@
             </div>
         </div>
         <div class="clearfix"></div>
-
+        <?php content_speacial_datapull(0, 5, 33)?>
         <div class="MKTV">
             <div class="mktvicerik">
-                <div class="ustyazi" style="font-weight: 500;font-size:18px;">MK TV</div>
-                <br>
-                <div class="mktviceriksol">
-                    <a href="">
-                        <div class="mktvresim">
-                            <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
+                <div class="ustyazi">MK TV</div>
+                <div class="arabosluk">
+                    <div class="mktviceriksol">
+                        <a href="">
+                            <div class="mktvresim">
+                                <img src="<?=asset_url_img($contentInfospe[0]['konu_resim_url']);?>" alt="">
+                            </div>
+                            <div class="mktvyazi">
+                                <div class="mktvbaslik">
+                                    <?=$contentInfospe[0]['konu_baslik'];?>
+                                </div>
+                                <div class="mktvaltbaslik">
+                                    <?=$contentInfospe[0]['konu_altbaslik']?>
+                                </div>
+                                <div class="mktvtarih">
+                                    <?=$contentInfospe[0]['konu_tarih']?>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mkviceriksag">
+                        <div class="mkvicerikvideolar">
+                            <?php for ($i = 1; $i <= 4; $i++) {?>
+                            <div class="mktvicerikik">
+                                <a href="">
+                                    <div class="mktvvideofoto">
+                                        <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
+                                    </div>
+                                    <div class="mktvvideoyazilar">
+                                        <div class="mktvbaslik kucuk">
+                                            <?=$contentInfospe[$i]['konu_baslik'];?>
+                                        </div>
+                                        <div class="mktvtarih">
+                                            <?=$contentInfospe[$i]['konu_tarih']?>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php }?>
                         </div>
-                        <div class="mktvyazi">
-                            <div class="mktvbaslik">
-                                Gaming İstanbul 2019'da kameramıza takılanlar
-
-                            </div>
-                            <div class="mktvaltbaslik">
-                                Fuarda neler var?
-                            </div>
-                            <div class="mktvtarih">
-                                31.01.2019 17:32
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="mkviceriksag">
-                    <div class="mkvicerikvideolar">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <div class="mktvvideofoto">
-                                        <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
-                                    </div>
-
-                                    <div class="mktvvideoyazilar">
-                                        <div class="mktvbaslik kucuk">
-                                            Gaming İstanbul 2019'da kameramıza takılanlar
-
-                                        </div>
-                                        <div class="mktvtarih">
-                                            31.01.2019 17:32
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="mktvvideofoto">
-                                        <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
-                                    </div>
-
-                                    <div class="mktvvideoyazilar">
-                                        <div class="mktvbaslik kucuk">
-                                            Gaming İstanbul 2019'da kameramıza takılanlar
-
-                                        </div>
-                                        <div class="mktvtarih">
-                                            31.01.2019 17:32
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="mktvvideofoto">
-                                        <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
-                                    </div>
-
-                                    <div class="mktvvideoyazilar">
-                                        <div class="mktvbaslik kucuk">
-                                            Gaming İstanbul 2019'da kameramıza takılanlar
-
-                                        </div>
-                                        <div class="mktvtarih">
-                                            31.01.2019 17:32
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="mktvvideofoto">
-                                        <img src="<?=asset_url("img/heybro.jpg"); ?>" alt="">
-                                    </div>
-
-                                    <div class="mktvvideoyazilar">
-                                        <div class="mktvbaslik kucuk">
-                                            Gaming İstanbul 2019'da kameramıza takılanlar
-
-                                        </div>
-                                        <div class="mktvtarih">
-                                            31.01.2019 17:32
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div class="clearfix"></div>
             </div>
         </div>
         <div class="clearfix"></div>
 
         <div class="row enalt">
-        <div class="bildiri">
-                <div style="margin: 20px 0px 20px 10px; font-weight:500;">HABER AKIŞI</div>
+            <div class="bildiri">
+                <div class="girisbaslik">HABER AKIŞI</div>
                 <ul>
-                    <?php content_datapull(10,10,'desc'); ?>
+                    <?php content_speacial_datapull(10, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="resim">
-                                <img src="<?= asset_url_img($contentInfo[$i]['konu_resim_url']); ?>" alt="">
+                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -576,17 +521,17 @@
                             <div class="yazi">
                                 <div class="icyazi">
                                     <div class="icyazikonu">
-                                        <?php category_name_datapull($contentInfo[$i]['kategori_id']); ?>
-                                        <?= $categor_name ?>
+                                        <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
+                                        <?=$categor_name?>
                                     </div>
                                     <div class="icyazibaslik">
-                                            <?= $contentInfo[$i]['konu_baslik']; ?>
+                                        <?=$contentInfospe[$i]['konu_baslik'];?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        <?= $contentInfo[$i]['konu_altbaslik']; ?>
+                                        <?=$contentInfospe[$i]['konu_altbaslik'];?>
                                     </div>
                                     <div class="icyazitarih">
-                                        <?= $contentInfo[$i]['konu_tarih']; ?>
+                                        <?=$contentInfospe[$i]['konu_tarih'];?>
                                     </div>
                                 </div>
                             </div>
