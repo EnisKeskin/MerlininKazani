@@ -71,8 +71,8 @@
                                 </i>
                             </div>
                             <div class="konu">
-                            <span><?php category_name_datapull($contentInfo[1]['kategori_id'])?></span>
-                        </div>
+                                <span><?php category_name_datapull($contentInfo[1]['kategori_id'])?></span>
+                            </div>
                         </div>
                         <div class="alt">
                             <?php if (category_name_datapull($contentInfo[1]['kategori_id'], 0) == "İnceleme/Özel İnceleme") {?>
@@ -82,7 +82,7 @@
                             </div><br>
                             <?php }?>
                             <span class="baslik kuc"><?=$contentInfo[1]['konu_baslik']?></span><br>
-                        <span class="alti kuc"><?=$contentInfo[1]['konu_altbaslik']?></span>
+                            <span class="alti kuc"><?=$contentInfo[1]['konu_altbaslik']?></span>
                         </div>
                     </div>
                 </a>
@@ -90,7 +90,7 @@
             <?php for ($i = 2; $i <= 5; $i++): ?>
             <div class="bodyustkismisolu kucuk">
                 <a href="">
-                    <img src = "<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
+                    <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -100,8 +100,8 @@
                                 </i>
                             </div>
                             <div class="konu">
-                            <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
-                        </div>
+                                <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
+                            </div>
                         </div>
                         <div class="alt">
                             <span class="baslik">KÜÇÜK HAMBURGER</span><br>
@@ -372,8 +372,8 @@
 
         </div>
         <?php content_datapull(1) ?>
-        <?php for ($i=0; $i < 4; $i++) { ?> 
-            <div class="bodyustkismisolu kucuk">
+        <?php for ($i=0; $i < 4; $i++) { ?>
+        <div class="bodyustkismisolu kucuk">
             <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
             <div class="bodyustkismisoluyazikismi">
                 <div class="soluustu">
@@ -384,8 +384,8 @@
                         </i>
                     </div>
                     <div class="konu">
-                            <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
-                        </div>
+                        <span><?php category_name_datapull($contentInfo[$i]['kategori_id'])?></span>
+                    </div>
                 </div>
                 <div class="alt">
                     <span class="baslik"><?php

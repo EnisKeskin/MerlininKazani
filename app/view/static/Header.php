@@ -26,8 +26,6 @@
                         <img src="<?=asset_url('img/logo.svg')?>" alt="">
                     </a>
                 </div>
-                <!--
-            -->
                 <div class="ustbaslikmenu">
                     <ul class="menu">
                         <?php for ($i = 0; $i < $row_main_num; $i++) {?>
@@ -37,7 +35,7 @@
                                 <div class="menualti">
                                      <?php category_datapull(($i + 1));?>
                                      <?php global $row_cat_num; for ($j = 0; $j < $row_cat_num; $j++) {?>
-                                        <li><a href=""><?=$category[$j]?></a></li>
+                                        <li><a href="<?= site_url("konular/".$perma_cat); ?>"><?=$category[$j]?></a></li>
                                      <?php }?>
 
                                 </div>

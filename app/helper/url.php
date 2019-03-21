@@ -58,6 +58,7 @@ function permalink($str, $options = array())
         'replacements' => array(),
         'transliterate' => true,
     );
+    
     $options = array_merge($defaults, $options);
     $char_map = array(
         'À' => 'A', 'Á' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A', 'Å' => 'A', 'Æ' => 'AE', 'Ç' => 'C',
@@ -109,6 +110,7 @@ function permalink($str, $options = array())
         'š' => 's', 'ū' => 'u', 'ž' => 'z',
     );
     $str = preg_replace(array_keys($options['replacements']), $options['replacements'], $str);
+   
     if ($options['transliterate']) {
         $str = str_replace(array_keys($char_map), $char_map, $str);
     }

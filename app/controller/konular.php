@@ -1,3 +1,3 @@
  <?php
-category_name_datapull(1);
- require view('konular');
+category_name_datapull(2);
+require view('konular');

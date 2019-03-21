@@ -7,6 +7,7 @@
  global $row_catnm_num;
  global $specialCat;
  global $row_special_num;
+ global $perma_cat;
 if (post('cikis')) {
     unset($_SESSION['username']);
     unset($_SESSION['userpass']);

@@ -30,6 +30,7 @@ function category_datapull($ana_kategori_id)
     global $db;
     global $category;
     global $row_cat_num;
+    global $perma_cat;
     $SQL = "SELECT *
             FROM kategoriler
             WHERE ana_kategori_id = $ana_kategori_id";
@@ -40,12 +41,13 @@ function category_datapull($ana_kategori_id)
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
             $category[$c] = $kategori_adi;
+            $perma_cat = $kategori_perma;
             $c++;
         }
     }
 }
 
-function category_name_datapull($kategori_id,$chk = 1)
+function category_name_datapull($kategori_id, $chk = 1)
 {
     global $db;
     global $categor_name;
@@ -60,8 +62,10 @@ function category_name_datapull($kategori_id,$chk = 1)
         extract($row);
         $categor_name = $kategori_adi;
     }
-    if($chk == 1 )
-    echo $categor_name;
+    if ($chk == 1) {
+        echo $categor_name;
+    }
+
 }
 
 function special_category_datapull()
@@ -78,14 +82,18 @@ function special_category_datapull()
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
             $specialCat[$c] = $ozel_kategori_ad;
+
             $c++;
         }
     }
 }
 
-function permalink_add($perma) {
+function permalink_add($perma, $id)
+{
     global $db;
     $SQL = "UPDATE kategoriler
-            SET kategori_perma = $perma";
-    $row = mysqli_query($db,$SQL);
+            SET kategori_perma = '$perma'
+            WHERE kategori_id = $id";
+    $row = mysqli_query($db, $SQL);
 }
+
