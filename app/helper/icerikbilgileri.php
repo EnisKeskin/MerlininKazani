@@ -68,6 +68,19 @@ function content_speacial_datapull($lower = 0, $upper = 10, $select = 0)
         }
     }
 }
+
 function clear() {
     unset($contentInfo );
+}
+
+function content_num($katid = 0)
+{
+    global $db;
+    global $conte_num;
+    $SQL = "SELECT *
+            FROM icerik
+            WHERE kategori_id = $katid" ;
+    $rows = mysqli_query($db, $SQL);
+    $conte_num = mysqli_num_rows($rows);
+    return $conte_num;
 }

@@ -5,13 +5,14 @@
         <div class="container">
             <div class="row">
                 <div class="bildi">
-                    <div class = "girisbaslik">
+                    <div class="girisbaslik">
                         <?=$categor_name?>
                     </div>
                     <div class="tumicerikkonu">
                         <ul>
-                            <?php content_speacial_datapull(0, 20, 1);?>
-                            <?php for ($i = 0; $i < 20; $i++) {?>
+                            <?php content_speacial_datapull($sayfa, 20, $katego_id);?>
+                            <?php for ($i = 0; $i < $contentRowNumspe; $i++) {if($i == 20)break;    
+                            ?>
                             <li>
                                 <div class="icerikkonu">
                                     <a href="">
@@ -22,7 +23,6 @@
                                             </div>
                                             <div class="ustbosluk">
                                                 <div class="icerikkonukat">
-                                                    <?php category_name_datapull(1);?>
                                                     <?=$categor_name?>
                                                 </div>
                                                 <div class="icerikkonubaslik">
@@ -43,28 +43,56 @@
                         </ul>
                     </div>
                     <div class="sayfa-numarasi">
+                        <?php $sayfadeger = url(2); ((url(2) == 1) ? $sayfadeger = url(2) : $sayfadeger --);$deger = ceil(content_num($katego_id) / 20); ?>
                         <ul>
                             <li>
-                                <a href="">Önceki Sayfa</a>
+                                <a href="<?= site_url("konular/".url(1)."/".($sayfadeger-1));?>">Önceki Sayfa</a>
                             </li>
+                            <?php if($sayfadeger < 5) { ?>
+                            <?php for ($i= $sayfadeger; $i < ($deger + $sayfadeger); $i++) {?>
+                            <?php if($i <= ($sayfadeger + 3)) { ?>
                             <li>
-                                <a href="">1</a>
+                                <a href="<?= site_url("konular/".url(1)."/".$i);?>"><?= $i ?></a>
                             </li>
+                            <?php }
+                                else {  ?>
                             <li>
-                                <a href="">1</a>
+                                <a href="">...</a>
                             </li>
-                            <li>
-                                <a href="">1</a>
-                            </li>
-                            <li>
-                                <a href="">1</a>
-                            </li>
-                            <li>
-                                <a href="">1</a>
-                            </li>
-                            <li>
-                                <a href="">Sonraki Sayfa</a>
-                            </li>
+                            <?php break; } ?>
+                            <?php } ?>
+                            <?php }else { ?>
+                                <li>
+                                    <a href="<?= site_url("konular/".url(1)."/1");?>"><?= 1 ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?= site_url("konular/".url(1)."/2");?>"><?= 2 ?></a>
+                                </li>
+                                <li>
+                                    <a href="">...</a>
+                                </li>
+                                <?php for ($i= $sayfadeger; $i < ($deger + $sayfadeger); $i++) {?>
+                                    <?php if($i <= ($sayfadeger + 2) and !($sayfadeger >= ($deger-1))) { ?>
+                                        <li>
+                                            <a href="<?= site_url("konular/".url(1)."/".$i);?>"><?= $i ?></a>
+                                        </li>
+                                        <?php }else {  ?>
+                                        <li>
+                                            <a href="">...</a>
+                                        </li>
+                                        <?php break; } ?>
+                                    <?php } ?>
+                               
+                                <li>
+                                    <a href="<?= site_url("konular/".url(1)."/".($deger-1));?>"><?= ($deger-1) ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?= site_url("konular/".url(1)."/".$deger);?>"><?= $deger ?></a>
+                                </li>
+                                <?php } ?>
+                                <li>
+                                    <a href="<?= site_url("konular/".url(1)."/".(url(2)+1));?>">Sonraki Sayfa</a>
+                                </li>
                         </ul>
                     </div>
                 </div>

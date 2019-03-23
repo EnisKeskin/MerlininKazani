@@ -35,7 +35,7 @@
                                 <div class="menualti">
                                      <?php category_datapull(($i + 1));?>
                                      <?php global $row_cat_num; for ($j = 0; $j < $row_cat_num; $j++) {?>
-                                        <li><a href="<?= site_url("konular/".$perma_cat); ?>"><?=$category[$j]?></a></li>
+                                        <li><a href="<?= site_url("konular/".$perma_cat[$j]."/1"); ?>"><?=$category[$j]?></a></li>
                                      <?php }?>
 
                                 </div>

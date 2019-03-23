@@ -41,20 +41,20 @@ function category_datapull($ana_kategori_id)
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
             $category[$c] = $kategori_adi;
-            $perma_cat = $kategori_perma;
+            $perma_cat[$c] = $kategori_perma;
             $c++;
         }
     }
 }
 
-function category_name_datapull($kategori_id, $chk = 1)
+function category_name_datapull($katego_id, $chk = 1)
 {
     global $db;
     global $categor_name;
     global $row_catnm_num;
     $SQL = "SELECT *
             FROM kategoriler
-            WHERE kategori_id = $kategori_id";
+            WHERE kategori_id = $katego_id";
     $rows = mysqli_query($db, $SQL);
     $row_catnm_num = mysqli_num_rows($rows);
     if (isset($row_catnm_num)) {
@@ -65,7 +65,7 @@ function category_name_datapull($kategori_id, $chk = 1)
     if ($chk == 1) {
         echo $categor_name;
     }
-
+    return $katego_id;
 }
 
 function special_category_datapull()
@@ -97,3 +97,16 @@ function permalink_add($perma, $id)
     $row = mysqli_query($db, $SQL);
 }
 
+function perma_search($perma_ad)
+{
+    global $db;
+    $SQL = "SELECT kategori_id
+            FROM kategoriler
+            WHERE kategori_perma = '$perma_ad'";
+    $rows = mysqli_query($db, $SQL);
+    $count = mysqli_num_rows($rows);
+    if(isset($count)) {
+        $row = mysqli_fetch_assoc($rows);
+        return $row['kategori_id'];
+    }
+}

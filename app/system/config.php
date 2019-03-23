@@ -1,6 +1,6 @@
 <?php
 
-
+$filename;
 $config = array();
 
 $config['db'] = [
@@ -13,4 +13,6 @@ $config['db'] = [
 define('dir',realpath('.'));
 define('controller',dir.'/app/controller');
 define('view',dir.'/app/view');
-define('url', 'http://'.$_SERVER['SERVER_NAME'] . '/MerlininKazani-Proje');
+$filename = realpath(".");
+$parca = explode("\\", $filename);
+define('url', 'http://'.$_SERVER['SERVER_NAME'] . "/" . end($parca));
