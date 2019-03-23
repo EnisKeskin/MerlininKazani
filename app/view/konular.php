@@ -15,7 +15,7 @@
                             ?>
                             <li>
                                 <div class="icerikkonu">
-                                    <a href="">
+                                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']); ?>">
                                         <div class="icerikkonuici">
                                             <div class="icerikkonuimg">
                                                 <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>"

@@ -1,5 +1,4 @@
 <?php
-
 function session($isim)
 {
     if (isset($_SESSION[$isim])) {
@@ -15,7 +14,7 @@ function cookie($isim)
     return false;
 }
 
-function user_check($username, $userpass)
+function user_check($username, $userpass,$userremme)
 {
     global $db;
     global $giriskontrol;
@@ -30,13 +29,20 @@ function user_check($username, $userpass)
         $SQL = "SELECT * FROM kullanici WHERE kullanici_adi = '$username' AND kullanici_sifre = '$userpassmd5' ";
         $rows = mysqli_query($db, $SQL);
         $row = mysqli_fetch_assoc($rows);
-        if (isset($row['kullanici_id'])){
-            //SESSION oluşturulduğu yer
-            $_SESSION["userid"]    =  $row['kullanici_id'];
-            $_SESSION["username"]  =  $username;
-            $_SESSION["userpass"]  =  $userpass;
-            $_SESSION["adsoyad"]   =  $row['kullanici_ismi'] . " " . $row['kullanici_soyadi'];
-            $_SESSION["userlogin"] =  1;
+        if (isset($row['kullanici_id'])) {
+            //SESSION veya cookie oluşturulduğu yer
+            if($userremme == 1) {
+                setcookie('userid', $row['kullanici_id'], time() + (60 * 60 * 240));
+                setcookie('username', $username, time() + (60 * 60 * 240));
+                setcookie('userpass', md5($userpass), time() + (60 * 60 * 240));
+                setcookie('userlogin', 1, time() + (60 * 60 * 240));
+                setcookie('adsoyad', ($row['kullanici_ismi'] . " " . $row['kullanici_soyadi']), time() + (60 * 60 * 240));
+            }
+            $_SESSION["userid"] = $row['kullanici_id'];
+            $_SESSION["username"] = $username;
+            $_SESSION["userpass"] = md5($userpass);
+            $_SESSION["adsoyad"] = $row['kullanici_ismi'] . " " . $row['kullanici_soyadi'];
+            $_SESSION["userlogin"] = 1;
             //Yönlendirme
             header('location:' . site_url('index'));
         } else {
@@ -49,7 +55,7 @@ function user_bring()
     global $db;
     global $kisbil;
     $usrnm = session("username");
-    $usrpass = md5(session("userpass"));
+    $usrpass = session("userpass");
     $SQL = "SELECT * FROM kullanici WHERE kullanici_adi = '$usrnm' AND kullanici_sifre = '$usrpass' ";
     $rows = mysqli_query($db, $SQL);
     $row = mysqli_fetch_assoc($rows);
@@ -140,4 +146,36 @@ function user_info_replace()
         $infocheck = "Bilinmeyen Bir Hata Oluştu";
     }
 
+}
+
+function user_info($user_id)
+{
+    global $db;
+    global $users_info;
+    $SQL = "SELECT *
+            FROM kullanici
+            WHERE kullanici_id = $user_id";
+    $rows = mysqli_query($db, $SQL);
+    $rows_num = mysqli_num_rows($rows);
+    if (isset($rows_num)) {
+        $row = mysqli_fetch_assoc($rows);
+        extract($row);
+        $users_info[0]['kul_id'] = $kullanici_id;
+        $users_info[0]['kul_adi'] = $kullanici_adi;
+        $users_info[0]['kul_sif'] = $kullanici_sifre;
+        $users_info[0]['kul_isim'] = $kullanici_ismi;
+        $users_info[0]['kul_soyadi'] = $kullanici_soyadi;
+        $users_info[0]['kul_resim'] = $resim_url;
+    }
+}
+
+function user_cookie_test()
+{
+        if (cookie('username') and cookie('userpass') and cookie('userlogin') and cookie('adsoyad') and cookie('userid')) {
+            $_SESSION["userid"] = cookie('userid');
+            $_SESSION["username"] = cookie('username');
+            $_SESSION["userpass"] = cookie('userpass');
+            $_SESSION["adsoyad"] =  cookie('adsoyad');
+            $_SESSION["userlogin"] = cookie('userlogin');
+        }
 }

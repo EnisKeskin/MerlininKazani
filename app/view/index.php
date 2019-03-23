@@ -4,30 +4,32 @@
         <div class="bodyustkismi">
             <?php content_datapull();?>
             <div class="bodyustkismisolu">
-                <img src="<?=asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
-                <div class="bodyustkismisoluyazikismi">
-                    <div class="soluustu">
-                        <div class="yorumsayisi">
-                            <i>
-                                <span class="ion-android-chat" style="color:#fff"></span>
-                                <span style="color:#fff; font-size:13px">23</span>
-                            </i>
+                <a href="<?= site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
+                    <img src="<?=asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
+                    <div class="bodyustkismisoluyazikismi">
+                        <div class="soluustu">
+                            <div class="yorumsayisi">
+                                <i>
+                                    <span class="ion-android-chat" style="color:#fff"></span>
+                                    <span style="color:#fff; font-size:13px">23</span>
+                                </i>
+                            </div>
+                            <div class="konu">
+                                <span><?php category_name_datapull($contentInfo[0]['kategori_id'])?></span>
+                            </div>
                         </div>
-                        <div class="konu">
-                            <span><?php category_name_datapull($contentInfo[0]['kategori_id'])?></span>
+                        <div class="alt">
+                            <?php if (category_name_datapull($contentInfo[0]['kategori_id'], 0) == "İnceleme/Özel İnceleme") {?>
+                            <div class="inceleme">
+                                <span>Editör<br>Puanı</span>
+                                <div class="puan">86</div>
+                            </div><br>
+                            <?php }?>
+                            <span class="baslik"><?=$contentInfo[0]['konu_baslik']?></span><br>
+                            <span class="alti"><?=$contentInfo[0]['konu_altbaslik']?></span>
                         </div>
                     </div>
-                    <div class="alt">
-                        <?php if (category_name_datapull($contentInfo[0]['kategori_id'], 0) == "İnceleme/Özel İnceleme") {?>
-                        <div class="inceleme">
-                            <span>Editör<br>Puanı</span>
-                            <div class="puan">86</div>
-                        </div><br>
-                        <?php }?>
-                        <span class="baslik"><?=$contentInfo[0]['konu_baslik']?></span><br>
-                        <span class="alti"><?=$contentInfo[0]['konu_altbaslik']?></span>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="boyustkismisagi">
                 <div class="witter">
@@ -60,7 +62,7 @@
 
         <div class="arabolum">
             <div class="bodyustkismisolu buyuk">
-                <a href="">
+                <a href="<?= site_url('icerik/'.$contentInfo[1]['konu_id']) ?>">
                     <img src="<?=asset_url_img($contentInfo[1]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
@@ -87,9 +89,10 @@
                     </div>
                 </a>
             </div>
+            <div class="arabolumsag">
             <?php for ($i = 2; $i <= 5; $i++): ?>
             <div class="bodyustkismisolu kucuk">
-                <a href="">
+                <a href="<?= site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
                     <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
@@ -104,15 +107,14 @@
                             </div>
                         </div>
                         <div class="alt">
-                            <span class="baslik">KÜÇÜK HAMBURGER</span><br>
+                            <span class="baslik"><?= $contentInfo[$i]['konu_baslik'] ?></span><br>
                         </div>
                     </div>
                 </a>
             </div>
             <?php endfor?>
-
+            </div>
         </div>
-        <div class="clearfix"></div>
 
         <div class="row">
             <div class="bildiri">
@@ -120,7 +122,7 @@
                 <ul>
                     <?php content_speacial_datapull(0, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
-                    <a href="" style="display:flex;">
+                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>" style="display:flex;">
                         <li>
                             <div class="resim">
                                 <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
@@ -372,8 +374,11 @@
 
         </div>
         <?php content_datapull(1) ?>
+        <!--  -->
+        <div class="araicerik">
         <?php for ($i=0; $i < 4; $i++) { ?>
         <div class="bodyustkismisolu kucuk">
+           <a href="<?= site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
             <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
             <div class="bodyustkismisoluyazikismi">
                 <div class="soluustu">
@@ -400,16 +405,18 @@
                     ?></span><br>
                 </div>
             </div>
+            </a>
         </div>
         <?php } ?>
-        <div class="clearfix"></div>
+        </div>
+        
         <?php content_speacial_datapull(0, 5, 33)?>
         <div class="MKTV">
             <div class="mktvicerik">
                 <div class="ustyazi">MK TV</div>
                 <div class="arabosluk">
                     <div class="mktviceriksol">
-                        <a href="">
+                        <a href="<?= site_url('icerik/'.$contentInfospe[0]['konu_id']) ?>">
                             <div class="mktvresim">
                                 <img src="<?=asset_url_img($contentInfospe[0]['konu_resim_url']);?>" alt="">
                             </div>
@@ -431,7 +438,7 @@
                         <div class="mkvicerikvideolar">
                             <?php for ($i = 1; $i <= 4; $i++) {?>
                             <div class="mktvicerikik">
-                                <a href="">
+                                <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
                                     <div class="mktvvideofoto">
                                         <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                     </div>
@@ -456,10 +463,10 @@
         <div class="row enalt">
             <div class="bildiri">
                 <div class="girisbaslik">HABER AKIŞI</div>
-                <ul>
+                <ul class = "habelerul">
                     <?php content_speacial_datapull(10, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
-                    <a href="" style="display:flex;">
+                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
                         <li>
                             <div class="resim">
                                 <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">

@@ -8,7 +8,7 @@ body {
 }
 
 .arabolum {
-    float: left;
+    display: flex;
 }
 
 .siteici {
@@ -254,7 +254,11 @@ body {
 
 .buyuk {
     margin-top: 15px;
-    float: left;
+}
+
+.arabolumsag {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .buyuk img {
@@ -269,7 +273,6 @@ body {
 
 .kucuk {
     margin: 15px 0px 0px 7px;
-    float: left;
     overflow: hidden;
 }
 
@@ -297,16 +300,22 @@ body {
 .row {
     display: flex;
 }
+
 .bildi {
     flex: 5;
 }
+
 .bildiri {
     flex: 5;
+    padding-right: 25px;
+    padding-left: 25px;
 }
+
 .tumicerikkonu ul {
     padding: 0;
     margin: 0;
 }
+
 .sidebar {
     flex: 2;
 }
@@ -650,7 +659,7 @@ body {
 }
 
 .sayfa-numarasi ul {
-    padding:0;
+    padding: 0;
     text-align: center;
 }
 
@@ -1172,6 +1181,7 @@ a {
 .ustyazi {
     font-weight: 500;
     font-size: 18px;
+    padding-bottom: 10px;
 }
 
 .baslik.kuc {
@@ -1184,4 +1194,12 @@ a {
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
+}
+
+.araicerik {
+    display: flex;
+}
+
+.habelerul a{
+    display:flex;
 }

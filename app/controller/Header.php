@@ -1,21 +1,13 @@
 <?php
- global $main_category;
- global $row_main_num;
- global $category;
- global $row_cat_num;
- global $categor_name;
- global $row_catnm_num;
- global $specialCat;
- global $row_special_num;
- global $perma_cat;
-if (post('cikis')) {
-    unset($_SESSION['username']);
-    unset($_SESSION['userpass']);
-    unset($_SESSION['userlogin']);
-    unset($_SESSION['userid']);
-    unset($_SESSION['adsoyad']);
-    header('location:' . site_url('index'));
-}
-    main_category_datapull();
-    special_category_datapull();
+global $main_category;
+global $row_main_num;
+global $category;
+global $row_cat_num;
+global $categor_name;
+global $row_catnm_num;
+global $specialCat;
+global $row_special_num;
+global $perma_cat;
+main_category_datapull();
+special_category_datapull();
 require view("static/header");

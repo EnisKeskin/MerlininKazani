@@ -1,6 +1,7 @@
 <?php
 
 require "app/init.php";
+
 $_url = get('url');
 $_url = array_filter(explode('/', $_url));
 if (!isset($_url[0])) {

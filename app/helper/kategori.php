@@ -64,7 +64,7 @@ function category_name_datapull($katego_id, $chk = 1)
     }
     if ($chk == 1) {
         echo $categor_name;
-    }
+    }else
     return $katego_id;
 }
 
@@ -82,7 +82,6 @@ function special_category_datapull()
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
             $specialCat[$c] = $ozel_kategori_ad;
-
             $c++;
         }
     }

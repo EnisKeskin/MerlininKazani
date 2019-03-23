@@ -13,4 +13,3 @@ require 'system/config.php';
 $db = mysqli_connect($config['db']['host'], $config['db']['user'], $config['db']['pass'], $config['db']['dbname'] );
 mysqli_set_charset($db,"utf8");
 if( mysqli_connect_error() ) die("Veritabanına bağlanılamadı...");
-

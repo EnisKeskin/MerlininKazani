@@ -3,8 +3,8 @@
 if (post('submit')) {
     $username = post('kullaniciadi');
     $userpass = post('kullanicisifre');
-    user_check($username, $userpass);
+    $userReMme = post('benihatirla');
+    user_check($username, $userpass,$userReMme);
 }
 
 linkup('login');
-

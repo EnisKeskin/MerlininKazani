@@ -5,12 +5,12 @@ function content_datapull($analysis = 0)
     global $db;
     global $contentInfo;
     global $contentRowNum;
-    if($analysis == 0){
+    if ($analysis == 0) {
         $SQL = "SELECT *
                 FROM icerik
                 WHERE kategori_id != 33
                 ORDER BY konu_id desc";
-    }else {
+    } else {
         $SQL = "SELECT *
                 FROM icerik
                 WHERE kategori_id in(2,3,4)
@@ -69,8 +69,9 @@ function content_speacial_datapull($lower = 0, $upper = 10, $select = 0)
     }
 }
 
-function clear() {
-    unset($contentInfo );
+function clear()
+{
+    unset($contentInfo);
 }
 
 function content_num($katid = 0)
@@ -79,8 +80,34 @@ function content_num($katid = 0)
     global $conte_num;
     $SQL = "SELECT *
             FROM icerik
-            WHERE kategori_id = $katid" ;
+            WHERE kategori_id = $katid";
     $rows = mysqli_query($db, $SQL);
     $conte_num = mysqli_num_rows($rows);
     return $conte_num;
+}
+
+function content_information($select)
+{
+    global $db;
+    global $cont_num;
+    global $content_info;
+    $SQL = "SELECT *
+            FROM icerik
+            WHERE konu_id = $select";
+    $rows = mysqli_query($db, $SQL);
+    $cont_num = mysqli_num_rows($rows);
+    if (isset($cont_num)) {
+        $row = mysqli_fetch_assoc($rows);
+        extract($row);
+        $content_info[0]['konu_id'] = $konu_id;
+        $content_info[0]['yazar_id'] = $yazar_id;
+        $content_info[0]['kategori_id'] = $kategori_id;
+        $content_info[0]['kat_alt_id'] = $kategori_alt_id;
+        $content_info[0]['konu_baslik'] = $konu_baslik;
+        $content_info[0]['konu_altbaslik'] = $konu_altbaslik;
+        $content_info[0]['konu_icerik'] = $konu_icerik;
+        $content_info[0]['konu_hastag'] = $konu_hastag;
+        $content_info[0]['konu_resim_url'] = $konu_resim_url;
+        $content_info[0]['konu_tarih'] = $konu_tarih;
+    }
 }

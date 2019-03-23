@@ -45,6 +45,11 @@
                     </ul>
                 </div>
             </div>
+            <?php
+                if(!session('userid')){
+                    user_cookie_test();
+                }
+            ?>
             <div class="sagustbaslik">
                 <div class="sagustbasliksolu">
                     <?php if (session('userlogin')) {?>
@@ -80,7 +85,7 @@
                                 </ul>
                                 <form action="" method="post">
                                     <div class="cikisbutton">
-                                        <button type="submit" name="cikis" value="1">Çıkış Yap</button>
+                                        <a href="<?php echo site_url("exit"); ?>">Çıkış Yap</a>
                                     </div>
                                 </form>
                             </div>
