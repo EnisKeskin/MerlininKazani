@@ -7,12 +7,12 @@ $config['db'] = [
     'host' => 'localhost',
     'user' => 'root',
     'pass' => '',
-    'dbname' => 'merlinikazani'
+    'dbname' => 'merlinikazani',
 ];
 
-define('dir',realpath('.'));
-define('controller',dir.'/app/controller');
-define('view',dir.'/app/view');
+define('dir', realpath('.'));
+define('controller', dir . '/app/controller');
+define('view', dir . '/app/view');
 $filename = realpath(".");
 $parca = explode("\\", $filename);
-define('url', 'http://'.$_SERVER['SERVER_NAME'] . "/" . end($parca));
+define('url', 'http://' . $_SERVER['SERVER_NAME'] . "/" . end($parca));

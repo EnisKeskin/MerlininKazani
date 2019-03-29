@@ -14,7 +14,7 @@ function cookie($isim)
     return false;
 }
 
-function user_check($username, $userpass,$userremme)
+function user_check($username, $userpass, $userremme)
 {
     global $db;
     global $giriskontrol;
@@ -31,7 +31,7 @@ function user_check($username, $userpass,$userremme)
         $row = mysqli_fetch_assoc($rows);
         if (isset($row['kullanici_id'])) {
             //SESSION veya cookie oluşturulduğu yer
-            if($userremme == 1) {
+            if ($userremme == 1) {
                 setcookie('userid', $row['kullanici_id'], time() + (60 * 60 * 240));
                 setcookie('username', $username, time() + (60 * 60 * 240));
                 setcookie('userpass', md5($userpass), time() + (60 * 60 * 240));
@@ -171,11 +171,11 @@ function user_info($user_id)
 
 function user_cookie_test()
 {
-        if (cookie('username') and cookie('userpass') and cookie('userlogin') and cookie('adsoyad') and cookie('userid')) {
-            $_SESSION["userid"] = cookie('userid');
-            $_SESSION["username"] = cookie('username');
-            $_SESSION["userpass"] = cookie('userpass');
-            $_SESSION["adsoyad"] =  cookie('adsoyad');
-            $_SESSION["userlogin"] = cookie('userlogin');
-        }
+    if (cookie('username') and cookie('userpass') and cookie('userlogin') and cookie('adsoyad') and cookie('userid')) {
+        $_SESSION["userid"] = cookie('userid');
+        $_SESSION["username"] = cookie('username');
+        $_SESSION["userpass"] = cookie('userpass');
+        $_SESSION["adsoyad"] = cookie('adsoyad');
+        $_SESSION["userlogin"] = cookie('userlogin');
+    }
 }

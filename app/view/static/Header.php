@@ -2,8 +2,9 @@
 <html lang="tr">
 
 <head>
- <!--   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet"> -->
+    <script src="<?= asset_url('js/jquery-3.3.1.min.js') ?>"></script>
+    
     <link rel="stylesheet" href="<?=asset_url('js/ionicons-2.0.1/css/ionicons.min.css')?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,10 +35,9 @@
                             <ul>
                                 <div class="menualti">
                                      <?php category_datapull(($i + 1));?>
-                                     <?php global $row_cat_num; for ($j = 0; $j < $row_cat_num; $j++) {?>
-                                        <li><a href="<?= site_url("konular/".$perma_cat[$j]."/1"); ?>"><?=$category[$j]?></a></li>
+                                     <?php global $row_cat_num;for ($j = 0; $j < $row_cat_num; $j++) {?>
+                                        <li><a href="<?=site_url("konular/" . $perma_cat[$j] . "/1");?>"><?=$category[$j]?></a></li>
                                      <?php }?>
-
                                 </div>
                             </ul>
                         </li>
@@ -46,8 +46,8 @@
                 </div>
             </div>
             <?php
-                if(!session('userid')){
-                    user_cookie_test();
+                if (!session('userid')) {
+                user_cookie_test();
                 }
             ?>
             <div class="sagustbaslik">
