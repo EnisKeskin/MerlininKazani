@@ -44,15 +44,20 @@
                     </div>
                     <div class="sayfa-numarasi">
                         <?php $sayfadeger = url(2); ((url(2) == 1) ? $sayfadeger = url(2) : $sayfadeger --);$deger = ceil(content_num($katego_id) / 20); ?>
+                        <?php if($deger < url(2) || url(2) <= 0 ) { ?>
+                           
+                        <?php } ?>
                         <ul>
                             <li>
-                                <a href="<?php echo  site_url("konular/".url(1)."/".($sayfadeger-1));?>">Önceki Sayfa</a>
+                                <?php if(url(2) > 1) {?>
+                                    <a href="<?php echo site_url("konular/".url(1)."/".(url(2)-1));?>">Önceki Sayfa</a>
+                                <?php } ?>
                             </li>
                             <?php if($sayfadeger < 5) { ?>
                             <?php for ($i= $sayfadeger; $i < ($deger + $sayfadeger); $i++) {?>
                             <?php if($i <= ($sayfadeger + 3)) { ?>
                             <li>
-                                <a href="<?php echo  site_url("konular/".url(1)."/".$i);?>"><?php echo  $i ?></a>
+                                <a href="<?php echo site_url("konular/".url(1)."/".$i);?>"><?php echo  $i ?></a>
                             </li>
                             <?php }
                                 else {  ?>
@@ -91,7 +96,9 @@
                                 </li>
                                 <?php } ?>
                                 <li>
-                                    <a href="<?php echo  site_url("konular/".url(1)."/".(url(2)+1));?>">Sonraki Sayfa</a>
+                                    <?php if($deger > url(2)) { ?>
+                                        <a href="<?php echo  site_url("konular/" . url(1) . "/" . (url(2) + 1));?>">Sonraki Sayfa</a>
+                                    <?php } ?>
                                 </li>
                         </ul>
                     </div>

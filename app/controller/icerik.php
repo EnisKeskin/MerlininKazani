@@ -1,12 +1,11 @@
 <?php
- global $db;
- global $content_info;
- global $cate_id;
 if (url(1)) {
-    $cate_id = url(1);
-    content_information($cate_id);
+    global $cont_id;
+    $cont_id = url(1);
+    content_information($cont_id);
     user_info($content_info[0]['yazar_id']);
+    main_comment($cont_id);
     require view('icerik');
-}else {
+} else {
     require view('index');
 }

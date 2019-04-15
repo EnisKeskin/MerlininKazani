@@ -5,7 +5,7 @@ $(function(){
 });
 
 $(function(){
-    $("#yorumacilma").click(function(){
-        
+    $("#commentco").click(function(){
+        $("#commentop-cl").toggle("slow");
     });
 });

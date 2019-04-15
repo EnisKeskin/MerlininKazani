@@ -169,6 +169,27 @@ function user_info($user_id)
     }
 }
 
+function comment_user_info($user_id)
+{
+    global $db;
+    global $com_user_info;
+    $SQL = "SELECT *
+            FROM kullanici
+            WHERE kullanici_id = $user_id";
+    $rows = mysqli_query($db, $SQL);
+    $rows_num = mysqli_num_rows($rows);
+    if (isset($rows_num)) {
+        $row = mysqli_fetch_assoc($rows);
+        extract($row);
+        $com_user_info[0]['kul_id'] = $kullanici_id;
+        $com_user_info[0]['kul_adi'] = $kullanici_adi;
+        $com_user_info[0]['kul_sif'] = $kullanici_sifre;
+        $com_user_info[0]['kul_isim'] = $kullanici_ismi;
+        $com_user_info[0]['kul_soyadi'] = $kullanici_soyadi;
+        $com_user_info[0]['kul_resim'] = $resim_url;
+    }
+}
+
 function user_cookie_test()
 {
     if (cookie('username') and cookie('userpass') and cookie('userlogin') and cookie('adsoyad') and cookie('userid')) {

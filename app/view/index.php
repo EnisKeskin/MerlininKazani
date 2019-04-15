@@ -483,7 +483,6 @@
                                 <div class="icyazi">
                                     <div class="icyazikonu">
                                         <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
-                                        <?php echo $categor_name?>
                                     </div>
                                     <div class="icyazibaslik">
                                         <?php echo $contentInfospe[$i]['konu_baslik'];?>

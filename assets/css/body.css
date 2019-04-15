@@ -1141,6 +1141,7 @@ a {
 
 .forward {
     border: none;
+    color:black;
     background: #ffd500;
     padding: 10px 60px 10px 60px;
     border-radius: .3rem;
@@ -1157,4 +1158,62 @@ a {
 
 .commentpost span {
     font-size: 12px;
+}
+
+.content-article {
+    width: 86.2%;
+    margin-left: 65px;
+    padding: 15px;
+    display: block;
+    background: #fbfcfc;
+    border: .20px solid #e7ecee;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.07);
+}
+
+.content-article span {
+    font-size: 13px;
+    line-height: 16px;
+    color: #23262e;
+}
+
+.content-reactions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.like {
+    padding: 9px 11px 9px 11px;
+    border-radius: 100%;
+    background: #3673ee;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.reply {
+    margin-left: 10px;
+}
+
+.reply i {
+    padding: 9px 11px 9px 11px;
+    border-radius: 100%;
+    background: #4f6288;
+    color: #fff;
+    font-size: 14px;
+}
+
+.reply-visit {
+    display: none;
+}
+
+.reply-like {
+    margin-top: 10px;
+}
+
+.reply-comment {
+    border-top: 1px solid rgba(22, 26, 35, 0.185);
+    width: 85%;
+    margin-left: 45px;
 }

@@ -61,307 +61,133 @@
                                     <textarea name="" id="" placeholder="Yorumla" maxlength="2000"
                                         class="textyorum"></textarea>
                                     <div class="commentpost">
-                                        <div><span>Kalan Karakter:</span><b>2000</b></div>
-                                        <button type="submit" value="1" class="forward">Gönder</button>
+                                        <div><span>Kalan Karakter:</span>2000</div>
+                                        <a href="" class="forward">Gönder</a>
                                     </div>
                                 </form>
                             </div>
                         </div>
+                        <!-- Yorumların başlatıldığı yer -->
+                        <?php for ($i = 0; $i < $comments_zero_num; $i++) {?>
+                        <div class="comment_con">
+                            <div class="comment-content">
+                                <?php comment_user_info($comments_zero[$i]["yor_kul_id"])?>
+                                <div class="kulbilgi">
+                                    <div class="yazarresim">
+                                        <img src="<?php echo asset_url_img($com_user_info[0]['kul_resim']) ?>" alt="">
+                                    </div>
+                                    <div class="yazar">
+                                        <div class="yazarismi">
+                                            <p><?php echo $com_user_info[0]['kul_isim'] . " " . $com_user_info[0]['kul_soyadi'] ?>
+                                            </p>
+                                        </div>
+                                        <div class="yazilantarih">
+                                            <p><?php echo $comments_zero[$i]["yorum_tarih"] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="content-article">
+                                    <span><?php echo $comments_zero[$i]["yorum"] ?></span>
+                                    <div class="content-reactions">
+                                        <div class="like">
+                                            <i class="ion-thumbsup"></i>
+                                        </div>
+                                        <div class="reply" id="commentco">
+                                            <i class="ion-chatbubbles"></i>
+                                            <span>Yanıtla</span>
+                                        </div>
+                                    </div>
+                                    <?php reply_comment($comments_zero[$i]["icerik_yor_id"],$cont_id)?>
+                                    <?php if ($reply_comment_num > 0) {?>
+                                    <?php for ($j=0; $j < $reply_comment_num; $j++) { ?>
+                                    <div class="reply-comment">
+                                        <?php comment_user_info($reply_comment[$j]["yor_kul_id"])?>
+                                        <div class="kulbilgi">
+                                            <div class="yazarresim">
+                                                <img src="<?php echo asset_url_img($com_user_info[0]['kul_resim']) ?>"
+                                                    alt="">
+                                            </div>
+                                            <div class="yazar">
+                                                <div class="yazarismi">
+                                                    <p><?php echo $com_user_info[0]['kul_isim'] . " " . $com_user_info[0]['kul_soyadi'] ?>
+                                                    </p>
+                                                </div>
+                                                <div class="yazilantarih">
+                                                    <p><?php echo $reply_comment[$i]["yorum_tarih"] ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reply-comment-article">
+                                            <span><?php echo $reply_comment[$i]["yorum"]; ?></span>
+                                        </div>
+                                        <div class="reply-like">
+                                            <div class="like">
+                                                <i class="ion-thumbsup"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php } ?>
+                                    <?php }?>
+                                    <div class="reply-visit" id="commentop-cl">
+                                        <div class="commentform">
+                                            <form action="" method="post">
+                                                <textarea name="" id="" placeholder="Yorumla" maxlength="2000"
+                                                    class="textyorum"></textarea>
+                                                <div class="commentpost">
+                                                    <div><span>Kalan Karakter:</span>2000</div>
+                                                    <a href="" class="forward">Gönder</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php }?>
                     </div>
+                    <!-- Yorumların bittiği yer -->
+
+
 
                     <div class="girisbaslik">HABER AKIŞI</div>
-                    <ul>
-                        <a href="">
+                    <ul class="habelerul">
+                        <?php content_speacial_datapull(10, 10, 1);?>
+                        <?php for ($i = 0; $i < 10; $i++) {?>
+                        <a href="<?php echo site_url('icerik/' . $contentInfospe[$i]['konu_id']) ?>">
                             <li>
                                 <div class="resim">
-                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
+                                    <img src="<?php echo asset_url_img($contentInfospe[$i]['konu_resim_url']); ?>"
+                                        alt="">
                                     <div class="soluustu haberlerin">
                                         <div class="yorumsayisi">
                                             <i>
                                                 <span class="ion-android-chat" style="color:#fff"></span>
-                                                <span style="color:#fff; font-size:13px">23</span>
+                                                <span style="color:#fff; font-size:12px">23</span>
                                             </i>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="yazi">
                                     <div class="icyazi">
                                         <div class="icyazikonu">
-                                            Haber
+                                            <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
                                         </div>
                                         <div class="icyazibaslik">
-                                            Hamburgerin wasdasdasdas
-                                            dasd asdas
+                                            <?php echo $contentInfospe[$i]['konu_baslik']; ?>
                                         </div>
                                         <div class="icyazialtbaslik">
-                                            Görenler şaşkına döndü
+                                            <?php echo $contentInfospe[$i]['konu_altbaslik']; ?>
                                         </div>
                                         <div class="icyazitarih">
-                                            29.01.2019 17:53
+                                            <?php echo $contentInfospe[$i]['konu_tarih']; ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="clearfix"></div>
-                            </li>
                         </a>
-
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
                         </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                        <li>
-                            <div class="resim">
-                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
-                                <div class="soluustu haberlerin">
-                                    <div class="yorumsayisi">
-                                        <i>
-                                            <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:13px">23</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="yazi">
-                                <div class="icyazi">
-                                    <div class="icyazikonu">
-                                        Haber
-                                    </div>
-                                    <div class="icyazibaslik">
-                                        Hamburgerin wasdasdasdas
-                                        dasd asdas
-                                    </div>
-                                    <div class="icyazialtbaslik">
-                                        Görenler şaşkına döndü
-                                    </div>
-                                    <div class="icyazitarih">
-                                        29.01.2019 17:53
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
+                        <?php }?>
                     </ul>
 
                 </div>
