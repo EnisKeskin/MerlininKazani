@@ -1119,3 +1119,42 @@ a {
     align-items: center;
     padding-top: 10px;
 }
+
+.textyorum {
+    resize: none;
+    width: 97%;
+    min-height: 60px;
+    background: #f8fafb;
+    border: 0.8px solid #e7ecee;
+    transition: .5s;
+    outline: 0;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.comment textarea:focus {
+    background: #ffffff;
+    min-height: 100px;
+    outline: 0;
+}
+
+.forward {
+    border: none;
+    background: #ffd500;
+    padding: 10px 60px 10px 60px;
+    border-radius: .3rem;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.commentpost {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.commentpost span {
+    font-size: 12px;
+}

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="bildi">
                     <div class="girisbaslik">
-                        <?=$categor_name?>
+                        <?php echo $categor_name?>
                     </div>
                     <div class="tumicerikkonu">
                         <ul>
@@ -15,24 +15,24 @@
                             ?>
                             <li>
                                 <div class="icerikkonu">
-                                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']); ?>">
+                                    <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']); ?>">
                                         <div class="icerikkonuici">
                                             <div class="icerikkonuimg">
-                                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>"
+                                                <img src="<?php echo asset_url_img($contentInfospe[$i]['konu_resim_url']);?>"
                                                     alt="">
                                             </div>
                                             <div class="ustbosluk">
                                                 <div class="icerikkonukat">
-                                                    <?=$categor_name?>
+                                                    <?php echo $categor_name?>
                                                 </div>
                                                 <div class="icerikkonubaslik">
-                                                    <span><?= $contentInfospe[$i]['konu_baslik']; ?></span>
+                                                    <span><?php echo  $contentInfospe[$i]['konu_baslik']; ?></span>
                                                 </div>
                                                 <div class="icerikkonualtbaslik">
-                                                    <?= $contentInfospe[$i]['konu_altbaslik']; ?>
+                                                    <?php echo  $contentInfospe[$i]['konu_altbaslik']; ?>
                                                 </div>
                                                 <div class="icerikkonutarih">
-                                                    <?= $contentInfospe[$i]['konu_tarih']; ?>
+                                                    <?php echo  $contentInfospe[$i]['konu_tarih']; ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -46,13 +46,13 @@
                         <?php $sayfadeger = url(2); ((url(2) == 1) ? $sayfadeger = url(2) : $sayfadeger --);$deger = ceil(content_num($katego_id) / 20); ?>
                         <ul>
                             <li>
-                                <a href="<?= site_url("konular/".url(1)."/".($sayfadeger-1));?>">Önceki Sayfa</a>
+                                <a href="<?php echo  site_url("konular/".url(1)."/".($sayfadeger-1));?>">Önceki Sayfa</a>
                             </li>
                             <?php if($sayfadeger < 5) { ?>
                             <?php for ($i= $sayfadeger; $i < ($deger + $sayfadeger); $i++) {?>
                             <?php if($i <= ($sayfadeger + 3)) { ?>
                             <li>
-                                <a href="<?= site_url("konular/".url(1)."/".$i);?>"><?= $i ?></a>
+                                <a href="<?php echo  site_url("konular/".url(1)."/".$i);?>"><?php echo  $i ?></a>
                             </li>
                             <?php }
                                 else {  ?>
@@ -63,10 +63,10 @@
                             <?php } ?>
                             <?php }else { ?>
                                 <li>
-                                    <a href="<?= site_url("konular/".url(1)."/1");?>"><?= 1 ?></a>
+                                    <a href="<?php echo  site_url("konular/".url(1)."/1");?>"><?php echo  1 ?></a>
                                 </li>
                                 <li>
-                                    <a href="<?= site_url("konular/".url(1)."/2");?>"><?= 2 ?></a>
+                                    <a href="<?php echo  site_url("konular/".url(1)."/2");?>"><?php echo  2 ?></a>
                                 </li>
                                 <li>
                                     <a href="">...</a>
@@ -74,7 +74,7 @@
                                 <?php for ($i= $sayfadeger; $i < ($deger + $sayfadeger); $i++) {?>
                                     <?php if($i <= ($sayfadeger + 2) and !($sayfadeger >= ($deger-1))) { ?>
                                         <li>
-                                            <a href="<?= site_url("konular/".url(1)."/".$i);?>"><?= $i ?></a>
+                                            <a href="<?php echo  site_url("konular/".url(1)."/".$i);?>"><?php echo  $i ?></a>
                                         </li>
                                         <?php }else {  ?>
                                         <li>
@@ -84,14 +84,14 @@
                                     <?php } ?>
                                
                                 <li>
-                                    <a href="<?= site_url("konular/".url(1)."/".($deger-1));?>"><?= ($deger-1) ?></a>
+                                    <a href="<?php echo  site_url("konular/".url(1)."/".($deger-1));?>"><?php echo  ($deger-1) ?></a>
                                 </li>
                                 <li>
-                                    <a href="<?= site_url("konular/".url(1)."/".$deger);?>"><?= $deger ?></a>
+                                    <a href="<?php echo  site_url("konular/".url(1)."/".$deger);?>"><?php echo  $deger ?></a>
                                 </li>
                                 <?php } ?>
                                 <li>
-                                    <a href="<?= site_url("konular/".url(1)."/".(url(2)+1));?>">Sonraki Sayfa</a>
+                                    <a href="<?php echo  site_url("konular/".url(1)."/".(url(2)+1));?>">Sonraki Sayfa</a>
                                 </li>
                         </ul>
                     </div>

@@ -5,30 +5,30 @@
         <div class="container">
             <div class="row">
                 <div class="bildiri">
-                    <div class="girisbaslik"><?=category_name_datapull($content_info[0]['kategori_id'])?></div>
+                    <div class="girisbaslik"><?php echo category_name_datapull($content_info[0]['kategori_id']) ?></div>
                     <div class="baslikkonusu">
-                        <a href=""><?=$content_info[0]['konu_baslik']?></a>
+                        <a href=""><?php echo $content_info[0]['konu_baslik'] ?></a>
                     </div>
                     <div class="icerikresim">
-                        <img src="<?=asset_url_img($content_info[0]['konu_resim_url'])?>" alt="">
+                        <img src="<?php echo asset_url_img($content_info[0]['konu_resim_url']) ?>" alt="">
                     </div>
                     <div class="icerikyazari">
                         <div class="kulbilgi">
                             <div class="yazarresim">
-                                <img src="<?=asset_url_img($users_info[0]['kul_resim'])?>" alt="">
+                                <img src="<?php echo asset_url_img($users_info[0]['kul_resim']) ?>" alt="">
                             </div>
                             <div class="yazar">
                                 <div class="yazarismi">
-                                    <p><?=$users_info[0]['kul_isim'] . " " . $users_info[0]['kul_soyadi']?></p>
+                                    <p><?php echo $users_info[0]['kul_isim'] . " " . $users_info[0]['kul_soyadi'] ?></p>
                                 </div>
                                 <div class="yazilantarih">
-                                    <p><?=$content_info[0]['konu_tarih']?></p>
+                                    <p><?php echo $content_info[0]['konu_tarih'] ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="icerikyazisi">
-                        <?=$content_info[0]['konu_icerik']?>
+                        <?php echo $content_info[0]['konu_icerik'] ?>
                     </div>
                     <div class="tags">
                         <ul>
@@ -40,21 +40,33 @@
                     </div>
 
                     <div class="comment">
-
-                    <div class="kulbilgi">
-                            <div class="yazarresim">
-                                <img src="<?=asset_url_img($users_info[0]['kul_resim'])?>" alt="">
+                        <div class="girisbaslik">Yorumlar</div>
+                        <div class="user_coment">
+                            <div class="kulbilgi">
+                                <div class="yazarresim">
+                                    <img src="<?php echo asset_url_img($users_info[0]['kul_resim']) ?>" alt="">
+                                </div>
+                                <div class="yazar">
+                                    <div class="yazarismi">
+                                        <p><?php echo $users_info[0]['kul_isim'] . " " . $users_info[0]['kul_soyadi'] ?>
+                                        </p>
+                                    </div>
+                                    <div class="yazilantarih">
+                                        <p><?php echo $content_info[0]['konu_tarih'] ?></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="yazar">
-                                <div class="yazarismi">
-                                    <p><?=$users_info[0]['kul_isim'] . " " . $users_info[0]['kul_soyadi']?></p>
-                                </div>
-                                <div class="yazilantarih">
-                                    <p><?=$content_info[0]['konu_tarih']?></p>
-                                </div>
+                            <div class="commentform">
+                                <form action="" method="post">
+                                    <textarea name="" id="" placeholder="Yorumla" maxlength="2000"
+                                        class="textyorum"></textarea>
+                                    <div class="commentpost">
+                                        <div><span>Kalan Karakter:</span><b>2000</b></div>
+                                        <button type="submit" value="1" class="forward">Gönder</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="girisbaslik">HABER AKIŞI</div>
@@ -62,7 +74,7 @@
                         <a href="">
                             <li>
                                 <div class="resim">
-                                    <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                     <div class="soluustu haberlerin">
                                         <div class="yorumsayisi">
                                             <i>
@@ -96,7 +108,7 @@
 
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -128,7 +140,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -160,7 +172,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -192,7 +204,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -224,7 +236,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -256,7 +268,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -288,7 +300,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -320,7 +332,7 @@
                         </li>
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -488,7 +500,7 @@
                             <div class="pop">
                                 <a href="">
                                     <div class="resim">
-                                        <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                        <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                     </div>
                                     <div class="sagustu">
                                         <div class="popsayisi">
@@ -504,7 +516,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -519,7 +531,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -534,7 +546,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -549,7 +561,7 @@
                             </div>
                             <div class="pop">
                                 <div class="resim">
-                                    <img src="<?=asset_url_img('heybro.jpg')?>" alt="">
+                                    <img src="<?php echo asset_url_img('heybro.jpg') ?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">

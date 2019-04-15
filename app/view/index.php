@@ -4,8 +4,8 @@
         <div class="bodyustkismi">
             <?php content_datapull();?>
             <div class="bodyustkismisolu">
-                <a href="<?= site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
-                    <img src="<?=asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
+                <a href="<?php echo  site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
+                    <img src="<?php echo asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -25,8 +25,8 @@
                                 <div class="puan">86</div>
                             </div><br>
                             <?php }?>
-                            <span class="baslik"><?=$contentInfo[0]['konu_baslik']?></span><br>
-                            <span class="alti"><?=$contentInfo[0]['konu_altbaslik']?></span>
+                            <span class="baslik"><?php echo $contentInfo[0]['konu_baslik']?></span><br>
+                            <span class="alti"><?php echo $contentInfo[0]['konu_altbaslik']?></span>
                         </div>
                     </div>
                 </a>
@@ -62,8 +62,8 @@
 
         <div class="arabolum">
             <div class="bodyustkismisolu buyuk">
-                <a href="<?= site_url('icerik/'.$contentInfo[1]['konu_id']) ?>">
-                    <img src="<?=asset_url_img($contentInfo[1]['konu_resim_url']);?>" alt="">
+                <a href="<?php echo  site_url('icerik/'.$contentInfo[1]['konu_id']) ?>">
+                    <img src="<?php echo asset_url_img($contentInfo[1]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -83,8 +83,8 @@
                                 <div class="puan">86</div>
                             </div><br>
                             <?php }?>
-                            <span class="baslik kuc"><?=$contentInfo[1]['konu_baslik']?></span><br>
-                            <span class="alti kuc"><?=$contentInfo[1]['konu_altbaslik']?></span>
+                            <span class="baslik kuc"><?php echo $contentInfo[1]['konu_baslik']?></span><br>
+                            <span class="alti kuc"><?php echo $contentInfo[1]['konu_altbaslik']?></span>
                         </div>
                     </div>
                 </a>
@@ -92,8 +92,8 @@
             <div class="arabolumsag">
             <?php for ($i = 2; $i <= 5; $i++): ?>
             <div class="bodyustkismisolu kucuk">
-                <a href="<?= site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
-                    <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
+                <a href="<?php echo  site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
+                    <img src="<?php echo asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">
                             <div class="yorumsayisi">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="alt">
-                            <span class="baslik"><?= $contentInfo[$i]['konu_baslik'] ?></span><br>
+                            <span class="baslik"><?php echo  $contentInfo[$i]['konu_baslik'] ?></span><br>
                         </div>
                     </div>
                 </a>
@@ -122,10 +122,10 @@
                 <ul>
                     <?php content_speacial_datapull(0, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
-                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>" style="display:flex;">
+                    <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>" style="display:flex;">
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
+                                <img src="<?php echo asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -141,13 +141,13 @@
                                         <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
                                     </div>
                                     <div class="icyazibaslik">
-                                        <?=$contentInfospe[$i]['konu_baslik'];?>
+                                        <?php echo $contentInfospe[$i]['konu_baslik'];?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        <?=$contentInfospe[$i]['konu_altbaslik'];?>
+                                        <?php echo $contentInfospe[$i]['konu_altbaslik'];?>
                                     </div>
                                     <div class="icyazitarih">
-                                        <?=$contentInfospe[$i]['konu_tarih'];?>
+                                        <?php echo $contentInfospe[$i]['konu_tarih'];?>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +291,7 @@
                         <div class="pop">
                             <a href="">
                                 <div class="resim">
-                                    <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
+                                    <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
                                 </div>
                                 <div class="sagustu">
                                     <div class="popsayisi">
@@ -307,7 +307,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
+                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -322,7 +322,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
+                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -337,7 +337,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
+                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -352,7 +352,7 @@
                         </div>
                         <div class="pop">
                             <div class="resim">
-                                <img src="<?=asset_url("img/heybro.jpg");?>" alt="">
+                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
                             </div>
                             <div class="sagustu">
                                 <div class="popsayisi">
@@ -378,8 +378,8 @@
         <div class="araicerik">
         <?php for ($i=0; $i < 4; $i++) { ?>
         <div class="bodyustkismisolu kucuk">
-           <a href="<?= site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
-            <img src="<?=asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
+           <a href="<?php echo  site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
+            <img src="<?php echo asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
             <div class="bodyustkismisoluyazikismi">
                 <div class="soluustu">
                     <div class="yorumsayisi">
@@ -416,19 +416,19 @@
                 <div class="ustyazi">MK TV</div>
                 <div class="arabosluk">
                     <div class="mktviceriksol">
-                        <a href="<?= site_url('icerik/'.$contentInfospe[0]['konu_id']) ?>">
+                        <a href="<?php echo  site_url('icerik/'.$contentInfospe[0]['konu_id']) ?>">
                             <div class="mktvresim">
-                                <img src="<?=asset_url_img($contentInfospe[0]['konu_resim_url']);?>" alt="">
+                                <img src="<?php echo asset_url_img($contentInfospe[0]['konu_resim_url']);?>" alt="">
                             </div>
                             <div class="mktvyazi">
                                 <div class="mktvbaslik">
-                                    <?=$contentInfospe[0]['konu_baslik'];?>
+                                    <?php echo $contentInfospe[0]['konu_baslik'];?>
                                 </div>
                                 <div class="mktvaltbaslik">
-                                    <?=$contentInfospe[0]['konu_altbaslik']?>
+                                    <?php echo $contentInfospe[0]['konu_altbaslik']?>
                                 </div>
                                 <div class="mktvtarih">
-                                    <?=$contentInfospe[0]['konu_tarih']?>
+                                    <?php echo $contentInfospe[0]['konu_tarih']?>
                                 </div>
                             </div>
                         </a>
@@ -438,16 +438,16 @@
                         <div class="mkvicerikvideolar">
                             <?php for ($i = 1; $i <= 4; $i++) {?>
                             <div class="mktvicerikik">
-                                <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
+                                <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
                                     <div class="mktvvideofoto">
-                                        <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
+                                        <img src="<?php echo asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                     </div>
                                     <div class="mktvvideoyazilar">
                                         <div class="mktvbaslik kucuk">
-                                            <?=$contentInfospe[$i]['konu_baslik'];?>
+                                            <?php echo $contentInfospe[$i]['konu_baslik'];?>
                                         </div>
                                         <div class="mktvtarih">
-                                            <?=$contentInfospe[$i]['konu_tarih']?>
+                                            <?php echo $contentInfospe[$i]['konu_tarih']?>
                                         </div>
                                     </div>
                                 </a>
@@ -466,10 +466,10 @@
                 <ul class = "habelerul">
                     <?php content_speacial_datapull(10, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
-                    <a href="<?= site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
+                    <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
                         <li>
                             <div class="resim">
-                                <img src="<?=asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
+                                <img src="<?php echo asset_url_img($contentInfospe[$i]['konu_resim_url']);?>" alt="">
                                 <div class="soluustu haberlerin">
                                     <div class="yorumsayisi">
                                         <i>
@@ -483,16 +483,16 @@
                                 <div class="icyazi">
                                     <div class="icyazikonu">
                                         <?php category_name_datapull($contentInfospe[$i]['kategori_id']);?>
-                                        <?=$categor_name?>
+                                        <?php echo $categor_name?>
                                     </div>
                                     <div class="icyazibaslik">
-                                        <?=$contentInfospe[$i]['konu_baslik'];?>
+                                        <?php echo $contentInfospe[$i]['konu_baslik'];?>
                                     </div>
                                     <div class="icyazialtbaslik">
-                                        <?=$contentInfospe[$i]['konu_altbaslik'];?>
+                                        <?php echo $contentInfospe[$i]['konu_altbaslik'];?>
                                     </div>
                                     <div class="icyazitarih">
-                                        <?=$contentInfospe[$i]['konu_tarih'];?>
+                                        <?php echo $contentInfospe[$i]['konu_tarih'];?>
                                     </div>
                                 </div>
                             </div>

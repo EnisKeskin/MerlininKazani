@@ -12,7 +12,7 @@
                 </label> <br>
                 <div class="kontrol">
                     <?php if(isset($giriskontrol)):?>
-                    <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?=$giriskontrol?></p>
+                    <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?php echo $giriskontrol?></p>
                     <?php endif ?>
                 </div>
                 <div class="girisbutton">

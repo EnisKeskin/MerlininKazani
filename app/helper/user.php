@@ -30,7 +30,7 @@ function user_check($username, $userpass, $userremme)
         $rows = mysqli_query($db, $SQL);
         $row = mysqli_fetch_assoc($rows);
         if (isset($row['kullanici_id'])) {
-            //SESSION veya cookie oluşturulduğu yer
+            //SESSION ve cookie oluşturulduğu yer
             if ($userremme == 1) {
                 setcookie('userid', $row['kullanici_id'], time() + (60 * 60 * 240));
                 setcookie('username', $username, time() + (60 * 60 * 240));
