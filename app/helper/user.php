@@ -40,6 +40,7 @@ function user_check($username, $userpass, $userremme)
             }
             $_SESSION["userid"] = $row['kullanici_id'];
             $_SESSION["username"] = $username;
+            $_SESSION["userimg"] = $row['resim_url'];
             $_SESSION["userpass"] = md5($userpass);
             $_SESSION["adsoyad"] = $row['kullanici_ismi'] . " " . $row['kullanici_soyadi'];
             $_SESSION["userlogin"] = 1;
@@ -166,6 +167,27 @@ function user_info($user_id)
         $users_info[0]['kul_isim'] = $kullanici_ismi;
         $users_info[0]['kul_soyadi'] = $kullanici_soyadi;
         $users_info[0]['kul_resim'] = $resim_url;
+    }
+}
+
+function user_info_content($user_id)
+{
+    global $db;
+    global $user_info_cont;
+    $SQL = "SELECT *
+            FROM kullanici
+            WHERE kullanici_id = $user_id";
+    $rows = mysqli_query($db, $SQL);
+    $rows_num = mysqli_num_rows($rows);
+    if (isset($rows_num)) {
+        $row = mysqli_fetch_assoc($rows);
+        extract($row);
+        $user_info_cont[0]['kul_id'] = $kullanici_id;
+        $user_info_cont[0]['kul_adi'] = $kullanici_adi;
+        $user_info_cont[0]['kul_sif'] = $kullanici_sifre;
+        $user_info_cont[0]['kul_isim'] = $kullanici_ismi;
+        $user_info_cont[0]['kul_soyadi'] = $kullanici_soyadi;
+        $user_info_cont[0]['kul_resim'] = $resim_url;
     }
 }
 

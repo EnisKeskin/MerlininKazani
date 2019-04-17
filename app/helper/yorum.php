@@ -23,14 +23,14 @@ function main_comment($content_id)
     }
 }
 
-function reply_comment($comment_id, $icerik_id)
+function reply_comment($con_comment_id, $icerik_id)
 {
     global $db;
     global $reply_comment;
     global $reply_comment_num;
     $SQL = "SELECT *
             FROM yorum
-            WHERE icerik_yor_id = $comment_id and ust_yorum_id > 0 and icerik_id = $icerik_id";
+            WHERE icerik_yor_id = '$con_comment_id' and ust_yorum_id > 0 and icerik_id = '$icerik_id'";
     $rows = mysqli_query($db, $SQL);
     $reply_comment_num = mysqli_num_rows($rows);
     $i = 0;
@@ -51,15 +51,15 @@ function add_main_content($content_id, $kul_id, $yorum, $icerik_yor_id)
     global $db;
     $date = date('d.m.Y H:i:s');
     $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,yorum,yorum_tarih,icerik_yor_id)
-            VALUES $content_id,$kul_id,$yorum,$date,$icerik_yor_id";
+            VALUES ('$content_id','$kul_id','$yorum','$date','$icerik_yor_id')";
     $rows = mysqli_query($db, $SQL);
 }
 
-function add_reply_comment($content_id, $kul_id, $yorum, $rep_com_id)
+function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id,$icerik_yor_id)
 {
     global $db;
     $date = date('d.m.Y H:i:s');
-    $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,rep_com_id,yorum,yorum_tarih,icerik_yor_id)
-            VALUES $content_id,$kul_id,$rep_com_id,$yorum,$date,$icerik_yor_id";
+    $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,ust_yorum_id,yorum,yorum_tarih,icerik_yor_id)
+            VALUES ('$content_id','$kul_id','$ust_yorum_id','$yorum','$date','$icerik_yor_id')";
     $rows = mysqli_query($db, $SQL);
 }

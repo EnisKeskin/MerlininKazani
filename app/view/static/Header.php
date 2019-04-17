@@ -64,7 +64,7 @@
                                 <a href="<?php echo site_url("profil/" . permalink(session('username')))?>">
                                     <div class="pencere">
                                         <div class="uyeicon">
-                                            <img src="<?php echo asset_url("img/heybro.jpg")?>" alt="">
+                                            <img src="<?php echo asset_url_img(session('userimg'))?>" alt="">
                                         </div>
                                         <div class="uyebilgi">
                                             <span><?php echo session('adsoyad')?></span> <br>

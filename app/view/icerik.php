@@ -13,13 +13,15 @@
                         <img src="<?php echo asset_url_img($content_info[0]['konu_resim_url']) ?>" alt="">
                     </div>
                     <div class="icerikyazari">
+                        <?php user_info_content($content_info[0]['yazar_id']) ?>
                         <div class="kulbilgi">
                             <div class="yazarresim">
-                                <img src="<?php echo asset_url_img($users_info[0]['kul_resim']) ?>" alt="">
+                                <img src="<?php echo asset_url_img($user_info_cont[0]['kul_resim']) ?>" alt="">
                             </div>
                             <div class="yazar">
                                 <div class="yazarismi">
-                                    <p><?php echo $users_info[0]['kul_isim'] . " " . $users_info[0]['kul_soyadi'] ?></p>
+                                    <p><?php echo $user_info_cont[0]['kul_isim'] . " " . $user_info_cont[0]['kul_soyadi'] ?>
+                                    </p>
                                 </div>
                                 <div class="yazilantarih">
                                     <p><?php echo $content_info[0]['konu_tarih'] ?></p>
@@ -41,6 +43,7 @@
 
                     <div class="comment">
                         <div class="girisbaslik">Yorumlar</div>
+                        <?php if(session('userlogin') == 1) { ?>
                         <div class="user_coment">
                             <div class="kulbilgi">
                                 <div class="yazarresim">
@@ -52,21 +55,53 @@
                                         </p>
                                     </div>
                                     <div class="yazilantarih">
-                                        <p><?php echo $content_info[0]['konu_tarih'] ?></p>
+                                        <p><?php echo date('d.m.Y H:i:s'); ?></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="commentform">
                                 <form action="" method="post">
-                                    <textarea name="" id="" placeholder="Yorumla" maxlength="2000"
+                                    <textarea name="yorumun" id="" placeholder="Yorumla" maxlength="2000"
                                         class="textyorum"></textarea>
                                     <div class="commentpost">
                                         <div><span>Kalan Karakter:</span>2000</div>
-                                        <a href="" class="forward">Gönder</a>
+                                        <button type="submit" class="forward" Value="1" name="comsubmit">Gönder</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
+                        <?php } ?>
+                        <?php if(session('userid') == 0) { ?>
+                        <div class="bil">Yorum yapabilmek için Lütfen Giriş yapınız</div>
+                        <?php } ?>
+                        <?php if(session('userlogin') == 0) { ?>
+                        <div class="user_coment">
+                            <div class="kulbilgi">
+                                <div class="yazarresim">
+                                    <img src="<?php echo asset_url_img('default.png') ?>" alt="">
+                                </div>
+                                <div class="yazar">
+                                    <div class="yazarismi">
+                                        <p><?php echo 'Misafir Kullanıcı' ?>
+                                        </p>
+                                    </div>
+                                    <div class="yazilantarih">
+                                        <p><?php echo date('d.m.Y H:i:s') ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="commentform">
+                                <form action="" method="post">
+                                    <textarea name="yorumun" id="" placeholder="Yorumla" maxlength="2000"
+                                        class="textyorum"></textarea>
+                                    <div class="commentpost">
+                                        <div><span>Kalan Karakter:</span>2000</div>
+                                        <button type="submit" class="forward" Value="1" name="comsubmit">Gönder</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <?php } ?>
                         <!-- Yorumların başlatıldığı yer -->
                         <?php for ($i = 0; $i < $comments_zero_num; $i++) {?>
                         <div class="comment_con">
@@ -94,7 +129,7 @@
                                         <div class="like">
                                             <i class="ion-thumbsup"></i>
                                         </div>
-                                        <div class="reply" id="commentco">
+                                        <div class="reply">
                                             <i class="ion-chatbubbles"></i>
                                             <span>Yanıtla</span>
                                         </div>
@@ -115,12 +150,12 @@
                                                     </p>
                                                 </div>
                                                 <div class="yazilantarih">
-                                                    <p><?php echo $reply_comment[$i]["yorum_tarih"] ?></p>
+                                                    <p><?php echo $reply_comment[$j]["yorum_tarih"] ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="reply-comment-article">
-                                            <span><?php echo $reply_comment[$i]["yorum"]; ?></span>
+                                            <span><?php echo $reply_comment[$j]["yorum"]; ?></span>
                                         </div>
                                         <div class="reply-like">
                                             <div class="like">
@@ -133,11 +168,14 @@
                                     <div class="reply-visit" id="commentop-cl">
                                         <div class="commentform">
                                             <form action="" method="post">
-                                                <textarea name="" id="" placeholder="Yorumla" maxlength="2000"
+                                                <textarea name="altyorum" id="" placeholder="Yorumla" maxlength="2000"
                                                     class="textyorum"></textarea>
+                                                <input type="text" style="display:none;" name="yazilan"
+                                                    value="<?php echo $comments_zero[$i]["icerik_yor_id"]?>">
                                                 <div class="commentpost">
                                                     <div><span>Kalan Karakter:</span>2000</div>
-                                                    <a href="" class="forward">Gönder</a>
+                                                    <button type="submit" name="repsubmit" Value="1"
+                                                        class="forward">Gönder</button>
                                                 </div>
                                             </form>
                                         </div>

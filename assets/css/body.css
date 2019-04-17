@@ -1205,15 +1205,25 @@ a {
 }
 
 .reply-visit {
-    display: none;
+
 }
 
 .reply-like {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .reply-comment {
     border-top: 1px solid rgba(22, 26, 35, 0.185);
     width: 85%;
     margin-left: 45px;
+}
+
+.bil {
+    display: flex;
+    padding: 30px;
+    color: red;
+    font-size: 19px;
+    font-weight: 700;
+    justify-content: center;
 }
