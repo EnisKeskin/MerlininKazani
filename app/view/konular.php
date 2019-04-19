@@ -45,7 +45,6 @@
                     <div class="sayfa-numarasi">
                         <?php $sayfadeger = url(2); ((url(2) == 1) ? $sayfadeger = url(2) : $sayfadeger --);$deger = ceil(content_num($katego_id) / 20); ?>
                         <?php if($deger < url(2) || url(2) <= 0 ) { ?>
-                           
                         <?php } ?>
                         <ul>
                             <li>

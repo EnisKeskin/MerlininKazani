@@ -55,11 +55,31 @@ function add_main_content($content_id, $kul_id, $yorum, $icerik_yor_id)
     $rows = mysqli_query($db, $SQL);
 }
 
-function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id,$icerik_yor_id)
+function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id, $icerik_yor_id)
 {
     global $db;
     $date = date('d.m.Y H:i:s');
     $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,ust_yorum_id,yorum,yorum_tarih,icerik_yor_id)
             VALUES ('$content_id','$kul_id','$ust_yorum_id','$yorum','$date','$icerik_yor_id')";
     $rows = mysqli_query($db, $SQL);
+}
+
+function yorumu($com_usr_id)
+{
+    global $db;
+    global $speacial_com;
+    global $rows_num;
+    $SQL = "SELECT *
+            FROM yorum
+            WHERE yor_kul_id = $com_usr_id ";
+    $rows = mysqli_query($db, $SQL);
+    $rows_num = mysqli_num_rows($rows);
+    $i = 0;
+    while ($row = mysqli_fetch_assoc($rows)) {
+        extract($row);
+        $speacial_com[$i]['yorum'] = $yorum;
+        $speacial_com[$i]['yorum_tarih'] = $yorum_tarih;
+        $speacial_com[$i]['icerik_id'] = $icerik_id;
+        $i++;
+    }
 }

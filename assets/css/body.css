@@ -1205,7 +1205,7 @@ a {
 }
 
 .reply-visit {
-
+    transition : 200ms;
 }
 
 .reply-like {
@@ -1227,3 +1227,4 @@ a {
     font-weight: 700;
     justify-content: center;
 }
+

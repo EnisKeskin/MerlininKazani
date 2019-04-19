@@ -2,7 +2,7 @@
 <div class="siteici">
     <div class="container">
         <div class="profil-content">
-            <div class="profil-cover" style="background:url(<?php echo asset_url('/img/heybro.jpg')?>)">
+            <div class="profil-cover" style="background:url(<?php echo asset_url_img(session('userimg'))?>)">
                 <a href="#" class="chance-over">
                     <i class="ion-image"></i>
                     Kapak Değiştir
@@ -10,16 +10,19 @@
                 <div class="clearfix"></div>
                 <div class="profil-bilgi">
                     <div class="avatar">
-                        <img src="<?php echo asset_url('/img/heybro.jpg')?>" alt="">
+                        <img src="<?php echo asset_url_img(session('userimg'))?>" alt="">
                     </div>
                     <div class="profilbilgiler">
                         <div class="profilad"><?php echo strtoupper(session('adsoyad'));?></div>
                         <ul>
-                            <li><a href="<?php echo site_url("profil/" . permalink(session("username")));?>">Profilim</a></li>
+                            <li><a
+                                    href="<?php echo site_url("profil/" . permalink(session("username")));?>">Profilim</a>
+                            </li>
                             <li><a
                                     href="<?php echo site_url("profil/mesajlar/" . permalink(session("username")));?>">Mesajlar</a>
                             </li>
-                            <li><a href="<?php echo site_url("profil/kisibilgileri/" . permalink(session("username")));?>">Kişisel
+                            <li><a
+                                    href="<?php echo site_url("profil/kisibilgileri/" . permalink(session("username")));?>">Kişisel
                                     Bilgiler</a></li>
                         </ul>
                     </div>
@@ -27,26 +30,27 @@
 
             </div>
             <div class="bildiri">
-
                 <ul>
                     <?php if ($profilbaslik == "Son Yorumlar") {?>
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;"><?php echo $profilbaslik;?></div>
-                    <?php for ($i = 0; $i < 5; $i++) {?>
+                    <?php if(session('userid')) yorumu(session('userid')) ?>
+                    <?php for ($i = 0; $i < $rows_num; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="yazi">
                                 <div class="yorumur">
                                     <div class="icyazibaslik yorumur">
                                         <!-- Konu -->
-                                        Jitman 2'nin ilk bölümü tüm platformlarda ücretsiz oldu!
+                                        <?php content_information($speacial_com[$i]['icerik_id']); ?>
+                                        <?php echo $content_info[0]['konu_baslik']; ?>
                                     </div>
                                     <div class="icyazialtbaslik">
                                         <!-- Yorum -->
-                                        Görenler şaşkına döndü
+                                        <?php echo $speacial_com[$i]['yorum']; ?>
                                     </div>
                                     <div class="icyazitarih">
                                         <!-- tarih -->
-                                        29.01.2019 17:53
+                                        <?php echo $speacial_com[$i]['yorum_tarih']; ?>
                                     </div>
                                 </div>
                             </div>
@@ -89,8 +93,8 @@
                                 <div class="icyazialtbaslik">
                                     Kullanici Adi
                                 </div>
-                                <input type="text" name="nickname" id="" class="inputcss" value="<?php echo $kisbil[0]?>"
-                                    readonly>
+                                <input type="text" name="nickname" id="" class="inputcss"
+                                    value="<?php echo $kisbil[0]?>" readonly>
                             </label><br>
                             <label>
                                 <div class="icyazialtbaslik">
@@ -108,13 +112,15 @@
                                 <div class="icyazialtbaslik">
                                     E-posta
                                 </div>
-                                <input type="text" name="mail" id="" class="inputcss" value="<?php echo $kisbil[3]?>" readonly>
+                                <input type="text" name="mail" id="" class="inputcss" value="<?php echo $kisbil[3]?>"
+                                    readonly>
                             </label><br>
                             <label>
                                 <div class="icyazialtbaslik">
                                     Doğum Tarihi
                                 </div>
-                                <input type="date" name="dogumtar" id="" class="dogumtar" value="<?php echo $kisbil[4]?>">
+                                <input type="date" name="dogumtar" id="" class="dogumtar"
+                                    value="<?php echo $kisbil[4]?>">
                             </label><br>
                             <label>
                                 <div class="icyazialtbaslik">
@@ -125,7 +131,8 @@
                             </label><br>
                             <div class="kontrol">
                                 <?php if (isset($infocheck)): ?>
-                                <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?php echo $infocheck?></p>
+                                <p class="giriskontrol" style="text-align:center; color:#8899B8;">
+                                    <?php echo $infocheck?></p>
                                 <?php endif?>
                             </div>
                             <div class="girisbutton">
@@ -154,7 +161,8 @@
                             </label><br>
                             <div class="kontrol">
                                 <?php if (isset($giriskontrol)): ?>
-                                <p class="giriskontrol" style="text-align:center; color:#8899B8;"><?php echo "$giriskontrol"?>
+                                <p class="giriskontrol" style="text-align:center; color:#8899B8;">
+                                    <?php echo "$giriskontrol"?>
                                 </p>
                                 <?php endif?>
                             </div>

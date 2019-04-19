@@ -37,6 +37,7 @@ function user_check($username, $userpass, $userremme)
                 setcookie('userpass', md5($userpass), time() + (60 * 60 * 240));
                 setcookie('userlogin', 1, time() + (60 * 60 * 240));
                 setcookie('adsoyad', ($row['kullanici_ismi'] . " " . $row['kullanici_soyadi']), time() + (60 * 60 * 240));
+                setcookie('userimg',$row['resim_url'], time() + (60 * 60 * 240));
             }
             $_SESSION["userid"] = $row['kullanici_id'];
             $_SESSION["username"] = $username;
@@ -85,8 +86,8 @@ function user_pass_replace()
         if (user_pass_control($usroldpass)) {
             if ($useridcheck) {
                 $SQL = "UPDATE kullanici
-                    SET    kullanici_sifre = '$usrpassmd5'
-                    WHERE  kullanici_id    =  $useridcheck
+                        SET    kullanici_sifre = '$usrpassmd5'
+                        WHERE  kullanici_id    =  $useridcheck
                     ";
                 $rows = mysqli_query($db, $SQL);
                 if ($rows) {
@@ -220,5 +221,6 @@ function user_cookie_test()
         $_SESSION["userpass"] = cookie('userpass');
         $_SESSION["adsoyad"] = cookie('adsoyad');
         $_SESSION["userlogin"] = cookie('userlogin');
+        $_SESSION["userimg"] = cookie('userimg');
     }
 }

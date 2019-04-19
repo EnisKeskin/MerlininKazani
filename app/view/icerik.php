@@ -129,7 +129,9 @@
                                         <div class="like">
                                             <i class="ion-thumbsup"></i>
                                         </div>
-                                        <div class="reply">
+                                        <div class="reply" type="javascript:;" 
+                                        onclick="myFunction('commentop<?php echo $i ?>','text<?php echo $i ?>');">
+                                        
                                             <i class="ion-chatbubbles"></i>
                                             <span>Yanıtla</span>
                                         </div>
@@ -165,10 +167,10 @@
                                     </div>
                                     <?php } ?>
                                     <?php }?>
-                                    <div class="reply-visit" id="commentop-cl">
+                                    <div class="reply-visit" id="commentop<?php echo $i ?>" style = "display:none;" >
                                         <div class="commentform">
                                             <form action="" method="post">
-                                                <textarea name="altyorum" id="" placeholder="Yorumla" maxlength="2000"
+                                                <textarea name="altyorum" id="text<?php echo $i ?>" placeholder="Yorumla" maxlength="2000"
                                                     class="textyorum"></textarea>
                                                 <input type="text" style="display:none;" name="yazilan"
                                                     value="<?php echo $comments_zero[$i]["icerik_yor_id"]?>">
