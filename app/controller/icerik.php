@@ -5,6 +5,8 @@ if (url(1)) {
     content_information($cont_id);
     if(session('userid'))
     user_info(session('userid'));
+    elseif(cookie('userid'))
+    user_info(cookie('userid'));
     if (session('userlogin') == 1) {
         main_comment($cont_id);
         if (post('comsubmit')) {

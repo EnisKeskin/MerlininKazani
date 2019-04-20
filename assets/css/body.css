@@ -448,7 +448,7 @@ body {
 }
 
 .siderow {
-    padding-top: 18px;
+    padding: 11px 0px 11px 0px;
 }
 
 .devam {
@@ -477,7 +477,7 @@ body {
 }
 
 .sidebarustu {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .populer ul {
@@ -489,7 +489,7 @@ body {
 .populer li {
     position: relative;
     display: inline-block;
-    width: 90px;
+    width: 85px;
     height: 50px;
     line-height: 50px;
     background: #292E39;
@@ -518,6 +518,12 @@ body {
 .pop .resim img {
     width: 280px;
     height: 157px;
+}
+
+.popsayac {
+    color:black; 
+    font-size:14px; 
+    font-weight:500
 }
 
 .pop {
@@ -1228,3 +1234,7 @@ a {
     justify-content: center;
 }
 
+.yorumadet {
+    color:#fff; 
+    font-size:13px
+}

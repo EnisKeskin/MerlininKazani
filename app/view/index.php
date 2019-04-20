@@ -3,6 +3,7 @@
     <div class="container">
         <div class="bodyustkismi">
             <?php content_datapull();?>
+            <?php comment_count($contentInfo[0]['konu_id']) ?>
             <div class="bodyustkismisolu">
                 <a href="<?php echo  site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
                     <img src="<?php echo asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
@@ -11,7 +12,7 @@
                             <div class="yorumsayisi">
                                 <i>
                                     <span class="ion-android-chat" style="color:#fff"></span>
-                                    <span style="color:#fff; font-size:13px">23</span>
+                                    <span class = "yorumadet"><?php echo $com_row ?></span>
                                 </i>
                             </div>
                             <div class="konu">
@@ -62,6 +63,7 @@
 
         <div class="arabolum">
             <div class="bodyustkismisolu buyuk">
+                <?php comment_count($contentInfo[1]['konu_id']) ?>
                 <a href="<?php echo  site_url('icerik/'.$contentInfo[1]['konu_id']) ?>">
                     <img src="<?php echo asset_url_img($contentInfo[1]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
@@ -69,7 +71,7 @@
                             <div class="yorumsayisi">
                                 <i>
                                     <span class="ion-android-chat" style="color:#fff"></span>
-                                    <span class="yorumsay">23</span>
+                                    <span class="yorumadet"><?php echo $com_row ?></span>
                                 </i>
                             </div>
                             <div class="konu">
@@ -91,6 +93,7 @@
             </div>
             <div class="arabolumsag">
             <?php for ($i = 2; $i <= 5; $i++): ?>
+            <?php comment_count($contentInfo[$i]['konu_id']) ?>
             <div class="bodyustkismisolu kucuk">
                 <a href="<?php echo  site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
                     <img src="<?php echo asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
@@ -99,7 +102,7 @@
                             <div class="yorumsayisi">
                                 <i>
                                     <span class="ion-android-chat" style="color:#fff"></span>
-                                    <span style="color:#fff; font-size:13px">23</span>
+                                    <span class = "yorumadet"><?php echo $com_row ?></span>
                                 </i>
                             </div>
                             <div class="konu">
@@ -122,6 +125,7 @@
                 <ul>
                     <?php content_speacial_datapull(0, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
+                    <?php comment_count($contentInfospe[$i]['konu_id']) ?>
                     <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>" style="display:flex;">
                         <li>
                             <div class="resim">
@@ -130,7 +134,7 @@
                                     <div class="yorumsayisi">
                                         <i>
                                             <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:12px">23</span>
+                                            <span class = "yorumadet"><?php echo $com_row ?></span>
                                         </i>
                                     </div>
                                 </div>
@@ -156,227 +160,13 @@
                     <?php }?>
                 </ul>
             </div>
-            <div class="sidebar">
-                <div class="sidebarlist">
-                    <div class="sidebarkonu">Teknoloji Haberleri</div>
-                    <div class="sidebarustu">
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    1
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    2
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    3
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    4
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    5
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    6
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    7
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    8
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    9
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="siderow">
-                            <div class="kapsul">
-                                <div class="kapsulsayi">
-                                    10
-                                </div>
-                                <div class="kapsulyazisi">
-                                    <a href="#">Bakan Kurum Açıkladı: Satılan Tüm Cam ve Pet Şişeler Depozitolu
-                                        olacak</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="devam">
-                        <input type="button" value="Daha Fazlası"
-                            onclick="javascript:window.location='http://tunaweb.net';">
-                    </div>
-
-                </div>
-                <div class="sidebarlist alttaki">
-                    <div class="sidebarkonu">Teknoloji Haberleri</div>
-                    <div class="sidebarustu populer">
-                        <ul>
-                            <li>Haberler</li>
-                            <li>İnceleme</li>
-                            <li>Teknoloji</li>
-                        </ul>
-                    </div>
-                    <div class="populerkonular">
-                        <div class="pop">
-                            <a href="">
-                                <div class="resim">
-                                    <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
-                                </div>
-                                <div class="sagustu">
-                                    <div class="popsayisi">
-                                        <i>
-                                            <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                        </i>
-                                    </div>
-                                </div>
-                                <div class="popyazi">
-                                    <span>asdasdasd</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pop">
-                            <div class="resim">
-                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
-                            </div>
-                            <div class="sagustu">
-                                <div class="popsayisi">
-                                    <i>
-                                        <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                    </i>
-                                </div>
-                            </div>
-                            <div class="popyazi">
-                                <span>asdasdasdas</span>
-                            </div>
-                        </div>
-                        <div class="pop">
-                            <div class="resim">
-                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
-                            </div>
-                            <div class="sagustu">
-                                <div class="popsayisi">
-                                    <i>
-                                        <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                    </i>
-                                </div>
-                            </div>
-                            <div class="popyazi">
-
-                            </div>
-                        </div>
-                        <div class="pop">
-                            <div class="resim">
-                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
-                            </div>
-                            <div class="sagustu">
-                                <div class="popsayisi">
-                                    <i>
-                                        <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                    </i>
-                                </div>
-                            </div>
-                            <div class="popyazi">
-
-                            </div>
-                        </div>
-                        <div class="pop">
-                            <div class="resim">
-                                <img src="<?php echo asset_url("img/heybro.jpg");?>" alt="">
-                            </div>
-                            <div class="sagustu">
-                                <div class="popsayisi">
-                                    <i>
-                                        <span style="color:black; font-size:14px; font-weight:500">15700</span>
-                                    </i>
-                                </div>
-                            </div>
-                            <div class="popyazi">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="devam">
-                        <a href=""><input type="button" value="Daha Fazlası"></a>
-                    </div>
-                </div>
-            </div>
-
+            <?php require controller("sidebar"); ?>
+            <?php require controller("sidebarpop")?>
         </div>
         <?php content_datapull(1) ?>
-        <!--  -->
         <div class="araicerik">
         <?php for ($i=0; $i < 4; $i++) { ?>
+        <?php comment_count($contentInfo[$i]['konu_id']) ?>
         <div class="bodyustkismisolu kucuk">
            <a href="<?php echo  site_url('icerik/'.$contentInfo[$i]['konu_id']) ?>">
             <img src="<?php echo asset_url_img($contentInfo[$i]['konu_resim_url']);?>" alt="">
@@ -385,7 +175,7 @@
                     <div class="yorumsayisi">
                         <i>
                             <span class="ion-android-chat" style="color:#fff"></span>
-                            <span style="color:#fff; font-size:13px">23</span>
+                            <span class = "yorumadet"><?php echo $com_row ?></span>
                         </i>
                     </div>
                     <div class="konu">
@@ -466,6 +256,7 @@
                 <ul class = "habelerul">
                     <?php content_speacial_datapull(10, 10, 1);?>
                     <?php for ($i = 0; $i < 10; $i++) {?>
+                    <?php comment_count($contentInfospe[$i]['konu_id']) ?>
                     <a href="<?php echo  site_url('icerik/'.$contentInfospe[$i]['konu_id']) ?>">
                         <li>
                             <div class="resim">
@@ -474,7 +265,7 @@
                                     <div class="yorumsayisi">
                                         <i>
                                             <span class="ion-android-chat" style="color:#fff"></span>
-                                            <span style="color:#fff; font-size:12px">23</span>
+                                            <span class = "yorumadet"><?php echo $com_row ?></span>
                                         </i>
                                     </div>
                                 </div>

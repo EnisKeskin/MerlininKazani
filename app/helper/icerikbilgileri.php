@@ -111,3 +111,29 @@ function content_information($select)
         $content_info[0]['konu_tarih'] = $konu_tarih;
     }
 }
+
+function content_pop($select)
+{
+    global $db;
+    global $cont_pop_num;
+    global $content_pop;
+    $SQL = "SELECT *
+            FROM icerik
+            WHERE kategori_id = $select
+            ORDER BY konu_pop desc
+            LIMIT 0, 5";
+    $rows = mysqli_query($db, $SQL);
+    $cont_pop_num = mysqli_num_rows($rows);
+    if (isset($cont_pop_num)) {
+        $i = 0;
+        while ($row = mysqli_fetch_assoc($rows)) {
+            extract($row);
+            $content_pop[$i]['konu_id'] = $konu_id;
+            $content_pop[$i]['konu_pop'] = $konu_pop;
+            $content_pop[$i]['kategori_id'] = $kategori_id;
+            $content_pop[$i]['konu_baslik'] = $konu_baslik;
+            $content_pop[$i]['konu_resim_url'] = $konu_resim_url;
+            $i++;
+        }
+    }
+}

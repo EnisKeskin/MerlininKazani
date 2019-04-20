@@ -46,6 +46,17 @@ function reply_comment($con_comment_id, $icerik_id)
     }
 }
 
+function comment_count($content_id)
+{
+    global $db;
+    global $com_row;
+    $SQL = "SELECT *
+            FROM yorum
+            WHERE icerik_id = $content_id";
+    $rows = mysqli_query($db,$SQL);
+    $com_row = mysqli_num_rows($rows);
+}
+
 function add_main_content($content_id, $kul_id, $yorum, $icerik_yor_id)
 {
     global $db;

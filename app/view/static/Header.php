@@ -120,17 +120,16 @@
 
                 </div>
                 <div class="sagustbasliksagi">
-
                     <div class="aramamenu">
                         <span class="ion-ios-search-strong" id="aramamenuac"
                             style="cursor:pointer; padding:20px;"></span>
                         <div>
                             <form action="" class="form" id="aramamenu">
                                 <input type="text" placeholder=" Arama Yap">
+                                <input type="submit" value="1" name = "search" style = "display:none;">
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
