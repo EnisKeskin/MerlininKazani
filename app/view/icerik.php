@@ -232,6 +232,7 @@
 
                 </div>
                 <?php require controller("sidebar"); ?>
+            <?php require controller("sidebarpop")?>
             </div>
             <div class="clearfix"></div>
         </div>

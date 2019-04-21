@@ -2,6 +2,7 @@
 if (url(1)) {
     global $cont_id;
     $cont_id = url(1);
+    content_pop_add($cont_id);
     content_information($cont_id);
     if(session('userid'))
     user_info(session('userid'));

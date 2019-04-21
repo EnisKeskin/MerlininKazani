@@ -1,4 +1,5 @@
 <?php require controller("header");?>
+
 <body>
     <div class="siteici">
         <div class="container">
@@ -81,9 +82,9 @@
                                         <img src="../img/heybro.jpg" alt="">
                                         <div class="soluustu haberin">
                                             <div class="yorumsayisi solalti">
-                                                    <div class="puan">
-                                                        60
-                                                    </div>
+                                                <div class="puan">
+                                                    60
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -138,6 +139,7 @@
                     </div>
                 </div>
                 <?php require controller("sidebar"); ?>
+                <?php require controller("sidebarpop")?>
             </div>
             <div class="clearfix"></div>
         </div>

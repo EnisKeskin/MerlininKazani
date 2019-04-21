@@ -137,3 +137,11 @@ function content_pop($select)
         }
     }
 }
+
+function content_pop_add($select) {
+    global $db;
+    $SQL = "UPDATE icerik
+            SET konu_pop = konu_pop+1
+            WHERE konu_id = $select";
+    $rows = mysqli_query($db,$SQL);
+}
