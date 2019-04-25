@@ -145,3 +145,26 @@ function content_pop_add($select) {
             WHERE konu_id = $select";
     $rows = mysqli_query($db,$SQL);
 }
+
+function search($select) {
+    global $db;
+    global $search_data;
+    global $search_num;
+    $SQL = "SELECT * 
+            FROM icerik 
+            WHERE konu_baslik 
+            LIKE '%$select%'
+            ";
+    $rows = mysqli_query($db,$SQL);
+    $search_num = mysqli_num_rows($rows);
+    $i = 0;
+    while($row = mysqli_fetch_assoc($rows)) {
+        extract($row);
+        $search_data[$i]['konu_id'] = $konu_id;
+        $search_data[$i]['konu_tarih'] = $konu_tarih;
+        $search_data[$i]['kategori_id'] = $kategori_id;
+        $search_data[$i]['konu_baslik'] = $konu_baslik;
+        $search_data[$i]['konu_resim_url'] = $konu_resim_url;
+        $i++;
+    }
+}

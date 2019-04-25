@@ -1238,3 +1238,50 @@ a {
     color:#fff; 
     font-size:13px
 }
+
+.arama_sonuc ul li {
+    display: flex;
+    width: 100%;
+}
+
+.arama_resim img {
+    height: 56px;
+    width: 100px;
+}
+
+.arama_sonuc a:hover .arama_baslik {
+    transition: 300ms;
+    color:#ffd500;
+}
+
+.arama_sonuc a {
+    border-bottom: 1px solid rgba(22, 26, 35, 0.13);
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.arama_text {
+    margin-left: 10px; 
+}
+
+.arama_text .arama_konu {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#9da1a9;
+}
+
+.arama_text .arama_baslik {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color:#23262e;
+}
+
+.arama_text .arama_tarih {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 20px;
+    color:#9da1a9;
+}

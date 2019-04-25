@@ -1,8 +1,4 @@
-$(function(){
-    $("#aramamenuac").click(function(){
-        $("#aramamenu").toggle();
-    });
-});
+
 
 function myFunction(deger,deger2) {
     var x = document.getElementById(deger);

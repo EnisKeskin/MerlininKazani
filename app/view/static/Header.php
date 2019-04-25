@@ -121,11 +121,12 @@
                 </div>
                 <div class="sagustbasliksagi">
                     <div class="aramamenu">
-                        <span class="ion-ios-search-strong" id="aramamenuac"
+                        <span type = "javascript:;" class="ion-ios-search-strong" onclick = "myFunction('aramamenu')" id="aramamenuac"
                             style="cursor:pointer; padding:20px;"></span>
                         <div>
-                            <form action="" class="form" id="aramamenu">
-                                <input type="text" placeholder=" Arama Yap">
+                            
+                            <form action="<?php echo url ."/arama" ?>" class="form" id="aramamenu" method = "post" style = "display:none;" >
+                                <input type="text" placeholder=" Arama Yap" name = "search_text">
                                 <input type="submit" value="1" name = "search" style = "display:none;">
                             </form>
                         </div>

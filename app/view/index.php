@@ -331,19 +331,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="yorumyazisi">
-                        <div class="yorum">
-                            <div class="yorumyazan">
-                                <span>Bilgekhan</span>
-                            </div>
-                            <div class="yorumunkendisi">
-                                <span>Yeni Batman Arkham oyunu ile ilgili söylenti kafaları karıştırdı</span>
-                            </div>
-                            <div class="yorumtarihi">
-                                <span>01.02.2019 16:03</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

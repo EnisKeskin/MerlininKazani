@@ -2,12 +2,12 @@
     <div class="sidebarkonu">Teknoloji Haberleri</div>
     <div class="sidebarustu populer">
         <ul>
-            <li type = "javascript:;" id= "pophaber" onclick="popOpen(1)" >Haberler</li>
-            <li type = "javascript:;" id= "popinceleme" onclick="popOpen(2)">İnceleme</li>
-            <li type = "javascript:;" id= "poptekno" onclick="popOpen(3)">Teknoloji</li>
+            <li type="javascript:;" id="pophaber" onclick="popOpen(1)">Haberler</li>
+            <li type="javascript:;" id="popinceleme" onclick="popOpen(2)">İnceleme</li>
+            <li type="javascript:;" id="poptekno" onclick="popOpen(3)">Teknoloji</li>
         </ul>
     </div>
-    <div class="populerkonular" id="konu_haber" >
+    <div class="populerkonular" id="konu_haber">
         <?php content_pop(1)?>
         <?php if ($cont_pop_num >= 5) {
             $num = 5;
@@ -16,7 +16,7 @@
         }?>
         <?php for ($i = 1; $i <= $num; $i++) {?>
         <div class="pop">
-            <a href="">
+            <a href="<?php echo site_url('icerik/'.$content_pop[$i-1]['konu_id']);?>">
                 <div class="resim">
                     <img src="<?php echo asset_url_img($content_pop[$i - 1]['konu_resim_url']); ?>" alt="">
                 </div>
@@ -34,7 +34,7 @@
         </div>
         <?php }?>
     </div>
-    <div class="populerkonular" id="konu_inceleme" style="display:none;" >
+    <div class="populerkonular" id="konu_inceleme" style="display:none;">
         <?php content_pop(2)?>
         <?php if ($cont_pop_num >= 5) {
             $num = 5;
@@ -43,7 +43,7 @@
         }?>
         <?php for ($i = 1; $i <= $num; $i++) {?>
         <div class="pop">
-            <a href="">
+            <a href="<?php echo site_url('icerik/'.$content_pop[$i-1]['konu_id']);?>">
                 <div class="resim">
                     <img src="<?php echo asset_url_img($content_pop[$i - 1]['konu_resim_url']); ?>" alt="">
                 </div>
@@ -61,7 +61,7 @@
         </div>
         <?php }?>
     </div>
-    <div class="populerkonular" id="konu_tekno" style="display:none;" >
+    <div class="populerkonular" id="konu_tekno" style="display:none;">
         <?php content_pop(16)?>
         <?php if ($cont_pop_num >= 5) {
             $num = 5;
@@ -70,7 +70,7 @@
         }?>
         <?php for ($i = 1; $i <= $num; $i++) {?>
         <div class="pop">
-            <a href="">
+            <a href="<?php echo site_url('icerik/'.$content_pop[$i-1]['konu_id']);?>">
                 <div class="resim">
                     <img src="<?php echo asset_url_img($content_pop[$i - 1]['konu_resim_url']); ?>" alt="">
                 </div>
