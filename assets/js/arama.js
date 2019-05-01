@@ -1,5 +1,3 @@
-
-
 function myFunction(deger,deger2) {
     var x = document.getElementById(deger);
     if (x.style.display === "none") {
@@ -28,3 +26,4 @@ function popOpen(checknum) {
     teknoloji.style.display = "block";
   }
 }
+

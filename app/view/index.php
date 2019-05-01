@@ -5,7 +5,7 @@
             <?php content_datapull();?>
             <?php comment_count($contentInfo[0]['konu_id']) ?>
             <div class="bodyustkismisolu">
-                <a href="<?php echo  site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
+                <a href="<?php echo site_url('icerik/'.$contentInfo[0]['konu_id']); ?>">
                     <img src="<?php echo asset_url_img($contentInfo[0]['konu_resim_url']);?>" alt="">
                     <div class="bodyustkismisoluyazikismi">
                         <div class="soluustu">

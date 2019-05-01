@@ -53,7 +53,7 @@ function comment_count($content_id)
     $SQL = "SELECT *
             FROM yorum
             WHERE icerik_id = $content_id";
-    $rows = mysqli_query($db,$SQL);
+    $rows = mysqli_query($db, $SQL);
     $com_row = mysqli_num_rows($rows);
 }
 
@@ -75,7 +75,7 @@ function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id, $icerik_
     $rows = mysqli_query($db, $SQL);
 }
 
-function yorumu($com_usr_id)
+function review($com_usr_id)
 {
     global $db;
     global $speacial_com;
@@ -92,5 +92,47 @@ function yorumu($com_usr_id)
         $speacial_com[$i]['yorum_tarih'] = $yorum_tarih;
         $speacial_com[$i]['icerik_id'] = $icerik_id;
         $i++;
+    }
+}
+
+function admiration($select)
+{
+    global $db;
+    global $like_sel;
+    global $like_num;
+    $SQL = "SELECT *
+            FROM begeniler
+            WHERE beg_yrm_id = $select";
+    $rows = mysqli_query($db, $SQL);
+    $like_num = mysqli_num_rows($rows);
+    $i = 0;
+    while ($row = mysqli_fetch_assoc($rows)) {
+        extract($row);
+        $like_sel[$i]["beg_uye_id"] = $beg_uye_id;
+        $i++;
+    }
+}
+
+function admiration_add($ad_coment_id, $ad_user_id)
+{
+    global $db;
+    $SQL = "INSERT
+            INTO begeniler(beg_uye_id,beg_yrm_id)
+            VALUES ($ad_user_id,$ad_coment_id)";
+    $rows = mysqli_query($db, $SQL);
+}
+
+function admiration_check($ad_user_id, $ad_coment_id)
+{
+    global $db;
+    $SQL = "SELECT *
+            FROM begeniler
+            WHERE beg_uye_id = $ad_coment_id and beg_yrm_id = $ad_user_id";
+    $rows = mysqli_query($db, $SQL);
+    $admi_num = mysqli_num_rows($rows);
+    if ($admi_num == 0) {
+        return true;
+    } else {
+        return false;
     }
 }

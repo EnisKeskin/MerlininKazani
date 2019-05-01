@@ -4,10 +4,13 @@ if (url(1)) {
     $cont_id = url(1);
     content_pop_add($cont_id);
     content_information($cont_id);
-    if(session('userid'))
-    user_info(session('userid'));
-    elseif(cookie('userid'))
-    user_info(cookie('userid'));
+
+    if (session('userid')) {
+        user_info(session('userid'));
+    } elseif (cookie('userid')) {
+        user_info(cookie('userid'));
+    }
+
     if (session('userlogin') == 1) {
         main_comment($cont_id);
         if (post('comsubmit')) {
@@ -21,7 +24,6 @@ if (url(1)) {
         }
     }
     main_comment($cont_id);
-
     require view('icerik');
 } else {
     require view('index');

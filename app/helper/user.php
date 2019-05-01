@@ -14,7 +14,7 @@ function cookie($isim)
     return false;
 }
 
-function user_check($username, $userpass, $userremme)
+function user_check($username, $userpass, $userremme = 1)
 {
     global $db;
     global $giriskontrol;
