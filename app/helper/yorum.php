@@ -23,6 +23,25 @@ function main_comment($content_id)
     }
 }
 
+function comment()
+{
+    global $db;
+    global $commen;
+    $SQL = "SELECT *
+            FROM yorum
+            ORDER BY yorum_id DESC";
+    $rows = mysqli_query($db, $SQL);
+    $i = 0;
+    while ($row = mysqli_fetch_assoc($rows)) {
+        extract($row);
+        $commen[$i]["icerik_id"] = $icerik_id;
+        $commen[$i]["yor_kul_id"] = $yor_kul_id;
+        $commen[$i]["yorum"] = $yorum;
+        $commen[$i]["yorum_tarih"] = $yorum_tarih;
+        $i++;
+    }
+}
+
 function reply_comment($con_comment_id, $icerik_id)
 {
     global $db;

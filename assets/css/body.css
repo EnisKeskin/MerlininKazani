@@ -573,8 +573,24 @@ body {
     padding-top: 20px;
 }
 
+.ank label {
+    padding-top: 3px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #666;
+    cursor: pointer;
+}
+
 .anketcevap .ank {
+    display: flex;
+    align-items: center;
     padding-top: 5px;
+}
+
+.anket_soru {
+    font-size: 14px;
+    color: #23262e;
+    font-weight: 500;
 }
 
 .oyla {
@@ -584,7 +600,7 @@ body {
     margin-top: 20px;
 }
 
-.oyla input {
+.oyla button , .oylain{
     width: 100%;
     height: 100%;
     background: #FFD500;
@@ -602,11 +618,18 @@ body {
     margin-top: 20px;
 }
 
-.soncular input {
+.geri_don {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.soncular input,.geri_don input {
+    text-align: center;
     cursor: pointer;
     width: 100%;
     height: 100%;
-    border: none;
     background: none;
     border-radius: 3px;
     border: 1px solid #FFD500;
@@ -634,7 +657,21 @@ body {
 
 .yorum {
     padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border:1px #161A2370 solid;
 }
+
+.yorum:hover {
+    border-radius: 3px;
+    transition: 200ms;
+    border:1px #48b8e6 solid;
+}
+
+.yorum:hover .yorumunkendisi span {
+    transition: 200ms;
+    color:#48b8e6;
+} 
 
 .yorumyazan span {
     font-size: 12px;
@@ -1336,4 +1373,30 @@ a {
     display: flex;
     align-items: center;
     padding: 5px 0px 10px 10px;
+}
+
+.anket_cevabı,.anket_oran {
+    margin: 5px 0px 5px 0px ;
+    font-size: 12px;
+    color: #23262e;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.level_bar {
+    width: 100%;
+    height: 5px;
+    background: #e9ebec;
+    border-radius: 3px;
+}
+
+.level_bar_value {
+    background: #ffd500;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.anket_oran {
+    color:#ffd500;
+    font-weight: 500;
 }

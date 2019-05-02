@@ -27,3 +27,16 @@ function popOpen(checknum) {
   }
 }
 
+function survey_results(check_num) {
+  var survey_question = document.getElementById('anket_soru');
+  var survey_result = document.getElementById('anket_sonuc');
+
+  if(check_num == 1 ) {
+    survey_question.style.display = "none";
+    survey_result.style.display = "block";
+  }else if (check_num == 2 ) {
+    survey_question.style.display = "block";
+    survey_result.style.display = "none";
+  }
+
+}
