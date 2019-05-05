@@ -4,7 +4,7 @@ if (url(1)) {
     $cont_id = url(1);
     content_pop_add($cont_id);
     content_information($cont_id);
-
+    tag($cont_id);
     if (session('userid')) {
         user_info(session('userid'));
     } elseif (cookie('userid')) {

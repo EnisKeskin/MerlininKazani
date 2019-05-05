@@ -34,7 +34,7 @@
                     <?php if ($profilbaslik == "Son Yorumlar") {?>
                     <div style="margin: 20px 0px 20px 10px; font-weight:500;"><?php echo $profilbaslik;?></div>
                     <?php if(session('userid')) review(session('userid')) ?>
-                    <?php for ($i = 0; $i < $rows_num; $i++) {?>
+                    <?php for ($i = 0; $i < 10; $i++) {?>
                     <a href="" style="display:flex;">
                         <li>
                             <div class="yazi">

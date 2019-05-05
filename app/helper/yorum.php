@@ -127,9 +127,18 @@ function admiration($select)
     $i = 0;
     while ($row = mysqli_fetch_assoc($rows)) {
         extract($row);
+        $like_sel[$i]["beg_id"] = $beg_id;
         $like_sel[$i]["beg_uye_id"] = $beg_uye_id;
         $i++;
     }
+}
+
+function admiration_del($beg_id, $del_user_id)
+{
+    global $db;
+    $SQL = "DELETE FROM begeniler 
+            WHERE beg_uye_id = $del_user_id  AND  beg_id = $beg_id ";
+    $rows = mysqli_query($db, $SQL);
 }
 
 function admiration_add($ad_coment_id, $ad_user_id)

@@ -34,10 +34,10 @@
                     </div>
                     <div class="tags">
                         <ul>
-                            <li><a href="">#Resident Evil 2 Remake</a></li>
-                            <li><a href="">#Resident Evil 2 Remake</a></li>
-                            <li><a href="">#Resident Evil 2 Remake</a></li>
-                            <li><a href="">#Resident Evil 2 Remake</a></li>
+                            <?php for ($i=0; $i <$tag_num ; $i++) { ?> 
+                                
+                                <li><a href="<?php echo site_url("arama/".permalink($tag_info[$i]['etiket_adi']))?>"><?php echo "#".$tag_info[$i]['etiket_adi'] ?></a></li>
+                            <?php } ?>
                         </ul>
                     </div>
 
@@ -130,7 +130,7 @@
                                     <div class="content-reactions">
                                         <?php if (session("userlogin") == 1) {?>
                                         <a
-                                            href="<?php echo site_url('like/' . $comments_zero[$i]["yorum_id"] . "/" . session('userid') . "/" . $comments_zero[$i]["icerik_id"]) ?>">
+                                            href="<?php echo site_url('like/' . $comments_zero[$i]["yorum_id"] . "/" . session('userid') . "/" . $comments_zero[$i]["icerik_id"]) ."/". $like_sel[$i]["beg_id"] ?>">
                                             <div class="like">
                                                 <i class="ion-thumbsup"></i>
                                             </div>
@@ -187,7 +187,7 @@
                                         <div class="reply-like">
                                             <?php if (session('userlogin') == 1) {?>
                                             <a
-                                                href="<?php echo site_url('like/' . $reply_comment[$j]["yorum_id"] . "/" . session('userid') . "/" . $reply_comment[$j]["icerik_id"]) ?>">
+                                                href="<?php echo site_url('like/' . $reply_comment[$j]["yorum_id"] . "/" . session('userid') . "/" . $reply_comment[$j]["icerik_id"]."/". $like_sel[$j]["beg_id"]) ?>">
                                                 <div class="like">
                                                     <i class="ion-thumbsup"></i>
                                                 </div>

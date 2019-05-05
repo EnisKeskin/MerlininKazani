@@ -1,6 +1,6 @@
 <?php
 
-function survey($active = 2)
+function survey($active = 1)
 {
     global $db;
     global $survey_info;
@@ -23,7 +23,7 @@ function survey($active = 2)
     }
 }
 
-function survey_ans_count($active = 2)
+function survey_ans_count($active = 1)
 {
     global $db;
     global $survey_count;

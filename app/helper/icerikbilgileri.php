@@ -168,3 +168,20 @@ function search($select) {
         $i++;
     }
 }
+
+function tag($cont_id) {
+    global $db;
+    global $tag_info;
+    global $tag_num;
+    $SQL = "SELECT *
+            FROM etiket
+            WHERE icerik_id = $cont_id";
+    $rows = mysqli_query($db,$SQL);
+    $tag_num = mysqli_num_rows($rows);
+    $i=0;
+    while($row = mysqli_fetch_assoc($rows)) {
+        extract($row);
+        $tag_info[$i]['etiket_adi'] = $etiket_adi;
+        $i++;
+    }
+}

@@ -1,4 +1,4 @@
-<?php require controller("header");?>
+<?php require controller("header"); ?>
 
 <body>
     <div class="siteici">
@@ -75,40 +75,39 @@
                     </div>
                     <div class="ozelinceleme">
                         <ul>
-                            <?php for ($i=0; $i < 15; $i++) { ?>
-                            <a href="">
-                                <li>
-                                    <div class="resim">
-                                        <img src="../img/heybro.jpg" alt="">
-                                        <div class="soluustu haberin">
-                                            <div class="yorumsayisi solalti">
-                                                <div class="puan">
-                                                    60
+                            <?php for ($i = 0; $i < 15; $i++) { ?>
+                                <a href="">
+                                    <li>
+                                        <div class="resim">
+                                            <img src="../img/heybro.jpg" alt="">
+                                            <div class="soluustu haberin">
+                                                <div class="yorumsayisi solalti">
+                                                    <div class="puan">
+                                                        60
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="yazi">
-                                        <div class="icyazi">
-                                            <div class="icyazikonu">
-                                                Haber
-                                            </div>
-                                            <div class="icyazibaslik">
-                                                Hamburgerin wasdasdasdas
-                                                dasd asdas
-                                            </div>
-                                            <div class="icyazialtbaslik">
-                                                Görenler şaşkına döndü
-                                            </div>
-                                            <div class="icyazitarih">
-                                                29.01.2019 17:53
+                                        <div class="yazi">
+                                            <div class="icyazi">
+                                                <div class="icyazikonu">
+                                                    Haber
+                                                </div>
+                                                <div class="icyazibaslik">
+                                                    Hamburgerin wasdasdasdas
+                                                    dasd asdas
+                                                </div>
+                                                <div class="icyazialtbaslik">
+                                                    Görenler şaşkına döndü
+                                                </div>
+                                                <div class="icyazitarih">
+                                                    29.01.2019 17:53
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </a>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </a>
                             <?php } ?>
                         </ul>
                     </div>
@@ -139,7 +138,7 @@
                     </div>
                 </div>
                 <?php require controller("sidebar"); ?>
-                <?php require controller("sidebarpop")?>
+                <?php require controller("sidebarpop") ?>
             </div>
             <div class="clearfix"></div>
         </div>
