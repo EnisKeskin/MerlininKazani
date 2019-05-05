@@ -64,8 +64,8 @@ function category_name_datapull($katego_id, $chk = 1)
     }
     if ($chk == 1) {
         echo $categor_name;
-    }else
-    return $katego_id;
+    } else
+        return $katego_id;
 }
 
 function special_category_datapull()
@@ -73,7 +73,7 @@ function special_category_datapull()
     global $db;
     global $specialCat;
     global $row_special_num;
-    $SQL = "SELECT ozel_kategori_ad
+    $SQL = "SELECT *
             FROM ozel_kategoriler";
     $rows = mysqli_query($db, $SQL);
     $row_special_num = mysqli_num_rows($rows);
@@ -81,7 +81,8 @@ function special_category_datapull()
         $c = 0;
         while ($row = mysqli_fetch_assoc($rows)) {
             extract($row);
-            $specialCat[$c] = $ozel_kategori_ad;
+            $specialCat[$c]['ozel_kategori_id'] = $ozel_kategori_id;
+            $specialCat[$c]['ozel_kategori_adi'] = $ozel_kategori_ad;
             $c++;
         }
     }
@@ -104,7 +105,7 @@ function perma_search($perma_ad)
             WHERE kategori_perma = '$perma_ad'";
     $rows = mysqli_query($db, $SQL);
     $count = mysqli_num_rows($rows);
-    if(isset($count)) {
+    if (isset($count)) {
         $row = mysqli_fetch_assoc($rows);
         return $row['kategori_id'];
     }

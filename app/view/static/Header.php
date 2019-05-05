@@ -141,7 +141,7 @@
             <div class="solaltbaslikbilgisi">
                 <ul>
                    <?php for ($i = 0; $i < $row_special_num; $i++) {?>
-                    <li><a href="#"><?php echo $specialCat[$i];?></a></li>
+                    <li><a href="#"><?php echo $specialCat[$i]['ozel_kategori_adi'];?></a></li>
                   <?php }?>
                 </ul>
             </div>
