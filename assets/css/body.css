@@ -1218,8 +1218,7 @@ a {
 .content-reactions {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin:10px 0px 10px 0px
 }
 
 .like {
@@ -1327,7 +1326,15 @@ a {
 }
 
 .like_num {
+    display: flex;
+    margin-left: 5px;
     font-size: 15px;
+    font-weight: 400;
+    color: #1a94d4;
+}
+
+.like_num a{
+    font-size: 10px;
     font-weight: 400;
     color: #1a94d4;
 }
@@ -1398,5 +1405,10 @@ a {
 
 .anket_oran {
     color:#ffd500;
+    font-weight: 500;
+}
+
+.kullanici_isim p {
+    font-size: 15px;
     font-weight: 500;
 }

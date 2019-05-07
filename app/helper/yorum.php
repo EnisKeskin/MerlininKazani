@@ -82,7 +82,7 @@ function add_main_content($content_id, $kul_id, $yorum, $icerik_yor_id)
     $date = date('d.m.Y H:i:s');
     $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,yorum,yorum_tarih,icerik_yor_id)
             VALUES ('$content_id','$kul_id','$yorum','$date','$icerik_yor_id')";
-    $rows = mysqli_query($db, $SQL);
+    mysqli_query($db, $SQL);
 }
 
 function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id, $icerik_yor_id)
@@ -91,7 +91,7 @@ function add_reply_comment($content_id, $kul_id, $yorum, $ust_yorum_id, $icerik_
     $date = date('d.m.Y H:i:s');
     $SQL = "INSERT INTO yorum(icerik_id,yor_kul_id,ust_yorum_id,yorum,yorum_tarih,icerik_yor_id)
             VALUES ('$content_id','$kul_id','$ust_yorum_id','$yorum','$date','$icerik_yor_id')";
-    $rows = mysqli_query($db, $SQL);
+    mysqli_query($db, $SQL);
 }
 
 function review($com_usr_id)
@@ -119,6 +119,7 @@ function admiration($select)
     global $db;
     global $like_sel;
     global $like_num;
+    global $admir_user;
     $SQL = "SELECT *
             FROM begeniler
             WHERE beg_yrm_id = $select";
@@ -129,8 +130,10 @@ function admiration($select)
         extract($row);
         $like_sel[$i]["beg_id"] = $beg_id;
         $like_sel[$i]["beg_uye_id"] = $beg_uye_id;
+        $admir_user[$i] = user_info($like_sel[$i]["beg_uye_id"]);
         $i++;
     }
+    return $admir_user;
 }
 
 function admiration_del($beg_id, $del_user_id)

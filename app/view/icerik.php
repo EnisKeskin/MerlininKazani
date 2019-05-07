@@ -129,15 +129,29 @@
                                     <span><?php echo $comments_zero[$i]["yorum"] ?></span>
                                     <div class="content-reactions">
                                         <?php if (session("userlogin") == 1) {?>
-                                        <a
-                                            href="<?php echo site_url('like/' . $comments_zero[$i]["yorum_id"] . "/" . session('userid') . "/" . $comments_zero[$i]["icerik_id"]) ."/". $like_sel[$i]["beg_id"] ?>">
+                                        <a href="<?php echo site_url('like/' . $comments_zero[$i]["yorum_id"] . "/" . session('userid') . "/" . $comments_zero[$i]["icerik_id"]) ."/". $like_sel[$i]["beg_id"] ?>">
                                             <div class="like">
                                                 <i class="ion-thumbsup"></i>
                                             </div>
-                                        </a> &nbsp
-                                        <div class="like_num" style="cursor:pointer"
-                                            onclick="mdl.style.display='block'">
-                                            <?php if ($like_num != 0) {echo $like_num;}?></div>
+                                        </a>
+                                        <div class="like_num">
+                                        <a href="<?php echo site_url("begeniler/".$comments_zero[$i]["yorum_id"]) ?>">
+                                            <?php 
+                                                if($like_num != 0) {
+                                                    if($like_num >= 2) {
+                                                        for ($k=0; $k < 2; $k++) { 
+                                                            echo $admir_user[$k]." ";
+                                                        }
+                                                        echo "..";
+                                                    }else {
+                                                        for ($k=0; $k <$like_num ; $k++) { 
+                                                            echo $admir_user[$k]." ";
+                                                        }
+                                                    }
+                                                }
+                                            ?>
+                                        </a>
+                                        </div>
                                         <div class="reply" type="javascript:;"
                                             onclick="myFunction('commentop<?php echo $i ?>','text<?php echo $i ?>');">
                                             <i class="ion-chatbubbles" style="cursor:pointer"></i>
@@ -148,17 +162,16 @@
                                             <div class="like">
                                                 <i class="ion-thumbsup"></i>
                                             </div>
-                                        </a>&nbsp
-                                        <div class="like_num" style="cursor:pointer"
-                                            onclick="mdl.style.display='block'">
-                                            <?php if ($like_num != 0) {echo $like_num;}?></div>
+                                        </a>
+                                        <div class="like_num">
+                                            <?php if ($like_num != 0) {echo $like_num;}?>
+                                        </div>
                                         <div class="reply" type="javascript:;"
                                             onclick="alert('Giriş yapmadan yorum yapamazsınız.')">
                                             <i style="cursor:pointer" class="ion-chatbubbles"></i>
                                             <span style="cursor:pointer">Yanıtla</span>
                                         </div>
                                         <?php }?>
-
                                     </div>
                                     <?php reply_comment($comments_zero[$i]["icerik_yor_id"], $cont_id)?>
                                     <?php if ($reply_comment_num > 0) {?>
@@ -191,17 +204,30 @@
                                                 <div class="like">
                                                     <i class="ion-thumbsup"></i>
                                                 </div>
-                                            </a> &nbsp
-                                            <div class="like_num">
-                                                <?php if ($like_num != 0) {echo $like_num;}?>
+                                            </a> 
+                                            <div class="like_num" style="cursor:pointer">
+                                            <a href="<?php echo site_url("begeniler/".$reply_comment[$j]["yorum_id"]) ?>">
+                                                <?php 
+                                                    if($like_num != 0) {
+                                                        if($like_num >= 3) {
+                                                            for ($k=0; $k < 3; $k++) { 
+                                                                echo $admir_user[$k];
+                                                            }
+                                                        }else {
+                                                            for ($k=0; $k <$like_num ; $k++) { 
+                                                                echo $admir_user[$k];
+                                                            }
+                                                        }
+                                                    }
+                                                ?>
+                                            </a>
                                             </div>
-
                                             <?php } else {?>
                                             <a onclick="alert('Üye Girişi yapmadan beğenemezsiniz')">
                                                 <div class="like">
                                                     <i class="ion-thumbsup"></i>
                                                 </div>
-                                            </a>&nbsp
+                                            </a>
                                             <div class="like_num" style="cursor:pointer"    
                                             onclick="mdl.style.display='block'">
                                                 <?php if ($like_num != 0) {echo $like_num;}?>
@@ -236,6 +262,7 @@
                     <ul class="habelerul">
                         <?php content_speacial_datapull(10, 10, 1);?>
                         <?php for ($i = 0; $i < 10; $i++) {?>
+                            <?php comment_count($contentInfospe[$i]['konu_id']) ?>
                         <a href="<?php echo site_url('icerik/' . $contentInfospe[$i]['konu_id']) ?>">
                             <li>
                                 <div class="resim">
@@ -245,7 +272,7 @@
                                         <div class="yorumsayisi">
                                             <i>
                                                 <span class="ion-android-chat" style="color:#fff"></span>
-                                                <span style="color:#fff; font-size:12px">23</span>
+                                                <span class="yorumadet"><?php echo $com_row ?></span>
                                             </i>
                                         </div>
                                     </div>

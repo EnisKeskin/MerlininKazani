@@ -169,6 +169,7 @@ function user_info($user_id)
         $users_info[0]['kul_soyadi'] = $kullanici_soyadi;
         $users_info[0]['kul_resim'] = $resim_url;
     }
+    return $users_info[0]['kul_isim']." ".$users_info[0]['kul_soyadi'];
 }
 
 function user_info_content($user_id)

@@ -185,13 +185,11 @@
                         <div class="alt">
                             <span class="baslik"><?php
                                         $boyut = strlen($contentInfo[$i]['konu_baslik']);
-
                                             if ($boyut <= 60) {
                                                 echo $contentInfo[$i]['konu_baslik'];
                                             } else {
                                                 echo substr($contentInfo[$i]['konu_baslik'], 0, 57) . "...";
                                             }
-
                                             ?>
                             </span><br>
                         </div>
