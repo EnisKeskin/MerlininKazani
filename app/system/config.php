@@ -7,7 +7,7 @@ $config['db'] = [
     'host' => 'localhost',
     'user' => 'root',
     'pass' => '',
-    'dbname' => 'merlinikazani',
+    'dbname' => 'merlininkazani',
 ];
 
 define('dir', realpath('.'));

@@ -20,7 +20,7 @@
                                         </div>
                                         <div class="arama_text">
                                             <div class="arama_konu">
-                                                <?php category_name_datapull($search_data[$i]['konu_id']) ?>
+                                                <?php category_name_datapull($search_data[$i]['kategori_id']) ?>
                                             </div>
                                             <div class="arama_baslik">
                                                 <?php echo $search_data[$i]['konu_baslik']; ?>
